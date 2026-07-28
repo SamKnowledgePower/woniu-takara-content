@@ -16,7 +16,7 @@ export default function Home() {
 
       <section id="top" className="hero">
         <div className="heroCopy">
-          <p className="eyebrow">窩牛 × TAKARA · CONTENT & BUSINESS</p>
+          <p className="eyebrow">窩牛 × Takara｜內容與商業成長</p>
           <h1>不是追一波聲量，<br />而是建立長期內容資產。</h1>
           <p className="lead">
             把窩牛累積的空間經驗與 Takara 的產品價值，整理成消費者看得懂、品牌能持續使用的內容。
@@ -38,33 +38,33 @@ export default function Home() {
           <div className="material materialA" />
           <div className="material materialB" />
           <div className="heroCard">
-            <span>YEARLY OUTPUT</span>
+            <span>年度產製</span>
             <strong>96</strong>
             <p>支短影音</p>
           </div>
-          <div className="lineNote">DESIGN · BUILD · LIVING</div>
+          <div className="lineNote">設計｜建造｜生活</div>
         </div>
       </section>
 
       <section className="positioning section">
         <div className="sectionHead">
-          <p className="eyebrow">WHAT WE ARE BUILDING</p>
+          <p className="eyebrow">我們要共同建立的成果</p>
           <h2>這次合作，<br />真正要留下什麼？</h2>
           <p>產量是履約基準，但不是最終目的。真正重要的是讓品牌知道要說什麼、能穩定說下去，並把每次發布轉成可持續使用的企業資產。</p>
         </div>
         <div className="positionCards">
           <article className="positionPrimary">
-            <span>01 / STRATEGY</span>
+            <span>01｜策略</span>
             <h3>先找出值得被看見的核心</h3>
             <p>從案場、服務流程、產品、客戶問題與原廠資料中，整理窩牛與 Takara 各自最有價值的內容主軸。</p>
           </article>
           <article>
-            <span>02 / CONTENT</span>
+            <span>02｜內容</span>
             <h3>把專業轉成客戶看得懂的內容</h3>
             <p>不只介紹規格與案例，而是回答消費者在裝修、選材、使用與決策過程中真正關心的問題。</p>
           </article>
           <article>
-            <span>03 / ASSET</span>
+            <span>03｜資產</span>
             <h3>讓每次產製回到品牌資產</h3>
             <p>影片之外，同步留下選題庫、素材規則、發布節奏、教學紀錄與可由內部接手的操作方法。</p>
           </article>
@@ -74,7 +74,7 @@ export default function Home() {
       <section id="about" className="aboutProposal">
         <div className="aboutIntro">
           <div>
-            <p className="eyebrow">WHO I AM</p>
+            <p className="eyebrow">關於我</p>
             <p className="chapterNo">01</p>
           </div>
           <figure className="profileFigure">
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
         <div className="studentResults">
           <div className="studentResultsIntro">
-            <p className="eyebrow">STUDENT RESULTS</p>
+            <p className="eyebrow">陪跑與教學成果</p>
             <h2>從專業整理、品牌建立，<br />到真正產生商業成果。</h2>
             <p>除了代操，我也長期陪跑不同領域的專業者，把經驗整理成能被市場理解的品牌、服務與知識產品。這些成果證明，我的工作不只停在曝光，而是能陪企業走過定位、內容與轉化的完整過程。</p>
           </div>
@@ -125,7 +125,7 @@ export default function Home() {
 
       <section className="evidenceShowcase section">
         <div className="sectionHead">
-          <p className="eyebrow">SELECTED WORK & EVIDENCE</p>
+          <p className="eyebrow">作品與實績證據</p>
           <h2>全部作品，<br />全部觀看數。</h2>
           <p>完整展示目前資料庫中的 17 件內容作品，涵蓋農業品牌、烘焙品牌與知識內容。觀看數為最近一次確認紀錄，並會隨平台持續累積。</p>
         </div>
@@ -134,9 +134,9 @@ export default function Home() {
             ["work-69w.png", "69萬", "和豐會客室｜新生代盤商"],
             ["work-braised-pork.jpg", "28萬", "商用滷肉飯配方知識內容"],
             ["work-26w.png", "26萬", "西瓜蓋章師｜陳師傅"],
-            ["work-9w.png", "9.1萬", "DAY 43｜西瓜期中考"],
-            ["work-8w.png", "8.2萬", "DAY 44｜西瓜博士團"],
-            ["work-day45.png", "6萬", "DAY 45｜沉浸式留瓜教學"],
+            ["work-9w.png", "9.1萬", "第 43 天｜西瓜期中考"],
+            ["work-8w.png", "8.2萬", "第 44 天｜西瓜博士團"],
+            ["work-day45.png", "6萬", "第 45 天｜沉浸式留瓜教學"],
             ["work-milkfish.jpg", "5.8萬", "台南虱目魚知識內容"],
             ["work-tour-bus.jpg", "5.1萬", "直播帶貨始祖｜遊覽車工商"],
             ["work-score.png", "2.7萬", "新生代盤商給西瓜幾分？"],
@@ -160,7 +160,7 @@ export default function Home() {
       <section className="caseEvidence" aria-labelledby="case-evidence-title">
         <div className="caseEvidenceIntro">
           <div>
-            <p className="eyebrow">ONE CASE · 90 DAYS</p>
+            <p className="eyebrow">單一案例｜90 天實績</p>
             <h2 id="case-evidence-title">不是只展示作品，<br />也展示結果。</h2>
           </div>
           <p>以下為單一實際專案的公開後台紀錄。它不是一套只能複製到特定產業的題材公式，而是方法經過品牌理解、專業轉譯、持續發布與數據校準後，所留下的可驗證成果。</p>
@@ -183,21 +183,21 @@ export default function Home() {
 
       <section id="method" className="methodology section">
         <div className="methodIntro">
-          <p className="eyebrow">MY METHODOLOGY</p>
+          <p className="eyebrow">我的方法論</p>
           <h2>一個內容引擎，<br />推進兩條品牌路線。</h2>
           <p>成果不是來自套用某一個成功案例，而是來自一套可以跨產業重複使用的方法：先理解真實專業，再轉譯成受眾問題，以持續產製與數據回饋校準方向。</p>
         </div>
         <div className="methodPrinciples">
-          <article><span>01 / DIAGNOSE</span><h3>先理解產業，不複製題材</h3><p>盤點品牌、客戶、服務、產品與現有素材，找出真正值得長期溝通的內容核心。</p></article>
-          <article><span>02 / TRANSLATE</span><h3>把專業轉成客戶問題</h3><p>將業內語言改寫為消費者會遇到的情境、疑問與決策，讓內容與業務建立關係。</p></article>
-          <article><span>03 / SERIES</span><h3>用系列累積，而非追單點爆量</h3><p>建立內容支柱與可連載題型，讓一次拍攝能形成內容庫，品牌也能持續被辨識。</p></article>
-          <article><span>04 / OPERATE</span><h3>同一套判斷貫穿製作</h3><p>策略、腳本、拍攝、剪輯與發布由同一脈絡推進，避免每個環節各自解讀品牌。</p></article>
-          <article><span>05 / CALIBRATE</span><h3>用發布結果校準下一輪</h3><p>每週檢查進度、每季檢視題材與發布狀況；數據是修正依據，不是空泛的成效承諾。</p></article>
-          <article><span>06 / TRANSFER</span><h3>把方法留在企業內部</h3><p>同步整理選題庫、素材規則、排程與教學紀錄，讓合作成果能被接手與延續。</p></article>
+          <article><span>01｜診斷</span><h3>先理解產業，不複製題材</h3><p>盤點品牌、客戶、服務、產品與現有素材，找出真正值得長期溝通的內容核心。</p></article>
+          <article><span>02｜轉譯</span><h3>把專業轉成客戶問題</h3><p>將業內語言改寫為消費者會遇到的情境、疑問與決策，讓內容與業務建立關係。</p></article>
+          <article><span>03｜系列化</span><h3>用系列累積，而非追單點爆量</h3><p>建立內容支柱與可連載題型，讓一次拍攝能形成內容庫，品牌也能持續被辨識。</p></article>
+          <article><span>04｜執行</span><h3>同一套判斷貫穿製作</h3><p>策略、腳本、拍攝、剪輯與發布由同一脈絡推進，避免每個環節各自解讀品牌。</p></article>
+          <article><span>05｜校準</span><h3>用發布結果校準下一輪</h3><p>每週檢查進度、每季檢視題材與發布狀況；數據是修正依據，不是空泛的成效承諾。</p></article>
+          <article><span>06｜交接</span><h3>把方法留在企業內部</h3><p>同步整理選題庫、素材規則、排程與教學紀錄，讓合作成果能被接手與延續。</p></article>
         </div>
         <div className="methodTracks">
           <article>
-            <header><span>TRACK A</span><strong>窩牛專業信任線</strong></header>
+            <header><span>路線一</span><strong>窩牛專業信任線</strong></header>
             <ol>
               <li><span>01</span>案場與服務訪談</li>
               <li><span>02</span>拆解消費者決策問題</li>
@@ -207,11 +207,11 @@ export default function Home() {
             <p>讓客戶在諮詢之前，先理解窩牛如何判斷與解決問題。</p>
           </article>
           <div className="methodCore">
-            <span>SHARED ENGINE</span>
+            <span>共用內容引擎</span>
             <strong>訪談 → 選題 → 腳本<br />拍攝 → 製作 → 發布<br />週回報 → 季檢核</strong>
           </div>
           <article>
-            <header><span>TRACK B</span><strong>Takara 產品教育線</strong></header>
+            <header><span>路線二</span><strong>Takara 產品教育線</strong></header>
             <ol>
               <li><span>01</span>原廠與展間素材盤點</li>
               <li><span>02</span>把規格放入生活情境</li>
@@ -229,7 +229,7 @@ export default function Home() {
       </section>
 
       <section className="proposalBridge">
-        <p className="eyebrow">FROM CAPABILITY TO THIS PROPOSAL</p>
+        <p className="eyebrow">從既有能力到本次方案</p>
         <h2>因此，接下來不是一份<br />從零拼湊的行銷清單。</h2>
         <p>而是把上述策略、轉譯、製作與資產化方法，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整、也能逐步交接的合作方案。</p>
         <a href="#service">進入年度合作方案 <span>↓</span></a>
@@ -249,7 +249,7 @@ export default function Home() {
 
       <section id="service" className="section">
         <div className="sectionHead">
-          <p className="eyebrow">THE SERVICE</p>
+          <p className="eyebrow">合作內容</p>
           <h2>雙主線內容，<br />同一套成長系統。</h2>
           <p>原則上每週一支窩牛本業內容、一支 Takara 內容。批次拍攝、累積內容庫，再依確認節奏分批發布。</p>
         </div>
@@ -277,7 +277,7 @@ export default function Home() {
 
       <section id="process" className="process section">
         <div className="sectionHead">
-          <p className="eyebrow">12-MONTH RHYTHM</p>
+          <p className="eyebrow">十二個月執行節奏</p>
           <h2>每週看得見進度，<br />每季調整一次方向。</h2>
         </div>
         <div className="timeline">
@@ -290,15 +290,15 @@ export default function Home() {
 
       <section className="deliver">
         <div>
-          <p className="eyebrow">WHAT YOU GET</p>
+          <p className="eyebrow">實際交付內容</p>
           <h2>交付的不只是影片。</h2>
         </div>
         <div className="deliverList">
           {[
-            ["年度內容策略", "窩牛與 Takara 的 B2C 內容主軸、選題與腳本。"],
+            ["年度內容策略", "窩牛與 Takara 的消費市場內容主軸、選題與腳本。"],
             ["96 支短影音", "主要拍攝、剪輯、品質控管與發布協作。"],
             ["24 次到場", "每次約 1 小時，最長不超過 2 小時。"],
-            ["內容資產系統", "專屬選題庫、素材規則、SOP 與發布排程。"],
+            ["內容資產系統", "專屬選題庫、素材規則、標準作業流程與發布排程。"],
             ["透明進度", "每週回報、季度檢核與阻塞事項追蹤。"],
             ["漸進式帶訓", "讓內部人員從可完成的小任務開始接手。"],
           ].map(([title, copy], index) => (
@@ -313,26 +313,26 @@ export default function Home() {
 
       <section id="scope" className="scope section">
         <div className="scopePanel">
-          <p className="eyebrow">CLEAR BOUNDARIES</p>
+          <p className="eyebrow">清楚的合作邊界</p>
           <h2>清楚的邊界，<br />讓合作更長久。</h2>
           <p>以完成製作並送交確認作為交付認定。窩牛保有最終發布確認權；觸及、詢價與成交受市場、平台與後續服務影響，不作特定數字保證。</p>
         </div>
         <div className="scopeList">
           <div><strong>包含</strong><p>年度策略、96 支短影音、24 次到場、主要製作、發布協作、進度檢核與帶訓。</p></div>
-          <div><strong>另案</strong><p>廣告、網站、長影片、課程、B2B、新品牌線、重大活動與高規格專案影片。</p></div>
+          <div><strong>另案</strong><p>廣告、網站、長影片、課程、企業對企業業務、新品牌線、重大活動與高規格專案影片。</p></div>
           <div><strong>權利</strong><p>成品與原始拍攝素材歸窩牛；通用方法論與模板授權內部使用，不得轉售。</p></div>
         </div>
       </section>
 
       <section id="contact" className="pricing">
         <div>
-          <p className="eyebrow">ANNUAL PARTNERSHIP</p>
+          <p className="eyebrow">年度合作方案</p>
           <h2>一年，把內容從臨時任務，變成日常能力。</h2>
         </div>
         <div className="priceCard">
           <p>12 個月合作</p>
-          <div><span>NT$</span><strong>32,000</strong><em>/ 月</em></div>
-          <p className="annual">年度合計 NT$384,000</p>
+          <div><span>新台幣</span><strong>32,000</strong><em>/ 月</em></div>
+          <p className="annual">年度合計新台幣 384,000 元</p>
           <a href="mailto:blessingstable@gmail.com">開始討論合作</a>
           <small>詳細權利義務以雙方簽署之正式契約為準。</small>
         </div>
