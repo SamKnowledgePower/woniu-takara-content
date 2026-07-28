@@ -157,6 +157,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="caseEvidence" aria-labelledby="case-evidence-title">
+        <div className="caseEvidenceIntro">
+          <div>
+            <p className="eyebrow">ONE CASE · 90 DAYS</p>
+            <h2 id="case-evidence-title">不是只展示作品，<br />也展示結果。</h2>
+          </div>
+          <p>以下為單一實際專案的公開後台紀錄。它不是一套只能複製到特定產業的題材公式，而是方法經過品牌理解、專業轉譯、持續發布與數據校準後，所留下的可驗證成果。</p>
+        </div>
+        <div className="caseEvidenceStats" aria-label="單一案例 90 天成果摘要">
+          <div><strong>90</strong><span>天實際執行</span></div>
+          <div><strong>138萬+</strong><span>總瀏覽次數</span></div>
+          <div><strong>73萬+</strong><span>觀看超過 3 秒</span></div>
+          <div><strong>496天</strong><span>累積觀看時間</span></div>
+        </div>
+        <figure className="caseEvidenceBanner">
+          <img
+            src="evidence-overview.png"
+            alt="單一內容專案過去 90 天的 Facebook 後台成效截圖，顯示 138 萬次瀏覽及 496 天觀看時間"
+            loading="lazy"
+          />
+          <figcaption>實際平台後台截圖｜統計區間：90 天</figcaption>
+        </figure>
+      </section>
+
       <section id="method" className="methodology section">
         <div className="methodIntro">
           <p className="eyebrow">MY METHODOLOGY</p>
