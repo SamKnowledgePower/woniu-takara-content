@@ -73,7 +73,7 @@ h1 { font-family: "Noto Serif TC", "Songti TC", serif; font-size: clamp(48px, 6.
 .testimonyGrid img { width: 100%; height: auto; display: block; }
 
 .evidenceShowcase { background: #fff; }
-.workGallery { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; }
+.workGallery { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
 .workGallery figure { margin: 0; position: relative; overflow: hidden; min-height: 390px; background: var(--ink); }
 .workGallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s ease; }
 .workGallery figure:hover img { transform: scale(1.025); }
@@ -81,37 +81,16 @@ h1 { font-family: "Noto Serif TC", "Songti TC", serif; font-size: clamp(48px, 6.
 .workGallery figcaption { position: absolute; left: 17px; right: 17px; bottom: 17px; z-index: 1; color: white; display: flex; flex-direction: column; gap: 6px; }
 .workGallery figcaption strong { font-family: Georgia,serif; font-size: 30px; font-weight: 500; }
 .workGallery figcaption span { font-size: 11px; line-height: 1.5; color: rgba(255,255,255,.78); }
-.performanceEvidence { margin-top: 18px; display: grid; grid-template-columns: .78fr 1.22fr; background: var(--ink); color: white; }
-.performanceCopy { padding: 54px; }
-.performanceCopy h3 { font-family: "Noto Serif TC",serif; font-size: clamp(32px,4vw,56px); line-height: 1.25; font-weight: 500; margin: 0 0 24px; }
-.performanceCopy > p:not(.eyebrow) { color: #b7c0b9; line-height: 1.8; }
-.performanceMetrics { display: grid; grid-template-columns: 1fr 1fr; margin-top: 38px; border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
-.performanceMetrics div { padding: 20px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
-.performanceMetrics strong { display: block; font-family: Georgia,serif; font-size: 25px; font-weight: 500; color: var(--orange); }
-.performanceMetrics span { font-size: 11px; color: #b7c0b9; }
-.evidenceImages { padding: 20px; background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: center; }
-.evidenceImages figure { margin: 0; background: white; padding: 8px; box-shadow: 0 8px 30px rgba(23,34,29,.12); }
-.evidenceImages img { width: 100%; height: auto; display: block; }
-.evidenceNote { margin: 15px 0 0; color: #78817b; font-size: 11px; text-align: right; }
-
-.proof { background: var(--cream); }
-.proofGrid { display: grid; grid-template-columns: 1fr 1.25fr; min-height: 620px; }
-.proofFeature { background: var(--orange); color: white; padding: 48px; display: flex; flex-direction: column; }
-.proofFeature > span, .proofNotes span { font-size: 11px; letter-spacing: .18em; font-weight: 800; }
-.proofFeature h3 { font-family: "Noto Serif TC",serif; font-size: clamp(40px,4vw,62px); line-height: 1.18; margin: auto 0 24px; font-weight: 500; }
-.proofFeature p { line-height: 1.8; max-width: 480px; }
-.proofFeature > strong { padding-top: 25px; margin-top: 25px; border-top: 1px solid rgba(255,255,255,.45); font-size: 14px; }
-.proofNotes { border-top: 1px solid var(--line); }
-.proofNotes article { min-height: 33.333%; padding: 38px 42px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 120px 1fr 1fr; gap: 26px; align-items: start; }
-.proofNotes span { color: var(--orange); }
-.proofNotes h3 { font-family: "Noto Serif TC",serif; font-size: 22px; line-height: 1.45; margin: 0; font-weight: 600; }
-.proofNotes p { color: #647067; line-height: 1.75; margin: 0; font-size: 14px; }
-
 .methodology { background: var(--paper); }
 .methodIntro { display: grid; grid-template-columns: .55fr 1.1fr .8fr; gap: 5vw; align-items: end; margin-bottom: 70px; }
 .methodIntro .eyebrow { align-self: start; }
 .methodIntro h2 { margin: 0; }
 .methodIntro > p:last-child { color: #647067; line-height: 1.85; }
+.methodPrinciples { display: grid; grid-template-columns: repeat(3,1fr); margin-bottom: 18px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.methodPrinciples article { min-height: 285px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+.methodPrinciples span { color: var(--orange); font-size: 11px; letter-spacing: .14em; font-weight: 800; }
+.methodPrinciples h3 { font-family: "Noto Serif TC",serif; font-size: 24px; line-height: 1.45; margin: auto 0 15px; }
+.methodPrinciples p { color: #647067; line-height: 1.75; margin: 0; font-size: 14px; }
 .methodTracks { display: grid; grid-template-columns: 1fr 250px 1fr; gap: 18px; align-items: stretch; }
 .methodTracks > article { border: 1px solid var(--ink); padding: 36px; }
 .methodTracks header { display: flex; flex-direction: column; gap: 12px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
@@ -202,7 +181,7 @@ footer { padding: 38px 5vw; background: var(--ink); color: white; display: flex;
   .credibilityStats { grid-template-columns: 1fr 1fr; }
   .studentResults { grid-template-columns: 1fr; }
   .workGallery { grid-template-columns: repeat(3,1fr); }
-  .performanceEvidence { grid-template-columns: 1fr; }
+  .methodPrinciples { grid-template-columns: 1fr 1fr; }
   .proofGrid { grid-template-columns: 1fr; }
   .methodIntro { grid-template-columns: 1fr; }
   .methodTracks { grid-template-columns: 1fr; }
@@ -230,13 +209,10 @@ footer { padding: 38px 5vw; background: var(--ink); color: white; display: flex;
   .profileFigure { max-width: 280px; }
   .credibilityStats { grid-template-columns: 1fr; }
   .credibilityStats article { min-height: 145px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
-  .proofNotes article { grid-template-columns: 1fr; }
   .testimonyGrid { grid-template-columns: 1fr 1fr; }
   .workGallery { grid-template-columns: 1fr 1fr; }
   .workGallery figure { min-height: 330px; }
-  .performanceCopy { padding: 36px 24px; }
-  .performanceMetrics { grid-template-columns: 1fr; }
-  .evidenceImages { grid-template-columns: 1fr; }
+  .methodPrinciples { grid-template-columns: 1fr; }
   .testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: none; }
   .methodSequence { grid-template-columns: 1fr 1fr; }
   .stats, .serviceGrid, .timeline { grid-template-columns: 1fr; }

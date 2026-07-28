@@ -126,8 +126,8 @@ export default function Home() {
       <section className="evidenceShowcase section">
         <div className="sectionHead">
           <p className="eyebrow">SELECTED WORK & EVIDENCE</p>
-          <h2>不是只說做過，<br />而是把證據放在提案裡。</h2>
-          <p>作品畫面與觀看數來自實際公開內容；整體成效另以 Facebook 專業儀表板截圖佐證。數據紀錄更新於 2026 年 7 月。</p>
+          <h2>全部作品，<br />全部觀看數。</h2>
+          <p>完整展示目前資料庫中的 17 件內容作品，涵蓋農業品牌、烘焙品牌與知識內容。觀看數為最近一次確認紀錄，並會隨平台持續累積。</p>
         </div>
         <div className="workGallery">
           {[
@@ -136,7 +136,18 @@ export default function Home() {
             ["work-26w.png", "26萬", "西瓜蓋章師｜陳師傅"],
             ["work-9w.png", "9.1萬", "DAY 43｜西瓜期中考"],
             ["work-8w.png", "8.2萬", "DAY 44｜西瓜博士團"],
+            ["work-day45.png", "6萬", "DAY 45｜沉浸式留瓜教學"],
             ["work-milkfish.jpg", "5.8萬", "台南虱目魚知識內容"],
+            ["work-tour-bus.jpg", "5.1萬", "直播帶貨始祖｜遊覽車工商"],
+            ["work-score.png", "2.7萬", "新生代盤商給西瓜幾分？"],
+            ["work-0to100.png", "2.4萬", "西瓜 0 到 100 天"],
+            ["work-second-gen.png", "2.2萬", "農二代沒這麼好當"],
+            ["work-family.png", "1.9萬", "一家人的西瓜見面會"],
+            ["work-shoes.png", "1.2萬", "鞋子長保如新的秘方"],
+            ["work-bakery-intro.jpg", "4,606", "酸麵包入門款"],
+            ["work-bakery-testimonial.jpg", "4,452", "酸麵包客戶見證"],
+            ["work-bakery-natural.jpg", "3,124", "吃最天然的食物"],
+            ["work-bakery-health.jpg", "1,822", "好食物與健康"],
           ].map(([src, views, title]) => (
             <figure key={src}>
               <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" />
@@ -144,64 +155,21 @@ export default function Home() {
             </figure>
           ))}
         </div>
-        <div className="performanceEvidence">
-          <div className="performanceCopy">
-            <p className="eyebrow">90-DAY PERFORMANCE</p>
-            <h3>和豐西瓜 Facebook<br />90 天代操成效</h3>
-            <p>從單支作品走向整體帳號表現，以連載內容、人物題材與產地紀實累積持續觀看。</p>
-            <div className="performanceMetrics">
-              <div><strong>1,384,199</strong><span>瀏覽次數</span></div>
-              <div><strong>738,867</strong><span>觀看 3 秒以上</span></div>
-              <div><strong>228,005</strong><span>觀看 1 分鐘以上</span></div>
-              <div><strong>496 天</strong><span>累計觀看時間</span></div>
-            </div>
-          </div>
-          <div className="evidenceImages">
-            <figure><img src="evidence-overview.png" alt="Facebook 90 天整體瀏覽與觀看成效截圖" loading="lazy" /></figure>
-            <figure><img src="evidence-top-posts.png" alt="Facebook 90 天最高觀看貼文截圖" loading="lazy" /></figure>
-          </div>
-        </div>
-        <p className="evidenceNote">資料佐證：Facebook 專業儀表板｜截圖日期 2026-07-24。觀看數會隨平台持續累積。</p>
-      </section>
-
-      <section className="proof section">
-        <div className="sectionHead">
-          <p className="eyebrow">PROOF, NOT PROMISES</p>
-          <h2>先理解產業，<br />再決定內容怎麼說。</h2>
-          <p>我不靠套版題材複製流量。每個品牌都從真實服務、客戶疑問與可長期累積的內容主軸開始。</p>
-        </div>
-        <div className="proofGrid">
-          <article className="proofFeature">
-            <span>CASE 01</span>
-            <h3>和豐西瓜<br />產地全紀錄</h3>
-            <p>以 DAY 1 到 DAY 100 的田間紀實，將種植、管理、採收與出貨轉成觀眾持續追看的連載內容。</p>
-            <strong>一半以上作品破萬觀看，25% 作品突破 5 萬</strong>
-          </article>
-          <div className="proofNotes">
-            <article>
-              <span>跨產業轉譯</span>
-              <h3>把專業語言，改寫成客戶願意理解的決策內容。</h3>
-              <p>曾處理農業紀錄、品牌人物、餐飲、財務、烘焙教育與知識內容，不以單一產業模板限制品牌。</p>
-            </article>
-            <article>
-              <span>完整執行</span>
-              <h3>從訪談到發布，同一套判斷貫穿整個流程。</h3>
-              <p>策略、腳本、拍攝、剪輯、發布與檢核由同一窗口統籌，降低溝通失真與重複交辦。</p>
-            </article>
-            <article>
-              <span>資產留下</span>
-              <h3>合作結束後，內容與方法仍留在企業內部。</h3>
-              <p>同步建立選題庫、素材規則、發布排程與教學紀錄，讓成果不只存在社群動態裡。</p>
-            </article>
-          </div>
-        </div>
       </section>
 
       <section id="method" className="methodology section">
         <div className="methodIntro">
           <p className="eyebrow">MY METHODOLOGY</p>
           <h2>一個內容引擎，<br />推進兩條品牌路線。</h2>
-          <p>窩牛需要建立空間服務的信任；Takara 需要讓產品規格進入生活情境。兩條路線目的不同，但共享同一套素材、製作與檢核系統。</p>
+          <p>成果不是來自套用某一個成功案例，而是來自一套可以跨產業重複使用的方法：先理解真實專業，再轉譯成受眾問題，以持續產製與數據回饋校準方向。</p>
+        </div>
+        <div className="methodPrinciples">
+          <article><span>01 / DIAGNOSE</span><h3>先理解產業，不複製題材</h3><p>盤點品牌、客戶、服務、產品與現有素材，找出真正值得長期溝通的內容核心。</p></article>
+          <article><span>02 / TRANSLATE</span><h3>把專業轉成客戶問題</h3><p>將業內語言改寫為消費者會遇到的情境、疑問與決策，讓內容與業務建立關係。</p></article>
+          <article><span>03 / SERIES</span><h3>用系列累積，而非追單點爆量</h3><p>建立內容支柱與可連載題型，讓一次拍攝能形成內容庫，品牌也能持續被辨識。</p></article>
+          <article><span>04 / OPERATE</span><h3>同一套判斷貫穿製作</h3><p>策略、腳本、拍攝、剪輯與發布由同一脈絡推進，避免每個環節各自解讀品牌。</p></article>
+          <article><span>05 / CALIBRATE</span><h3>用發布結果校準下一輪</h3><p>每週檢查進度、每季檢視題材與發布狀況；數據是修正依據，不是空泛的成效承諾。</p></article>
+          <article><span>06 / TRANSFER</span><h3>把方法留在企業內部</h3><p>同步整理選題庫、素材規則、排程與教學紀錄，讓合作成果能被接手與延續。</p></article>
         </div>
         <div className="methodTracks">
           <article>
