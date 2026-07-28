@@ -16,11 +16,11 @@ export default function Home() {
 
       <section id="top" className="hero">
         <div className="heroCopy">
-          <p className="eyebrow">引弘企業社年度合作提案 · 12 MONTHS</p>
-          <h1>把空間專業，<br />變成持續被看見的內容資產。</h1>
+          <p className="eyebrow">窩牛 × TAKARA · CONTENT & BUSINESS</p>
+          <h1>不是追一波聲量，<br />而是建立長期內容資產。</h1>
           <p className="lead">
-            為窩牛室內設計、裝修與 Takara 代理業務建立一套能長期運作的 B2C
-            內容系統：策略、拍攝、製作、發布協作，以及內部能力建置。
+            把窩牛累積的空間經驗與 Takara 的產品價值，整理成消費者看得懂、品牌能持續使用的內容。
+            從理解專業、建立策略到穩定產製，這份提案的目標不是「做完 96 支影片」，而是建立一套能長期運作的內容系統。
           </p>
           <div className="heroActions">
             <a className="primary" href="#service">查看年度方案</a>
@@ -46,12 +46,41 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="positioning section">
+        <div className="sectionHead">
+          <p className="eyebrow">WHAT WE ARE BUILDING</p>
+          <h2>這次合作，<br />真正要留下什麼？</h2>
+          <p>產量是履約基準，但不是最終目的。真正重要的是讓品牌知道要說什麼、能穩定說下去，並把每次發布轉成可持續使用的企業資產。</p>
+        </div>
+        <div className="positionCards">
+          <article className="positionPrimary">
+            <span>01 / STRATEGY</span>
+            <h3>先找出值得被看見的核心</h3>
+            <p>從案場、服務流程、產品、客戶問題與原廠資料中，整理窩牛與 Takara 各自最有價值的內容主軸。</p>
+          </article>
+          <article>
+            <span>02 / CONTENT</span>
+            <h3>把專業轉成客戶看得懂的內容</h3>
+            <p>不只介紹規格與案例，而是回答消費者在裝修、選材、使用與決策過程中真正關心的問題。</p>
+          </article>
+          <article>
+            <span>03 / ASSET</span>
+            <h3>讓每次產製回到品牌資產</h3>
+            <p>影片之外，同步留下選題庫、素材規則、發布節奏、教學紀錄與可由內部接手的操作方法。</p>
+          </article>
+        </div>
+      </section>
+
       <section id="about" className="aboutProposal">
         <div className="aboutIntro">
           <div>
             <p className="eyebrow">WHO I AM</p>
             <p className="chapterNo">01</p>
           </div>
+          <figure className="profileFigure">
+            <img src="yang-yin-hong.jpg" alt="楊引弘" />
+            <figcaption>楊引弘<br /><span>引弘企業社</span></figcaption>
+          </figure>
           <div>
             <h2>我不只交付影片，<br />而是協助業主建立能持續運作的內容能力。</h2>
             <p>
@@ -67,11 +96,72 @@ export default function Home() {
           </div>
         </div>
         <div className="credibilityStats" aria-label="引弘企業社內容實績">
-          <article><strong>152萬+</strong><span>展示作品累計觀看</span></article>
-          <article><strong>57萬</strong><span>單支最高觀看</span></article>
+          <article><strong>169萬+</strong><span>展示作品累計觀看</span></article>
+          <article><strong>69萬</strong><span>單支最高觀看</span></article>
           <article><strong>2萬</strong><span>YouTube 頻道訂閱</span></article>
           <article><strong>3+</strong><span>年顧問與代操經驗</span></article>
         </div>
+        <div className="studentResults">
+          <div className="studentResultsIntro">
+            <p className="eyebrow">STUDENT RESULTS</p>
+            <h2>從專業整理、品牌建立，<br />到真正產生商業成果。</h2>
+            <p>除了代操，我也長期陪跑不同領域的專業者，把經驗整理成能被市場理解的品牌、服務與知識產品。這些成果證明，我的工作不只停在曝光，而是能陪企業走過定位、內容與轉化的完整過程。</p>
+          </div>
+          <div className="testimonyGrid">
+            {[
+              ["student-result-1.jpg", "預防醫學諮詢品牌成果"],
+              ["student-result-2.jpg", "個人財務顧問品牌成果"],
+              ["student-result-3.jpg", "形象美學品牌成果"],
+              ["student-result-4.jpg", "酸種麵包教育品牌成果"],
+              ["student-result-5.jpg", "美業溝通課品牌成果"],
+              ["student-result-6.jpg", "投資教學品牌成果"],
+              ["student-result-7.jpg", "個人知識品牌成果"],
+            ].map(([src, alt]) => (
+              <figure key={src}><img src={src} alt={alt} loading="lazy" /></figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="evidenceShowcase section">
+        <div className="sectionHead">
+          <p className="eyebrow">SELECTED WORK & EVIDENCE</p>
+          <h2>不是只說做過，<br />而是把證據放在提案裡。</h2>
+          <p>作品畫面與觀看數來自實際公開內容；整體成效另以 Facebook 專業儀表板截圖佐證。數據紀錄更新於 2026 年 7 月。</p>
+        </div>
+        <div className="workGallery">
+          {[
+            ["work-69w.png", "69萬", "和豐會客室｜新生代盤商"],
+            ["work-braised-pork.jpg", "28萬", "商用滷肉飯配方知識內容"],
+            ["work-26w.png", "26萬", "西瓜蓋章師｜陳師傅"],
+            ["work-9w.png", "9.1萬", "DAY 43｜西瓜期中考"],
+            ["work-8w.png", "8.2萬", "DAY 44｜西瓜博士團"],
+            ["work-milkfish.jpg", "5.8萬", "台南虱目魚知識內容"],
+          ].map(([src, views, title]) => (
+            <figure key={src}>
+              <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" />
+              <figcaption><strong>{views}</strong><span>{title}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="performanceEvidence">
+          <div className="performanceCopy">
+            <p className="eyebrow">90-DAY PERFORMANCE</p>
+            <h3>和豐西瓜 Facebook<br />90 天代操成效</h3>
+            <p>從單支作品走向整體帳號表現，以連載內容、人物題材與產地紀實累積持續觀看。</p>
+            <div className="performanceMetrics">
+              <div><strong>1,384,199</strong><span>瀏覽次數</span></div>
+              <div><strong>738,867</strong><span>觀看 3 秒以上</span></div>
+              <div><strong>228,005</strong><span>觀看 1 分鐘以上</span></div>
+              <div><strong>496 天</strong><span>累計觀看時間</span></div>
+            </div>
+          </div>
+          <div className="evidenceImages">
+            <figure><img src="evidence-overview.png" alt="Facebook 90 天整體瀏覽與觀看成效截圖" loading="lazy" /></figure>
+            <figure><img src="evidence-top-posts.png" alt="Facebook 90 天最高觀看貼文截圖" loading="lazy" /></figure>
+          </div>
+        </div>
+        <p className="evidenceNote">資料佐證：Facebook 專業儀表板｜截圖日期 2026-07-24。觀看數會隨平台持續累積。</p>
       </section>
 
       <section className="proof section">
@@ -144,6 +234,13 @@ export default function Home() {
             <div key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>
           ))}
         </div>
+      </section>
+
+      <section className="proposalBridge">
+        <p className="eyebrow">FROM CAPABILITY TO THIS PROPOSAL</p>
+        <h2>因此，接下來不是一份<br />從零拼湊的行銷清單。</h2>
+        <p>而是把上述策略、轉譯、製作與資產化方法，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整、也能逐步交接的合作方案。</p>
+        <a href="#service">進入年度合作方案 <span>↓</span></a>
       </section>
 
       <section className="manifesto" id="promise">
