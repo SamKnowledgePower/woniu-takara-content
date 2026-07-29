@@ -41,15 +41,15 @@ export default function Home() {
           <article className="positionPrimary">
             <span>01｜策略</span>
             <h3>先找出值得被看見的核心</h3>
-            <p>從案場、服務流程、產品、客戶問題與原廠資料中，整理窩牛與 Takara 各自最有價值的內容主軸。</p>
+            <p>對外，觀察同業與國內外對標帳號操作議題的策略；對內，從案場、服務流程、產品、客戶問題與原廠資料中，整理窩牛與 Takara 各自最有價值的內容主軸，並發展品牌 IP 規劃書與內容策略規劃書。</p>
           </article>
           <article>
             <span>02｜內容</span>
             <h3>把專業轉成客戶看得懂的內容</h3>
-            <p>不只介紹規格與案例，而是回答消費者在裝修、選材、使用與決策過程中真正關心的問題。</p>
+            <p>不單單介紹規格與案例，更進一步回答消費者在裝修、選材、使用與決策過程中真正關心的問題，並破除常見迷思。</p>
           </article>
           <article>
-            <span>03｜資產</span>
+            <span>03｜內容資產建構</span>
             <h3>讓每次產製回到品牌資產</h3>
             <p>影片之外，同步留下選題庫、素材規則、發布節奏、教學紀錄與可由內部接手的操作方法。</p>
           </article>
@@ -67,7 +67,7 @@ export default function Home() {
             <figcaption>楊引弘<br /><span>引弘企業社</span></figcaption>
           </figure>
           <div>
-            <h2>我不只交付影片，<br />而是協助業主建立能持續運作的內容能力。</h2>
+            <h2>我協助的，遠超過影片企劃與製作。<br />最重要的是，協助業主建立能持續運作的內容能力。</h2>
             <p>
               我是楊引弘。深耕創業與內容變現主題超過 20 年，近年以顧問與代操身分，
               協助農業、餐飲、財務諮詢、烘焙教育與知識品牌，把原本只存在老闆腦中的專業，
@@ -111,7 +111,7 @@ export default function Home() {
       <section id="works" className="evidenceShowcase section">
         <div className="sectionHead">
           <p className="eyebrow">作品與實績證據</p>
-          <h2>全部作品，<br />全部觀看數。</h2>
+          <h2>內容行銷，<br />最難的是持續創造好流量。</h2>
           <p>完整展示目前資料庫中的 17 件內容作品，涵蓋農業品牌、烘焙品牌與知識內容。觀看數為最近一次確認紀錄，並會隨平台持續累積。</p>
         </div>
         <div className="workGallery">
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="caseEvidenceIntro">
           <div>
             <p className="eyebrow">單一案例｜90 天實績</p>
-            <h2 id="case-evidence-title">不是只展示作品，<br />也展示結果。</h2>
+            <h2 id="case-evidence-title">展示結果，<br />比面子工程重要。</h2>
           </div>
           <p>以下為單一實際專案的公開後台紀錄。它不是一套只能複製到特定產業的題材公式，而是方法經過品牌理解、專業轉譯、持續發布與數據校準後，所留下的可驗證成果。</p>
         </div>
@@ -155,6 +155,7 @@ export default function Home() {
           <div><strong>138萬+</strong><span>總瀏覽次數</span></div>
           <div><strong>73萬+</strong><span>觀看超過 3 秒</span></div>
           <div><strong>496天</strong><span>累積觀看時間</span></div>
+          <div className="highlight"><strong>每日 3–5 位</strong><span>主動詢問客戶</span></div>
         </div>
         <figure className="caseEvidenceBanner">
           <img
@@ -217,13 +218,13 @@ export default function Home() {
       <section className="proposalBridge">
         <p className="eyebrow">從既有能力到本次方案</p>
         <h2>因此，接下來不是一份<br />從零拼湊的行銷清單。</h2>
-        <p>而是把上述策略、轉譯、製作與資產化方法，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整、也能逐步交接的合作方案。</p>
+        <p>重點要放在發展策略、轉譯、製作與資產化方法，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整、也能逐步交接的合作方案。</p>
         <a href="#service">進入年度合作方案 <span>↓</span></a>
       </section>
 
       <section className="manifesto" id="promise">
         <p>好的空間需要被理解，好的產品需要被看見。</p>
-        <h2>我們不只替你拍片，而是把案例、展間、原廠素材與日常專業，整理成一套窩牛能帶走、能延續的內容方法。</h2>
+        <h2>把案例、展間、原廠素材與日常專業，整理成一套窩牛能帶走、能延續的內容方法。</h2>
       </section>
 
       <section className="stats" aria-label="年度方案數據">
@@ -269,8 +270,8 @@ export default function Home() {
         <div className="timeline">
           <div><span>00</span><h3>準備期</h3><p>素材蒐集、資料盤點、理解品牌與內容定位。此階段為贈送，不計入 12 個月。</p></div>
           <div><span>01–03</span><h3>建立節奏</h3><p>確認雙主線題材、批次拍攝方式、送審與發布流程，建立第一批內容庫。</p></div>
-          <div><span>04–09</span><h3>穩定產出</h3><p>持續拍攝與製作，依週進度追蹤交付；用真實任務帶入內部操作能力。</p></div>
-          <div><span>10–12</span><h3>整理交接</h3><p>完成年度量、補齊資產與教學紀錄，確認後續顧問或延伸合作方向。</p></div>
+          <div><span>04–06</span><h3>穩定產出</h3><p>持續拍攝與製作，依週進度追蹤交付；第 6 個月開始整理內容資產，並用真實任務帶入內部操作能力。</p></div>
+          <div><span>07–12</span><h3>資產化與系統交接</h3><p>維持內容產製，同步完成選題庫、素材規則、發布流程、教學紀錄與內部帶訓，讓系統逐步由窩牛接手。</p></div>
         </div>
       </section>
 

@@ -176,10 +176,13 @@ h1 {
 .caseEvidenceIntro { padding: 0 5.5vw 70px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 8vw; align-items: end; }
 .caseEvidenceIntro h2 { margin: 0; font-family: var(--serif); font-size: clamp(42px, 6vw, 88px); font-weight: 400; line-height: 1.2; }
 .caseEvidenceIntro > p { margin: 0; color: rgba(255,255,255,.64); line-height: 1.95; }
-.caseEvidenceStats { margin: 0 5.5vw 55px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(255,255,255,.24); }
+.caseEvidenceStats { margin: 0 5.5vw 55px; display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid rgba(255,255,255,.24); }
 .caseEvidenceStats div { min-height: 150px; padding: 26px; display: flex; flex-direction: column; justify-content: flex-end; border-right: 1px solid rgba(255,255,255,.24); }
 .caseEvidenceStats div:last-child { border: 0; }
 .caseEvidenceStats span { margin-top: 8px; color: rgba(255,255,255,.52); font-size: 11px; letter-spacing: .08em; }
+.caseEvidenceStats .highlight { color: var(--ink); background: var(--cream); }
+.caseEvidenceStats .highlight strong { font-weight: 600; }
+.caseEvidenceStats .highlight span { color: var(--brown); font-weight: 600; }
 .caseEvidenceBanner { position: relative; margin: 0; background: #fff; }
 .caseEvidenceBanner img { display: block; width: 100%; }
 .caseEvidenceBanner figcaption { position: absolute; right: 18px; bottom: 16px; padding: 8px 12px; background: rgba(13,11,9,.88); color: rgba(255,255,255,.6); font-size: 10px; }
@@ -321,7 +324,7 @@ body { font-size: 21px; }
 .methodSequence span { font-size: 21px; }
 .methodSequence strong { font-size: 18px; }
 .proposalBridge h2 { font-size: clamp(48px, 6.7vw, 96px); }
-.proposalBridge a { font-size: 16px; }
+.proposalBridge a { font-size: clamp(26px, 2.3vw, 34px); }
 .manifesto p { font-size: 19px; }
 .manifesto h2 { font-size: clamp(36px, 4.7vw, 68px); }
 .serviceCard h3 { font-size: 44px; }
@@ -350,6 +353,8 @@ footer { font-size: 17px; }
   .workGallery { grid-template-columns: repeat(2, 1fr); }
   .workGallery figure:nth-child(7n + 1) { grid-column: span 1; }
   .caseEvidenceIntro { grid-template-columns: 1fr; }
+  .caseEvidenceStats { grid-template-columns: 1fr 1fr; }
+  .caseEvidenceStats .highlight { grid-column: 1 / -1; }
   .methodPrinciples { grid-template-columns: 1fr 1fr; }
   .methodTracks { grid-template-columns: 1fr; }
   .methodCore { min-height: 220px; }
@@ -385,6 +390,7 @@ footer { font-size: 17px; }
   .caseEvidenceIntro { padding: 0 22px 45px; }
   .caseEvidenceStats { margin: 0 22px 30px; grid-template-columns: 1fr 1fr; }
   .caseEvidenceStats div { min-height: 115px; padding: 17px; border-bottom: 1px solid rgba(255,255,255,.24); }
+  .caseEvidenceStats .highlight { grid-column: 1 / -1; min-height: 140px; }
   .caseEvidenceBanner { overflow-x: auto; }
   .caseEvidenceBanner img { width: 980px; max-width: none; }
   .caseEvidenceBanner figcaption { position: static; padding: 12px 22px; }
