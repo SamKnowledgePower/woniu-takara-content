@@ -3,46 +3,44 @@ export default function Home() {
     <main>
       <header className="nav">
         <a className="brand" href="#top" aria-label="窩牛首頁">
-          <span className="mark">窩</span>
-          <span>窩牛 × Takara</span>
+          <span className="brandWord">窩牛 × Takara</span>
+          <small>年度內容合作提案</small>
         </a>
         <nav aria-label="主選單">
-          <a href="#about">關於引弘</a>
+          <a href="#about">關於我</a>
           <a href="#method">方法論</a>
+          <a href="#works">作品實績</a>
           <a href="#service">合作內容</a>
         </nav>
-        <a className="navCta" href="#contact">啟動合作</a>
+        <a className="navCta" href="#contact">討論合作</a>
       </header>
 
       <section id="top" className="hero">
+        <div className="blueprint" aria-hidden="true" />
+        <div className="heroPortrait" aria-hidden="true">
+          <img src="yang-yin-hong.jpg" alt="" />
+        </div>
         <div className="heroCopy">
-          <p className="eyebrow">窩牛 × Takara｜內容與商業成長</p>
-          <h1>不是追一波聲量，<br />而是建立長期內容資產。</h1>
-          <p className="lead">
-            把窩牛累積的空間經驗與 Takara 的產品價值，整理成消費者看得懂、品牌能持續使用的內容。
-            從理解專業、建立策略到穩定產製，這份提案的目標不是「做完 96 支影片」，而是建立一套能長期運作的內容系統。
-          </p>
+          <p className="eyebrow">內容策略 × 品牌資產 × 內部能力</p>
+          <h1>讓空間專業，<br />成為長期被看見的內容資產。</h1>
+          <p className="lead">把窩牛累積的空間經驗與 Takara 的產品價值，轉譯成消費者看得懂、品牌能持續使用的內容。</p>
           <div className="heroActions">
-            <a className="primary" href="#service">查看年度方案</a>
-            <a className="textLink" href="#promise">我們如何合作 <span>↘</span></a>
+            <a className="primary" href="#about">認識提案者</a>
+            <a className="textLink" href="#service">查看年度方案 <span>↓</span></a>
           </div>
           <div className="proposer">
-            <span className="proposerMark">楊</span>
             <div>
               <strong>楊引弘｜引弘企業社</strong>
-              <small>內容策略、短影音製作與品牌營運顧問</small>
+              <small>內容策略・短影音製作・品牌營運顧問</small>
             </div>
           </div>
         </div>
-        <div className="heroVisual" aria-label="空間材質與內容節奏示意">
-          <div className="material materialA" />
-          <div className="material materialB" />
-          <div className="heroCard">
-            <span>年度產製</span>
-            <strong>96</strong>
-            <p>支短影音</p>
-          </div>
-          <div className="lineNote">設計｜建造｜生活</div>
+        <div className="heroIndex" aria-label="年度合作摘要">
+          <span>年度合作</span>
+          <strong>12 個月</strong>
+          <i />
+          <span>內容產製</span>
+          <strong>96 支</strong>
         </div>
       </section>
 
@@ -123,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="evidenceShowcase section">
+      <section id="works" className="evidenceShowcase section">
         <div className="sectionHead">
           <p className="eyebrow">作品與實績證據</p>
           <h2>全部作品，<br />全部觀看數。</h2>
