@@ -56,7 +56,7 @@ section { content-visibility: auto; contain-intrinsic-size: 900px; }
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 0;
   padding: 0;
   color: #fff;
   background: var(--night);
@@ -69,7 +69,7 @@ section { content-visibility: auto; contain-intrinsic-size: 900px; }
   background: linear-gradient(transparent, rgba(8,6,5,.7));
   pointer-events: none;
 }
-.heroArtwork { display: block; width: 100%; min-height: 100vh; object-fit: cover; object-position: center; }
+.heroArtwork { display: block; width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center; }
 .heroControls {
   position: absolute;
   z-index: 3;
@@ -140,7 +140,7 @@ h1 {
 .aboutIntro { display: grid; grid-template-columns: .28fr .46fr 1.1fr; gap: 5vw; align-items: start; padding-bottom: 9vw; }
 .chapterNo { margin: 55px 0 0; font-family: var(--serif); font-size: 110px; line-height: 1; color: var(--copper); }
 .profileFigure { position: sticky; top: 30px; margin: 0; }
-.profileFigure img { display: block; width: 100%; aspect-ratio: 4 / 5.4; object-fit: cover; filter: sepia(.25) saturate(.75); }
+.profileFigure img { display: block; width: 100%; aspect-ratio: 4 / 5.4; object-fit: cover; object-position: 30% center; filter: sepia(.25) saturate(.75); }
 .profileFigure figcaption { padding: 18px 20px; color: #fff; background: var(--night); font-family: var(--serif); font-size: 17px; line-height: 1.5; }
 .profileFigure figcaption span { color: rgba(255,255,255,.48); font-family: var(--sans); font-size: 10px; letter-spacing: .16em; }
 .aboutIntro > div:last-child > p { max-width: 840px; color: #625b52; font-size: 16px; line-height: 2.05; }
@@ -151,23 +151,23 @@ h1 {
 .caseEvidenceStats strong,
 .stats strong { font-family: var(--serif); font-size: clamp(38px, 4vw, 62px); font-weight: 400; }
 .credibilityStats span { margin-top: 10px; color: var(--muted); font-size: 12px; }
-.studentResults { padding: 10vw 0; display: grid; grid-template-columns: .58fr 1.42fr; gap: 7vw; }
+.studentResults { padding: 10vw 0; display: grid; grid-template-columns: .72fr 1.28fr; gap: 8vw; }
 .studentResultsIntro h2 { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(36px, 4.3vw, 64px); line-height: 1.35; font-weight: 400; }
 .studentResultsIntro > p:last-child { color: var(--muted); line-height: 1.9; }
-.testimonyGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: start; }
+.testimonyGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
 .testimonyGrid figure { margin: 0; background: #fff; overflow: hidden; box-shadow: 0 15px 40px rgba(37,24,16,.08); }
-.testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: translateY(30px); }
+.testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: translateY(50px); }
 .testimonyGrid img { display: block; width: 100%; }
 
 .evidenceShowcase { color: #fff; background: #050505; }
 .evidenceShowcase .sectionHead > p:last-child { color: rgba(255,255,255,.55); }
-.workGallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.workGallery figure { position: relative; min-height: 450px; margin: 0; overflow: hidden; background: #1a1714; }
-.workGallery figure:nth-child(7n + 1) { grid-column: span 2; }
-.workGallery img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease, filter .6s ease; filter: saturate(.78); }
-.workGallery figure:hover img { transform: scale(1.025); filter: saturate(1); }
-.workGallery figure::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.9)); }
-.workGallery figcaption { position: absolute; z-index: 1; left: 20px; right: 20px; bottom: 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; color: #fff; }
+.workGallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 26px; }
+.workGallery figure { position: relative; min-height: 0; margin: 0; overflow: hidden; display: flex; flex-direction: column; background: #171411; }
+.workGallery figure:nth-child(7n + 1) { grid-column: span 1; }
+.workGallery img { display: block; width: 100%; height: auto; object-fit: contain; transition: transform .6s ease, filter .6s ease; filter: saturate(.82); background: #f5f1e8; }
+.workGallery figure:hover img { filter: saturate(1); }
+.workGallery figure::after { display: none; }
+.workGallery figcaption { position: static; z-index: 1; min-height: 110px; padding: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; color: #fff; background: #171411; }
 .workGallery figcaption strong { font-family: var(--serif); font-size: 30px; font-weight: 400; }
 .workGallery figcaption span { max-width: 150px; text-align: right; color: rgba(255,255,255,.65); font-size: 10px; line-height: 1.6; }
 
@@ -261,12 +261,12 @@ footer p { color: rgba(255,255,255,.5); }
 footer > span { justify-self: end; color: rgba(255,255,255,.35); }
 
 /* 閱讀清晰度：首頁主標維持原比例，其餘文字全面提高一級 */
-body { font-size: 18px; }
-.brandWord { font-size: 21px; }
-.brand small { font-size: 11px; }
-.nav nav a, .navCta { font-size: 14px; }
-.eyebrow { font-size: 13px; }
-.primary, .textLink { font-size: 15px; }
+body { font-size: 21px; }
+.brandWord { font-size: 23px; }
+.brand small { font-size: 14px; }
+.nav nav a, .navCta { font-size: 16px; }
+.eyebrow { font-size: 16px; }
+.primary, .textLink { font-size: 18px; }
 .sectionHead h2,
 .aboutIntro h2,
 .methodIntro h2,
@@ -274,17 +274,17 @@ body { font-size: 18px; }
 .scope h2,
 .pricing h2 { font-size: clamp(42px, 5.3vw, 78px); }
 .sectionHead > p:last-child,
-.positionCards p { font-size: 16px; }
+.positionCards p { font-size: 20px; }
 .positionCards span,
 .methodPrinciples span,
 .methodTracks header span,
-.methodCore > span { font-size: 12px; }
+.methodCore > span { font-size: 15px; }
 .positionCards h3 { font-size: 33px; }
 .profileFigure figcaption { font-size: 20px; }
-.profileFigure figcaption span { font-size: 12px; }
-.aboutIntro > div:last-child > p { font-size: 18px; }
+.profileFigure figcaption span { font-size: 16px; }
+.aboutIntro > div:last-child > p { font-size: 21px; }
 .credibilityStats span,
-.stats span { font-size: 14px; }
+.stats span { font-size: 17px; }
 .studentResultsIntro > p:last-child,
 .caseEvidenceIntro > p,
 .methodIntro > p:last-child,
@@ -294,41 +294,41 @@ body { font-size: 18px; }
 .deliverList p,
 .scopePanel > p:last-child,
 .scopeList p,
-.priceCard .annual { font-size: 16px; }
+.priceCard .annual { font-size: 20px; }
 .studentResultsIntro h2 { font-size: clamp(40px, 4.6vw, 68px); }
 .workGallery figcaption strong { font-size: 34px; }
-.workGallery figcaption span { max-width: 190px; font-size: 13px; }
+.workGallery figcaption span { max-width: 230px; font-size: 17px; }
 .caseEvidenceIntro h2 { font-size: clamp(46px, 6.2vw, 92px); }
-.caseEvidenceStats span { font-size: 14px; }
-.caseEvidenceBanner figcaption { font-size: 13px; }
+.caseEvidenceStats span { font-size: 17px; }
+.caseEvidenceBanner figcaption { font-size: 16px; }
 .methodPrinciples h3 { font-size: 28px; }
-.methodPrinciples p { font-size: 15px; }
+.methodPrinciples p { font-size: 19px; }
 .methodTracks header strong { font-size: 29px; }
 .methodTracks li,
-.methodTracks article > p { font-size: 16px; }
+.methodTracks article > p { font-size: 20px; }
 .methodCore strong { font-size: 21px; }
 .methodSequence span { font-size: 21px; }
-.methodSequence strong { font-size: 15px; }
+.methodSequence strong { font-size: 18px; }
 .proposalBridge h2 { font-size: clamp(48px, 6.7vw, 96px); }
 .proposalBridge a { font-size: 16px; }
-.manifesto p { font-size: 15px; }
+.manifesto p { font-size: 19px; }
 .manifesto h2 { font-size: clamp(36px, 4.7vw, 68px); }
 .serviceCard h3 { font-size: 44px; }
-.serviceCard li { font-size: 13px; }
+.serviceCard li { font-size: 16px; }
 .timeline span { font-size: 36px; }
 .timeline h3 { font-size: 27px; }
-.timeline p { font-size: 15px; }
+.timeline p { font-size: 19px; }
 .deliverList span { font-size: 24px; }
-.deliverList h3 { font-size: 18px; }
-.priceCard > p:first-child { font-size: 14px; }
-.priceCard div span { font-size: 16px; }
-.priceCard small { font-size: 14px; }
-footer { font-size: 14px; }
+.deliverList h3 { font-size: 21px; }
+.priceCard > p:first-child { font-size: 17px; }
+.priceCard div span { font-size: 19px; }
+.priceCard small { font-size: 17px; }
+footer { font-size: 17px; }
 
 @media (max-width: 980px) {
   .nav { grid-template-columns: 1fr auto; }
   .nav nav { display: none; }
-  .hero, .heroArtwork { min-height: 760px; }
+  .hero, .heroArtwork { min-height: 0; }
   .sectionHead, .methodIntro { grid-template-columns: 1fr; align-items: start; }
   .positionCards { grid-template-columns: 1fr; }
   .positionCards article { min-height: 320px; }
@@ -336,7 +336,7 @@ footer { font-size: 14px; }
   .aboutIntro > div:first-child { grid-column: 1 / -1; }
   .profileFigure { position: static; }
   .studentResults { grid-template-columns: 1fr; }
-  .workGallery { grid-template-columns: repeat(3, 1fr); }
+  .workGallery { grid-template-columns: repeat(2, 1fr); }
   .workGallery figure:nth-child(7n + 1) { grid-column: span 1; }
   .caseEvidenceIntro { grid-template-columns: 1fr; }
   .methodPrinciples { grid-template-columns: 1fr 1fr; }
@@ -352,9 +352,10 @@ footer { font-size: 14px; }
   .brandWord { font-size: 18px; }
   .brand small { display: none; }
   .navCta { padding: 9px 13px; }
-  .hero, .heroArtwork { min-height: 680px; }
-  .heroArtwork { object-position: 27% center; }
-  .heroControls { left: 22px; bottom: 22px; }
+  .hero { padding-top: 86px; }
+  .hero, .heroArtwork { min-height: 0; }
+  .heroArtwork { object-position: center; }
+  .heroControls { position: static; padding: 20px 22px 26px; }
   .section, .deliver, .scope, .pricing { padding: 88px 22px; }
   .sectionHead { margin-bottom: 46px; }
   .aboutProposal { padding: 88px 22px 0; }
@@ -365,10 +366,10 @@ footer { font-size: 14px; }
   .credibilityStats { grid-template-columns: 1fr 1fr; }
   .credibilityStats article { min-height: 135px; padding: 19px; }
   .credibilityStats article:nth-child(2) { border-right: 0; }
-  .testimonyGrid { grid-template-columns: 1fr 1fr; }
+  .testimonyGrid { grid-template-columns: 1fr; gap: 24px; }
   .testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: none; }
-  .workGallery { grid-template-columns: 1fr; }
-  .workGallery figure { min-height: 500px; }
+  .workGallery { grid-template-columns: 1fr; gap: 30px; }
+  .workGallery figure { min-height: 0; }
   .caseEvidence { padding-top: 88px; }
   .caseEvidenceIntro { padding: 0 22px 45px; }
   .caseEvidenceStats { margin: 0 22px 30px; grid-template-columns: 1fr 1fr; }
