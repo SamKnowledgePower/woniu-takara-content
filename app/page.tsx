@@ -67,7 +67,7 @@ export default function Home() {
             <figcaption>楊引弘<br /><span>引弘企業社</span></figcaption>
           </figure>
           <div>
-            <h2>我協助的，遠超過影片企劃與製作。<br />最重要的是，協助業主建立能持續運作的內容能力。</h2>
+            <h2>我協助的<br />遠超過影片企劃與製作。<br />最重要的<br />協助業主建立能<span className="wine">持續運作的內容能力</span>。</h2>
             <p>
               我是楊引弘。深耕創業與內容變現主題超過 20 年，近年以顧問與代操身分，
               協助農業、餐飲、財務諮詢、烘焙教育與知識品牌，把原本只存在老闆腦中的專業，
@@ -89,7 +89,7 @@ export default function Home() {
         <div className="studentResults">
           <div className="studentResultsIntro">
             <p className="eyebrow">陪跑與教學成果</p>
-            <h2>從專業整理<br />品牌建立<br />到真正產生<br /><span className="businessOutcome">商業成果</span></h2>
+            <h2>從專業整理<br />品牌建立<br />到真正產生<br /><span className="businessOutcome wine">商業成果</span></h2>
             <p>除了代操，我也長期陪跑不同領域的專業者，把經驗整理成能被市場理解的品牌、服務與知識產品。這些成果證明，我的工作不只停在曝光，而是能陪企業走過定位、內容與轉化的完整過程。</p>
           </div>
           <div className="testimonyGrid">
@@ -111,7 +111,7 @@ export default function Home() {
       <section id="works" className="evidenceShowcase section">
         <div className="sectionHead">
           <p className="eyebrow">作品與實績證據</p>
-          <h2>內容行銷，<br />最難的是持續創造好流量。</h2>
+          <h2>內容行銷，<br />最難的是<span className="wine">持續</span>創造好流量。</h2>
           <p>完整展示目前資料庫中的 17 件內容作品，涵蓋農業品牌、烘焙品牌與知識內容。觀看數為最近一次確認紀錄，並會隨平台持續累積。</p>
         </div>
         <div className="workGallery">
@@ -155,7 +155,7 @@ export default function Home() {
           <div><strong>138萬+</strong><span>總瀏覽次數</span></div>
           <div><strong>73萬+</strong><span>觀看超過 3 秒</span></div>
           <div><strong>496天</strong><span>累積觀看時間</span></div>
-          <div className="highlight"><strong>每日 3–5 位</strong><span>主動詢問客戶</span></div>
+          <div className="highlight"><span className="daily">每日</span><strong>3–5 位</strong><span className="inquiry">主動詢問客戶</span></div>
         </div>
         <figure className="caseEvidenceBanner">
           <img
@@ -224,7 +224,7 @@ export default function Home() {
 
       <section className="manifesto" id="promise">
         <p>好的空間需要被理解，好的產品需要被看見。</p>
-        <h2>把案例、展間、原廠素材與日常專業，整理成一套窩牛能帶走、能延續的內容方法。</h2>
+        <h2 className="methodStatement">把案例、展間、Takara原廠素材與日常專業<br />整理成一套<br />窩牛能帶走、能延續的內容方法。</h2>
       </section>
 
       <section className="stats" aria-label="年度方案數據">
