@@ -150,9 +150,15 @@ h1 {
 .studentResultsIntro h2 { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(36px, 4.3vw, 64px); line-height: 1.35; font-weight: 400; }
 .studentResultsIntro > p:last-child { color: var(--muted); line-height: 1.9; }
 .testimonyGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
-.testimonyGrid figure { margin: 0; background: #fff; overflow: hidden; box-shadow: 0 15px 40px rgba(37,24,16,.08); }
-.testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: translateY(50px); }
-.testimonyGrid img { display: block; width: 100%; }
+.testimonyGrid figure {
+  margin: 0;
+  aspect-ratio: 1.48 / 1;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(37,24,16,.08);
+}
+.testimonyGrid figure:nth-child(2), .testimonyGrid figure:nth-child(5) { transform: none; }
+.testimonyGrid img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
 .evidenceShowcase { color: #fff; background: #050505; }
 .evidenceShowcase .sectionHead > p:last-child { color: rgba(255,255,255,.55); }
