@@ -18,8 +18,12 @@ export default function Home() {
       <section id="top" className="hero">
         <img
           className="heroArtwork"
-          src="hero-material-v2.png"
+          src="hero-material-v2.jpg"
           alt="窩牛 × Takara 年度內容合作提案，深色木質、石材與建築圖面構成的主視覺"
+          width="1731"
+          height="909"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="heroControls">
           <a className="primary" href="#about">認識提案者</a>
@@ -98,7 +102,7 @@ export default function Home() {
               ["student-result-6.jpg", "投資教學品牌成果"],
               ["student-result-7.jpg", "個人知識品牌成果"],
             ].map(([src, alt]) => (
-              <figure key={src}><img src={src} alt={alt} loading="lazy" /></figure>
+              <figure key={src}><img src={src} alt={alt} loading="lazy" decoding="async" /></figure>
             ))}
           </div>
         </div>
@@ -131,7 +135,7 @@ export default function Home() {
             ["work-bakery-health.jpg", "1,822", "好食物與健康"],
           ].map(([src, views, title]) => (
             <figure key={src}>
-              <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" />
+              <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" decoding="async" />
               <figcaption><strong>{views}</strong><span>{title}</span></figcaption>
             </figure>
           ))}
@@ -157,6 +161,7 @@ export default function Home() {
             src="evidence-overview.png"
             alt="單一內容專案過去 90 天的 Facebook 後台成效截圖，顯示 138 萬次瀏覽及 496 天觀看時間"
             loading="lazy"
+            decoding="async"
           />
           <figcaption>實際平台後台截圖｜統計區間：90 天</figcaption>
         </figure>
