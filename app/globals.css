@@ -148,6 +148,7 @@ h1 {
 .credibilityStats span { margin-top: 10px; color: var(--muted); font-size: 12px; }
 .studentResults { padding: 10vw 0; display: grid; grid-template-columns: .72fr 1.28fr; gap: 8vw; }
 .studentResultsIntro h2 { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(36px, 4.3vw, 64px); line-height: 1.35; font-weight: 400; }
+.studentResultsIntro .businessOutcome { display: inline-block; font-size: 1.3em; line-height: 1.08; }
 .studentResultsIntro > p:last-child { color: var(--muted); line-height: 1.9; }
 .testimonyGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
 .testimonyGrid figure {

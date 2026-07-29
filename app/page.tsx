@@ -89,7 +89,7 @@ export default function Home() {
         <div className="studentResults">
           <div className="studentResultsIntro">
             <p className="eyebrow">陪跑與教學成果</p>
-            <h2>從專業整理、品牌建立，<br />到真正產生商業成果。</h2>
+            <h2>從專業整理<br />品牌建立<br />到真正產生<br /><span className="businessOutcome">商業成果</span></h2>
             <p>除了代操，我也長期陪跑不同領域的專業者，把經驗整理成能被市場理解的品牌、服務與知識產品。這些成果證明，我的工作不只停在曝光，而是能陪企業走過定位、內容與轉化的完整過程。</p>
           </div>
           <div className="testimonyGrid">
