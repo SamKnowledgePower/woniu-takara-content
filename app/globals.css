@@ -57,7 +57,7 @@ section { content-visibility: auto; contain-intrinsic-size: 900px; }
 .hero {
   position: relative;
   min-height: 0;
-  padding: 0;
+  padding: 0 0 108px;
   color: #fff;
   background: var(--night);
 }
@@ -66,15 +66,14 @@ section { content-visibility: auto; contain-intrinsic-size: 900px; }
 }
 .heroArtwork { display: block; width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center; }
 .heroControls {
-  position: static;
+  position: absolute;
+  z-index: 3;
+  left: 5.5vw;
+  bottom: 22px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 42px;
-  padding: 28px 5.5vw;
-  color: var(--ink);
-  background: var(--cream);
-  border-bottom: 1px solid var(--line);
+  gap: 34px;
+  color: #fff;
 }
 .eyebrow { margin: 0 0 26px; font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 h1 {
@@ -90,14 +89,14 @@ h1 {
 .heroActions { display: flex; align-items: center; gap: 26px; }
 .primary {
   padding: 15px 24px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--cream);
   border-radius: 3px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--cream);
+  color: var(--ink);
   font-size: 13px;
   font-weight: 600;
 }
-.textLink { padding: 9px 0; border-bottom: 1px solid var(--ink); font-size: 13px; }
+.textLink { padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.55); font-size: 13px; }
 .proposer { margin-top: 50px; padding-top: 20px; width: 410px; border-top: 1px solid rgba(255,255,255,.22); }
 .proposer strong { display: block; font-family: var(--serif); font-weight: 500; }
 .proposer small { display: block; margin-top: 7px; color: rgba(255,255,255,.55); font-size: 11px; letter-spacing: .08em; }
@@ -358,10 +357,10 @@ footer { font-size: 17px; }
   .brandWord { font-size: 18px; }
   .brand small { display: none; }
   .navCta { padding: 9px 13px; }
-  .hero { padding-top: 86px; }
+  .hero { padding: 86px 0 104px; }
   .hero, .heroArtwork { min-height: 0; }
   .heroArtwork { object-position: center; }
-  .heroControls { justify-content: flex-start; gap: 24px; padding: 20px 22px 26px; }
+  .heroControls { left: 22px; right: 22px; bottom: 18px; justify-content: flex-start; gap: 24px; }
   .section, .deliver, .scope, .pricing { padding: 88px 22px; }
   .sectionHead { margin-bottom: 46px; }
   .aboutProposal { padding: 88px 22px 0; }
