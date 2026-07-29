@@ -16,31 +16,14 @@ export default function Home() {
       </header>
 
       <section id="top" className="hero">
-        <div className="blueprint" aria-hidden="true" />
-        <div className="heroPortrait" aria-hidden="true">
-          <img src="yang-yin-hong.jpg" alt="" />
-        </div>
-        <div className="heroCopy">
-          <p className="eyebrow">內容策略 × 品牌資產 × 內部能力</p>
-          <h1>讓空間專業，<br />成為長期被看見的內容資產。</h1>
-          <p className="lead">把窩牛累積的空間經驗與 Takara 的產品價值，轉譯成消費者看得懂、品牌能持續使用的內容。</p>
-          <div className="heroActions">
-            <a className="primary" href="#about">認識提案者</a>
-            <a className="textLink" href="#service">查看年度方案 <span>↓</span></a>
-          </div>
-          <div className="proposer">
-            <div>
-              <strong>楊引弘｜引弘企業社</strong>
-              <small>內容策略・短影音製作・品牌營運顧問</small>
-            </div>
-          </div>
-        </div>
-        <div className="heroIndex" aria-label="年度合作摘要">
-          <span>年度合作</span>
-          <strong>12 個月</strong>
-          <i />
-          <span>內容產製</span>
-          <strong>96 支</strong>
+        <img
+          className="heroArtwork"
+          src="hero-material-v2.png"
+          alt="窩牛 × Takara 年度內容合作提案，深色木質、石材與建築圖面構成的主視覺"
+        />
+        <div className="heroControls">
+          <a className="primary" href="#about">認識提案者</a>
+          <a className="textLink" href="#service">查看年度方案 <span>↓</span></a>
         </div>
       </section>
 
