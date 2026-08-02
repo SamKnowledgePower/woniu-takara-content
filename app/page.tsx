@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
         <div className="credibilityStats" aria-label="引弘企業社內容實績">
-          <article><strong>169萬+</strong><span>展示作品累計觀看</span></article>
+          <article><strong>172萬+</strong><span>展示作品累計觀看</span></article>
           <article><strong>69萬</strong><span>單支最高觀看</span></article>
           <article><strong>2萬</strong><span>YouTube 頻道訂閱</span></article>
           <article><strong>3+</strong><span>年顧問與代操經驗</span></article>
@@ -116,27 +116,33 @@ export default function Home() {
         </div>
         <div className="workGallery">
           {[
-            ["work-69w.png", "69萬", "和豐會客室｜新生代盤商"],
-            ["work-braised-pork.jpg", "28萬", "商用滷肉飯配方知識內容"],
-            ["work-26w.png", "26萬", "西瓜蓋章師｜陳師傅"],
-            ["work-9w.png", "9.1萬", "第 43 天｜西瓜期中考"],
-            ["work-8w.png", "8.2萬", "第 44 天｜西瓜博士團"],
-            ["work-day45.png", "6萬", "第 45 天｜沉浸式留瓜教學"],
-            ["work-milkfish.jpg", "5.8萬", "台南虱目魚知識內容"],
-            ["work-tour-bus.jpg", "5.1萬", "直播帶貨始祖｜遊覽車工商"],
-            ["work-score.png", "2.7萬", "新生代盤商給西瓜幾分？"],
-            ["work-0to100.png", "2.4萬", "西瓜 0 到 100 天"],
-            ["work-second-gen.png", "2.2萬", "農二代沒這麼好當"],
-            ["work-family.png", "1.9萬", "一家人的西瓜見面會"],
-            ["work-shoes.png", "1.2萬", "鞋子長保如新的秘方"],
-            ["work-bakery-intro.jpg", "4,606", "酸麵包入門款"],
-            ["work-bakery-testimonial.jpg", "4,452", "酸麵包客戶見證"],
-            ["work-bakery-natural.jpg", "3,124", "吃最天然的食物"],
-            ["work-bakery-health.jpg", "1,822", "好食物與健康"],
-          ].map(([src, views, title]) => (
+            { src: "work-69w.png", views: "69萬", title: "和豐會客室｜新生代盤商", videos: ["https://www.facebook.com/share/v/1Ui7kpMYDE/"] },
+            { src: "https://i.ytimg.com/vi/S1kKuAUq-lQ/maxresdefault.jpg", views: "288,819", title: "商用滷肉飯配方知識內容", videos: ["https://youtu.be/S1kKuAUq-lQ"] },
+            { src: "work-26w.png", views: "269,365", title: "西瓜蓋章師｜陳師傅", videos: ["https://www.facebook.com/reel/1247933740580920"] },
+            { src: "work-9w.png", views: "92,216", title: "第 43 天｜西瓜期中考", videos: ["https://www.facebook.com/reel/1316874006994118"] },
+            { src: "work-8w.png", views: "8.2萬", title: "第 44 天｜西瓜博士團", videos: ["https://www.facebook.com/reel/985560837209761"] },
+            { src: "work-day45.png", views: "60,635", title: "第 45 天｜沉浸式留瓜教學", videos: ["https://www.facebook.com/share/r/1HEWABnp3S/"] },
+            { src: "https://i.ytimg.com/vi/Iy6LtjvVuPc/maxresdefault.jpg", views: "59,625", title: "台南虱目魚知識內容", videos: ["https://youtu.be/Iy6LtjvVuPc"] },
+            { src: "work-tour-bus.jpg", views: "51,969", title: "直播帶貨始祖｜遊覽車工商", videos: ["https://www.facebook.com/share/r/1DMCmSRJ5N/"] },
+            { src: "work-score.png", views: "28,278", title: "新生代盤商給西瓜幾分？", videos: ["https://www.facebook.com/share/r/1D6goaMYA5/"] },
+            { src: "work-0to100.png", views: "24,500", title: "西瓜 0 到 100 天", videos: ["https://www.facebook.com/share/r/1DPLPjMNQT/"] },
+            { src: "work-second-gen.png", views: "22,148", title: "農二代沒這麼好當", videos: ["https://www.facebook.com/reel/3518267544988891"] },
+            { src: "work-family.png", views: "24,607", title: "一家人的西瓜見面會", videos: ["https://www.facebook.com/reel/1057590556718092"] },
+            { src: "work-shoes.png", views: "12,458", title: "鞋子長保如新的秘方", videos: ["https://www.facebook.com/reel/970422245558000"] },
+            { src: "work-bakery-intro.jpg", views: "4,606", title: "酸麵包入門款", videos: ["https://www.facebook.com/reel/1495499355062283", "https://www.facebook.com/reel/27220347970941032"] },
+            { src: "work-bakery-testimonial.jpg", views: "4,452", title: "酸麵包客戶見證", videos: [] },
+            { src: "work-bakery-natural.jpg", views: "3,124", title: "吃最天然的食物", videos: ["https://www.facebook.com/share/r/14jQDTkktKq/"] },
+            { src: "work-bakery-health.jpg", views: "1,844", title: "好食物與健康", videos: ["https://www.facebook.com/reel/2257212065110286"] },
+          ].map(({ src, views, title, videos }) => (
             <figure key={src}>
-              <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" decoding="async" />
+              {videos.length ? (
+                <a className="workMedia" href={videos[0]} target="_blank" rel="noopener noreferrer" aria-label={`觀看「${title}」影片`}>
+                  <img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" decoding="async" />
+                  <span className="workPlay" aria-hidden="true">▶</span>
+                </a>
+              ) : <div className="workMedia"><img src={src} alt={`${title}，觀看 ${views}`} loading="lazy" decoding="async" /></div>}
               <figcaption><strong>{views}</strong><span>{title}</span></figcaption>
+              {videos.length > 1 && <div className="workLinks">{videos.map((url, index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">影片 {index + 1} ↗</a>)}</div>}
             </figure>
           ))}
         </div>
