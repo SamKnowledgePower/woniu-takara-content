@@ -151,26 +151,26 @@ export default function Home() {
       <section className="caseEvidence" aria-labelledby="case-evidence-title">
         <div className="caseEvidenceIntro">
           <div>
-            <p className="eyebrow">單一案例｜90 天實績</p>
+            <p className="eyebrow">單一案例｜持續代操實績</p>
             <h2 id="case-evidence-title">展示結果，<br />比面子工程重要。</h2>
           </div>
           <p>以下為單一實際專案的公開後台紀錄。它不是一套只能複製到特定產業的題材公式，而是方法經過品牌理解、專業轉譯、持續發布與數據校準後，所留下的可驗證成果。</p>
         </div>
-        <div className="caseEvidenceStats" aria-label="單一案例 90 天成果摘要">
-          <div><strong>90</strong><span>天實際執行</span></div>
-          <div><strong>138萬+</strong><span>總瀏覽次數</span></div>
-          <div><strong>73萬+</strong><span>觀看超過 3 秒</span></div>
-          <div><strong>496天</strong><span>累積觀看時間</span></div>
+        <div className="caseEvidenceStats" aria-label="單一案例 3 月 1 日至 8 月 1 日成果摘要">
+          <div><strong>154</strong><span>天統計期間</span></div>
+          <div><strong>148萬+</strong><span>總瀏覽次數</span></div>
+          <div><strong>79萬+</strong><span>觀看超過 3 秒</span></div>
+          <div><strong>532天</strong><span>累積觀看時間</span></div>
           <div className="highlight"><span className="daily">每日</span><strong>3–5 位</strong><span className="inquiry">主動詢問客戶</span></div>
         </div>
         <figure className="caseEvidenceBanner">
           <img
             src="evidence-overview.png"
-            alt="單一內容專案過去 90 天的 Facebook 後台成效截圖，顯示 138 萬次瀏覽及 496 天觀看時間"
+            alt="單一內容專案 2026 年 3 月 1 日至 8 月 1 日的 Facebook 後台成效截圖，顯示 148 萬次瀏覽及 532 天觀看時間"
             loading="lazy"
             decoding="async"
           />
-          <figcaption>實際平台後台截圖｜統計區間：90 天</figcaption>
+          <figcaption>實際平台後台截圖｜統計區間：2026/03/01–2026/08/01</figcaption>
         </figure>
       </section>
 
