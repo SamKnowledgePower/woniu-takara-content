@@ -221,6 +221,11 @@ export interface PlanResourceCard {
   status: "ready" | "planned";
   href: string | null;
   previewUrl: string | null;
+  // 是否用新分頁開啟。href 一律用完整網址（含網域），因為 vinext 的用戶端
+  // bundle 不會正確帶入 next.config 的 basePath／env，client component 裡的
+  // next/link 或相對路徑在 hydrate 後會被改寫成漏掉 /woniu-takara-content
+  // 前綴的錯網址（已於 2026-08-05 實際部署後驗證到這個 bug）。
+  openInNewTab: boolean;
 }
 
 export const planResourceCards: PlanResourceCard[] = [
@@ -231,6 +236,7 @@ export const planResourceCards: PlanResourceCard[] = [
     status: "ready",
     href: "https://docs.google.com/document/d/1ptCxDhZfLZy4PA4GWBfX0mZQYMJ_SH4PO7RryjfO9ms/edit",
     previewUrl: "https://docs.google.com/document/d/1ptCxDhZfLZy4PA4GWBfX0mZQYMJ_SH4PO7RryjfO9ms/preview",
+    openInNewTab: true,
   },
   {
     key: "contract",
@@ -239,6 +245,7 @@ export const planResourceCards: PlanResourceCard[] = [
     status: "ready",
     href: "https://docs.google.com/document/d/1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y/edit",
     previewUrl: "https://docs.google.com/document/d/1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y/preview",
+    openInNewTab: true,
   },
   {
     key: "contentMap",
@@ -247,14 +254,16 @@ export const planResourceCards: PlanResourceCard[] = [
     status: "planned",
     href: null,
     previewUrl: null,
+    openInNewTab: false,
   },
   {
     key: "progress",
     title: "專案進度表",
     summary: "依實際執行內容持續更新，作為完成項目、當前進度與後續安排的共同檢核依據。",
     status: "ready",
-    href: "/progress",
-    previewUrl: "/progress",
+    href: "https://samknowledgepower.github.io/woniu-takara-content/progress",
+    previewUrl: "https://samknowledgepower.github.io/woniu-takara-content/progress",
+    openInNewTab: false,
   },
 ];
 
