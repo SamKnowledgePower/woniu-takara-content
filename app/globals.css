@@ -275,6 +275,9 @@ h1 {
 footer { padding: 46px 5.5vw; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; color: #fff; background: var(--night); font-size: 11px; }
 footer p { color: rgba(255,255,255,.5); }
 footer > span { justify-self: end; color: rgba(255,255,255,.35); }
+.footerDocs { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 24px; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.15); }
+.footerDocs a { color: rgba(255,255,255,.6); }
+.footerDocs a:hover { color: #fff; }
 
 /* 閱讀清晰度：首頁主標維持原比例，其餘文字全面提高一級 */
 body { font-size: 21px; }
@@ -419,4 +422,122 @@ footer { font-size: 17px; }
   .priceCard { padding: 30px 22px; }
   footer { grid-template-columns: 1fr; gap: 12px; }
   footer > span { justify-self: start; }
+}
+
+/* 首頁四文件卡片：服務說明書、合作契約、內容行銷大地圖、專案進度表 */
+.resources { color: #fff; background: var(--night); }
+.resources .sectionHead > p:last-child { color: rgba(255, 255, 255, .55); }
+.resourceGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.resource { min-width: 0; padding: 34px; border: 1px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .03); }
+.resourceStep { margin-bottom: 16px; color: var(--copper); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.resource h3 { margin: 0 0 14px; font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.4; }
+.resource > p { margin: 0 0 24px; min-height: 58px; color: rgba(255, 255, 255, .6); line-height: 1.8; font-size: 14px; }
+.resourceActions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; width: 100%; }
+.resourceActions > a, .previewToggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+.resourceActions > a.primary { color: var(--ink); background: var(--cream); border-color: var(--cream); }
+.resourceBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 16px;
+  color: rgba(255, 255, 255, .55);
+  border: 1px dashed rgba(255, 255, 255, .3);
+  font-size: 13px;
+}
+.resourcePreview { width: 100%; margin-top: 4px; }
+.resourcePreview iframe { display: block; width: 100%; height: 430px; border: 1px solid rgba(255, 255, 255, .2); background: #fff; }
+
+@media (max-width: 980px) {
+  .resourceGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .resource { padding: 24px 20px; }
+  .resourcePreview iframe { height: 320px; }
+}
+
+/* 文件頁：契約／服務說明書／進度表共用版型 */
+/* 首頁 section { content-visibility: auto } 是給長頁捲動效能用，文件頁不需要延遲渲染，
+   且會讓找字、複製全文、列印等功能在捲到之前抓不到內容，故在此還原。 */
+.docMain section { content-visibility: visible; contain-intrinsic-size: auto; }
+.docMain { min-height: 100vh; background: var(--paper); color: var(--ink); }
+.docNav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 5.5vw;
+  color: #fff;
+  background: var(--night);
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+.docNav__back { font-size: 14px; color: rgba(255, 255, 255, .72); }
+.docNav__back:hover { color: #fff; }
+.docNav__links { display: flex; gap: 26px; }
+.docNav__links a { padding: 6px 0; font-size: 14px; color: rgba(255, 255, 255, .6); border-bottom: 2px solid transparent; }
+.docNav__links a:hover { color: #fff; }
+.docNav__links a[aria-current="page"] { color: #fff; border-color: var(--copper); }
+
+.docArticle { max-width: 880px; margin: 0 auto; padding: 8vw 5.5vw 12vw; }
+.docEyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--copper); }
+.docTitle { margin: 0 0 10px; font-family: var(--serif); font-size: clamp(32px, 5vw, 52px); font-weight: 400; line-height: 1.25; }
+.docSubtitle { margin: 0 0 48px; font-size: 15px; line-height: 1.8; color: var(--muted); }
+.docSection { margin: 0 0 46px; padding-top: 34px; border-top: 1px solid var(--line); }
+.docSection h2 { margin: 0 0 18px; font-family: var(--serif); font-size: clamp(22px, 2.6vw, 30px); font-weight: 400; }
+.docSection h3 { margin: 22px 0 10px; font-size: 16px; font-weight: 600; }
+.docSection p { margin: 0 0 14px; font-size: 15px; line-height: 1.9; color: #322c26; }
+.docSection ul, .docSection ol { margin: 0 0 14px; padding-left: 22px; font-size: 15px; line-height: 1.9; color: #322c26; }
+.docSection li { margin-bottom: 6px; }
+
+.docFieldGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; margin: 0 0 14px; background: var(--line); border: 1px solid var(--line); }
+.docFieldGrid > div { padding: 16px 18px; background: var(--paper); }
+.docFieldGrid dt { margin: 0 0 6px; font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+.docFieldGrid dd { margin: 0; font-size: 15px; line-height: 1.6; }
+
+.docTable { width: 100%; margin: 0 0 14px; font-size: 14px; border-collapse: collapse; }
+.docTable--wide { min-width: 640px; }
+.docTableWrap { overflow-x: auto; margin: 0 0 14px; }
+.docTableWrap .docTable { margin-bottom: 0; }
+.docTable caption { margin-bottom: 8px; text-align: left; caption-side: top; font-size: 12px; color: var(--muted); }
+.docTable th, .docTable td { padding: 10px 12px; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+.docTable th { font-weight: 600; background: var(--cream); }
+.docTable .docEmptyRow td { color: var(--muted); }
+
+.docBadge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+.docBadge--confirmed { color: #2f5a3d; background: #e3ede4; }
+.docBadge--pending { color: #8a5a12; background: #f7e9cf; }
+
+.docSignBlock { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--ink); }
+.docSignBlock h3 { margin: 0 0 14px; font-family: var(--serif); font-size: 18px; font-weight: 400; }
+.docSignBlock p { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+
+.docFooterNote { margin-top: 56px; padding: 20px 22px; font-size: 13px; line-height: 1.8; color: var(--brown); background: var(--cream); border-left: 3px solid var(--copper); }
+
+.docChecklist { display: flex; flex-direction: column; gap: 10px; margin: 0 0 14px; padding: 0; list-style: none; }
+.docChecklist li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.7; }
+.docChecklist span.docCheckbox { flex: none; width: 18px; height: 18px; margin-top: 3px; border: 1px solid var(--ink); border-radius: 3px; }
+
+@media (max-width: 620px) {
+  .docNav { padding: 14px 20px; }
+  .docNav__links { gap: 16px; }
+  .docArticle { padding: 60px 20px 90px; }
+  .docSignBlock { grid-template-columns: 1fr; gap: 28px; }
+  .docFieldGrid { grid-template-columns: 1fr 1fr; }
 }

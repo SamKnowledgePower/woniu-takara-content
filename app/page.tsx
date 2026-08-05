@@ -1,3 +1,6 @@
+import Link from "next/link";
+import ResourceCards from "./components/ResourceCards";
+
 export default function Home() {
   return (
     <main>
@@ -11,6 +14,7 @@ export default function Home() {
           <a href="#method">方法論</a>
           <a href="#works">作品實績</a>
           <a href="#service">合作內容</a>
+          <a href="#documents">方案文件</a>
         </nav>
         <a className="navCta" href="#contact">討論合作</a>
       </header>
@@ -81,8 +85,8 @@ export default function Home() {
           </div>
         </div>
         <div className="credibilityStats" aria-label="引弘企業社內容實績">
-          <article><strong>172萬+</strong><span>展示作品累計觀看</span></article>
-          <article><strong>69萬</strong><span>單支最高觀看</span></article>
+          <article><strong>176.9萬+</strong><span>展示作品累計觀看</span></article>
+          <article><strong>72.8萬</strong><span>單支最高觀看</span></article>
           <article><strong>2萬</strong><span>YouTube 頻道訂閱</span></article>
           <article><strong>3+</strong><span>年顧問與代操經驗</span></article>
         </div>
@@ -116,23 +120,23 @@ export default function Home() {
         </div>
         <div className="workGallery">
           {[
-            { src: "work-69w.png", views: "69萬", title: "和豐會客室｜新生代盤商", videos: ["https://www.facebook.com/share/v/1Ui7kpMYDE/"] },
-            { src: "https://i.ytimg.com/vi/S1kKuAUq-lQ/maxresdefault.jpg", views: "288,819", title: "商用滷肉飯配方知識內容", videos: ["https://youtu.be/S1kKuAUq-lQ"] },
-            { src: "work-26w.png", views: "269,365", title: "西瓜蓋章師｜陳師傅", videos: ["https://www.facebook.com/reel/1247933740580920"] },
-            { src: "work-9w.png", views: "92,216", title: "第 43 天｜西瓜期中考", videos: ["https://www.facebook.com/reel/1316874006994118"] },
-            { src: "work-8w.png", views: "8.2萬", title: "第 44 天｜西瓜博士團", videos: ["https://www.facebook.com/reel/985560837209761"] },
-            { src: "work-day45.png", views: "60,635", title: "第 45 天｜沉浸式留瓜教學", videos: ["https://www.facebook.com/share/r/1HEWABnp3S/"] },
-            { src: "https://i.ytimg.com/vi/Iy6LtjvVuPc/maxresdefault.jpg", views: "59,625", title: "台南虱目魚知識內容", videos: ["https://youtu.be/Iy6LtjvVuPc"] },
-            { src: "work-tour-bus.jpg", views: "51,969", title: "直播帶貨始祖｜遊覽車工商", videos: ["https://www.facebook.com/share/r/1DMCmSRJ5N/"] },
-            { src: "work-score.png", views: "28,278", title: "新生代盤商給西瓜幾分？", videos: ["https://www.facebook.com/share/r/1D6goaMYA5/"] },
-            { src: "work-0to100.png", views: "24,500", title: "西瓜 0 到 100 天", videos: ["https://www.facebook.com/share/r/1DPLPjMNQT/"] },
-            { src: "work-second-gen.png", views: "22,148", title: "農二代沒這麼好當", videos: ["https://www.facebook.com/reel/3518267544988891"] },
-            { src: "work-family.png", views: "24,607", title: "一家人的西瓜見面會", videos: ["https://www.facebook.com/reel/1057590556718092"] },
-            { src: "work-shoes.png", views: "12,458", title: "鞋子長保如新的秘方", videos: ["https://www.facebook.com/reel/970422245558000"] },
+            { src: "work-69w.png", views: "728,011", title: "和豐會客室｜新生代盤商", videos: ["https://www.facebook.com/share/v/1Ui7kpMYDE/"] },
+            { src: "https://i.ytimg.com/vi/S1kKuAUq-lQ/maxresdefault.jpg", views: "289,088", title: "商用滷肉飯配方知識內容", videos: ["https://youtu.be/S1kKuAUq-lQ"] },
+            { src: "work-26w.png", views: "272,929", title: "西瓜蓋章師｜陳師傅", videos: ["https://www.facebook.com/reel/1247933740580920"] },
+            { src: "work-9w.png", views: "92,574", title: "第 43 天｜西瓜期中考", videos: ["https://www.facebook.com/reel/1316874006994118"] },
+            { src: "work-8w.png", views: "84,062", title: "第 44 天｜西瓜博士團", videos: ["https://www.facebook.com/reel/985560837209761"] },
+            { src: "work-day45.png", views: "60,661", title: "第 45 天｜沉浸式留瓜教學", videos: ["https://www.facebook.com/share/r/1HEWABnp3S/"] },
+            { src: "https://i.ytimg.com/vi/Iy6LtjvVuPc/maxresdefault.jpg", views: "59,710", title: "台南虱目魚知識內容", videos: ["https://youtu.be/Iy6LtjvVuPc"] },
+            { src: "work-tour-bus.jpg", views: "51,974", title: "直播帶貨始祖｜遊覽車工商", videos: ["https://www.facebook.com/share/r/1DMCmSRJ5N/"] },
+            { src: "work-score.png", views: "28,437", title: "新生代盤商給西瓜幾分？", videos: ["https://www.facebook.com/share/r/1D6goaMYA5/"] },
+            { src: "work-0to100.png", views: "24,511", title: "西瓜 0 到 100 天", videos: ["https://www.facebook.com/share/r/1DPLPjMNQT/"] },
+            { src: "work-second-gen.png", views: "22,159", title: "農二代沒這麼好當", videos: ["https://www.facebook.com/reel/3518267544988891"] },
+            { src: "work-family.png", views: "28,368", title: "一家人的西瓜見面會", videos: ["https://www.facebook.com/reel/1057590556718092"] },
+            { src: "work-shoes.png", views: "12,471", title: "鞋子長保如新的秘方", videos: ["https://www.facebook.com/reel/970422245558000"] },
             { src: "work-bakery-intro.jpg", views: "4,606", title: "酸麵包入門款", videos: ["https://www.facebook.com/reel/1495499355062283", "https://www.facebook.com/reel/27220347970941032"] },
             { src: "work-bakery-testimonial.jpg", views: "4,452", title: "酸麵包客戶見證", videos: [] },
-            { src: "work-bakery-natural.jpg", views: "3,124", title: "吃最天然的食物", videos: ["https://www.facebook.com/share/r/14jQDTkktKq/"] },
-            { src: "work-bakery-health.jpg", views: "1,844", title: "好食物與健康", videos: ["https://www.facebook.com/reel/2257212065110286"] },
+            { src: "work-bakery-natural.jpg", views: "3,239", title: "吃最天然的食物", videos: ["https://www.facebook.com/share/r/14jQDTkktKq/"] },
+            { src: "work-bakery-health.jpg", views: "1,850", title: "好食物與健康", videos: ["https://www.facebook.com/reel/2257212065110286"] },
           ].map(({ src, views, title, videos }) => (
             <figure key={src}>
               {videos.length ? (
@@ -317,6 +321,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="documents" className="resources section">
+        <div className="sectionHead">
+          <p className="eyebrow">合作依據與執行工具</p>
+          <h2>提案確認方向後，<br />實際合作以這四份文件銜接。</h2>
+          <p>從完整交付內容、雙方權利邊界，到內容規劃與每週執行紀錄，都有一致的查閱依據。</p>
+        </div>
+        <ResourceCards />
+      </section>
+
       <section id="contact" className="pricing">
         <div>
           <p className="eyebrow">年度合作方案</p>
@@ -335,6 +348,10 @@ export default function Home() {
         <div className="brand"><span className="mark">窩</span><span>窩牛 × Takara</span></div>
         <p>內容行銷導入暨內部能力建置</p>
         <span>© 2026 引弘企業社</span>
+        <nav className="footerDocs" aria-label="方案文件">
+          <a href="#documents">合作依據與執行工具</a>
+          <Link href="/progress">專案進度表</Link>
+        </nav>
       </footer>
     </main>
   );
