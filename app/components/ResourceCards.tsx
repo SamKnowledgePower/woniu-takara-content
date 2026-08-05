@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { planResourceCards, type PlanResourceCard } from "../data/plan";
 
 const stepLabels: Record<PlanResourceCard["key"], string> = {
@@ -10,9 +11,14 @@ const stepLabels: Record<PlanResourceCard["key"], string> = {
   progress: "04・每週執行檢核",
 };
 
+// GitHub Pages 上這個網站部署在 /woniu-takara-content 子路徑。next/link 的 <Link>
+// 會自動處理 basePath，但 iframe 的 src 屬性不會，需要手動補上前綴。
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 function ResourceCardItem({ card }: { card: PlanResourceCard }) {
   const [previewOpen, setPreviewOpen] = useState(false);
   const isExternal = card.href?.startsWith("http");
+  const isInternal = card.href != null && !isExternal;
 
   return (
     <article className="resource">
@@ -25,14 +31,15 @@ function ResourceCardItem({ card }: { card: PlanResourceCard }) {
         </div>
       ) : (
         <div className="resourceActions">
-          <a
-            className="primary"
-            href={card.href ?? undefined}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener" : undefined}
-          >
-            {card.key === "progress" ? "開啟專案進度表" : "開啟 Google 文件"}
-          </a>
+          {isInternal ? (
+            <Link className="primary" href={card.href as string}>
+              開啟專案進度表
+            </Link>
+          ) : (
+            <a className="primary" href={card.href ?? undefined} target="_blank" rel="noopener">
+              開啟 Google 文件
+            </a>
+          )}
           {card.previewUrl ? (
             <button
               className="previewToggle"
@@ -45,7 +52,11 @@ function ResourceCardItem({ card }: { card: PlanResourceCard }) {
           ) : null}
           {previewOpen && card.previewUrl ? (
             <div className="resourcePreview">
-              <iframe src={card.previewUrl} title={`${card.title}預覽`} loading="lazy" />
+              <iframe
+                src={isExternal ? card.previewUrl : `${basePath}${card.previewUrl}`}
+                title={`${card.title}預覽`}
+                loading="lazy"
+              />
             </div>
           ) : null}
         </div>
