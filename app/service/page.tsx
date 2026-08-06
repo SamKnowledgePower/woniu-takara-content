@@ -15,81 +15,127 @@ import {
 
 export const metadata: Metadata = {
   title: "窩牛 × Takara｜服務說明書",
-  description: "窩牛 × Takara 內容行銷導入暨內部能力建置服務說明書。",
+  description: "引弘企業社 × 窩牛 × Takara 內容行銷導入暨內部能力建置一年期服務說明書。",
 };
+
+const woniuTrack = planServiceTracks.find((t) => t.key === "woniu")!;
+const takaraTrack = planServiceTracks.find((t) => t.key === "takara")!;
+const internalTrack = planServiceTracks.find((t) => t.key === "internalCapability")!;
 
 export default function ServicePage() {
   return (
     <main className="docMain">
       <DocNav current="/service" />
       <article className="docArticle">
-        <p className="docEyebrow">窩牛 × Takara</p>
-        <h1 className="docTitle">{planIdentity.planName.value}｜服務說明書</h1>
+        <p className="docEyebrow">引弘企業社 × 窩牛 × Takara</p>
+        <h1 className="docTitle">{planIdentity.planName.value}｜一年期服務說明書</h1>
         <p className="docSubtitle">
           服務提供：引弘企業社｜合作期間：{planDuration.contractMonths.value} 個月｜服務費：每月新臺幣 {planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")} 元。
-          本說明書用一般客戶看得懂的語言解釋合作內容與價值；詳細權利義務、修改、終止與保密以雙方簽署之契約為準。
+          本說明書用客戶角度說明這一年會得到什麼、我們如何執行、為什麼這樣安排；詳細權利義務、修改、終止與保密以雙方簽署之正式契約為準。
         </p>
 
         <section className="docSection">
-          <h2>這一年要完成的事</h2>
-          <p>
-            把窩牛在室內設計、裝修、統包、營造與自地自建的專業，以及 Takara 代理產品的價值，轉成穩定、可持續發布的 B2C 短影音內容。這不只是代拍影片，同時建立選題庫、素材整理規則、發布排程與內部操作能力，讓合作結束後窩牛仍能保有內容資產、帳號權限與持續運作的基礎。
-          </p>
+          <h2>第一部分｜一年合作總覽</h2>
           <div className="docFieldGrid">
+            <div><dt>合作期間</dt><dd>{planDuration.contractMonths.value} 個月（另有不計入之贈送準備期）</dd></div>
             <div><dt>短影音</dt><dd>{planVolume.annualVideoCount.value} 支／年</dd></div>
             <div><dt>到場服務</dt><dd>{planVolume.annualOnsiteVisitCount.value} 次／年</dd></div>
-            <div><dt>每次到場</dt><dd>{planVolume.onsiteVisitTypicalDuration.value}，{planVolume.onsiteVisitMaxDuration.value}</dd></div>
+            <div><dt>季度檢核</dt><dd>每年 {planVolume.quarterlyReviewCount.value} 次</dd></div>
             <div><dt>進度回報</dt><dd>{planVolume.weeklyReporting.value ? "每週" : "依約定頻率"}</dd></div>
-            <div><dt>綜合檢核</dt><dd>每年 {planVolume.quarterlyReviewCount.value} 次</dd></div>
-            <div><dt>單支影音規格</dt><dd>{planContractTerms.videoDurationSeconds.value}</dd></div>
+            <div><dt>內容主線</dt><dd>窩牛本業／Takara 代理雙主線</dd></div>
           </div>
+          <p>這一年不只是代拍影片，同時建立選題庫、素材整理規則、發布排程與內部操作能力，讓合作結束後窩牛仍能保有內容資產、帳號權限與持續運作的基礎。</p>
         </section>
 
         <section className="docSection">
-          <h2>一、年度內容行銷</h2>
+          <h2>第二部分｜年度內容策略</h2>
           <h3>我們會做什麼</h3>
           <ul>
-            <li>盤點既有案例、展間、原廠素材與服務內容。</li>
-            <li>規劃窩牛本業與 Takara 的全年 B2C 內容主軸。</li>
-            <li>負責內容策略、選題、腳本、主要拍攝、主要剪輯與品質控管。</li>
-            <li>採批次拍攝、累積內容庫、分批送審與發布。</li>
-            <li>針對我們製作的內容提供發布協作。</li>
+            <li>盤點品牌、案例、服務、產品及原廠素材。</li>
+            <li>建立窩牛本業與 Takara 雙主線內容支柱。</li>
+            <li>規劃選題、腳本與批次拍攝安排。</li>
+            <li>根據發布結果與週報回饋持續校準方向。</li>
           </ul>
-          <h3>雙主線內容</h3>
+          <h3>你獲得的價值</h3>
           <ul>
-            {planServiceTracks.map((track) => (
-              <li key={track.key}>
-                <strong>{track.title}</strong>：{track.summary}（{track.items.join("、")}）
-              </li>
+            <li>不再臨時想題目，內容有固定產出節奏。</li>
+            <li>把專業知識轉成客戶聽得懂的內容。</li>
+            <li>建立可以長期累積、不隨人員異動而流失的內容方向。</li>
+          </ul>
+        </section>
+
+        <section className="docSection">
+          <h2>第三部分｜窩牛本業內容線</h2>
+          <p>{woniuTrack.summary}</p>
+          <h3>我們會做什麼</h3>
+          <ul>
+            {woniuTrack.items.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
-          <h3>交付如何認定</h3>
-          <p>{planContractTerms.acceptanceWindow.value}。</p>
+          <h3>你獲得的價值</h3>
+          <p>把現場判斷與案例經驗說成消費者聽得懂的內容，在諮詢前就建立專業信任，降低溝通與說服成本。</p>
         </section>
 
         <section className="docSection">
-          <h2>二、{planVolume.annualOnsiteVisitCount.value} 次到場服務</h2>
+          <h2>第四部分｜Takara 產品教育線</h2>
+          <p>{takaraTrack.summary}</p>
+          <h3>我們會做什麼</h3>
+          <ul>
+            {takaraTrack.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <h3>你獲得的價值</h3>
+          <p>把規格與原廠優勢轉成消費者能理解的生活情境與購買理由，凸顯與其他品牌的差異。</p>
+        </section>
+
+        <section className="docSection">
+          <h2>第五部分｜{planVolume.annualVideoCount.value} 支短影音</h2>
+          <h3>我們會做什麼</h3>
+          <ul>
+            <li>企劃、選題與腳本撰寫。</li>
+            <li>主要拍攝與主要剪輯。</li>
+            <li>字幕與基本後製、品質控管。</li>
+            <li>送審與發布協作。</li>
+          </ul>
           <p>
-            每年提供 {planVolume.annualOnsiteVisitCount.value} 次到場，{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題與專業資訊確認、現場交辦、真實任務帶訓。每次產出會依出鏡人員、現場條件與內容難度調整，不保證每次固定支數；全年以 {planVolume.annualVideoCount.value} 支總交付為驗收基準。
+            {planVolume.annualVideoCount.value} 支為全年總交付，不保證每次到場固定支數；依內容難度、出鏡人員與場景批次製作。單支規格：{planContractTerms.videoDurationSeconds.value}。交付與確認方式：{planContractTerms.acceptanceWindow.value}。
           </p>
         </section>
 
         <section className="docSection">
-          <h2>三、內部能力建置</h2>
+          <h2>第六部分｜{planVolume.annualOnsiteVisitCount.value} 次到場服務</h2>
           <p>
-            {planServiceTracks.find((track) => track.key === "internalCapability")?.summary}
+            每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題確認、專業訪談、現場交辦及帶訓，依實際排程安排，不等於每月固定次數。
           </p>
-          <p>帶訓是年度主計畫的子計畫；每次到場仍以完成拍攝與主交付為優先。人員異動時的補訓安排，見下方額外服務說明。</p>
         </section>
 
         <section className="docSection">
-          <h2>四、進度透明</h2>
-          <p>每週提供簡短進度：本週完成與累計交付、本週送審／待確認／已發布、素材或拍攝阻塞、下週計畫與需要窩牛決定的事項。</p>
-          <p>每 {12 / planVolume.quarterlyReviewCount.value} 個月共同檢核一次，共 {planVolume.quarterlyReviewCount.value} 次：年度交付進度、內容庫與發布狀況、窩牛／Takara 題材比例、內部帶訓與交接成熟度、是否需調整下一季方向。</p>
+          <h2>第七部分｜內部能力建置</h2>
+          <p>{internalTrack.summary}</p>
+          <h3>我們會做什麼</h3>
+          <ul>
+            {internalTrack.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <h3>你獲得的價值</h3>
+          <ul>
+            <li>合作結束後不會失去內容操作能力。</li>
+            <li>新人可依文件與紀錄接手，不需要重新從零學習。</li>
+            <li>素材與方法留在企業內部，成為可持續使用的資產。</li>
+          </ul>
         </section>
 
         <section className="docSection">
-          <h2>五、年度執行階段</h2>
+          <h2>第八部分｜每週回報與季度檢核</h2>
+          <p>每週提供簡短進度：本週完成、累計交付、待確認、阻塞事項、下週安排、需要窩牛決定的事項。</p>
+          <p>每 3 個月共同檢核一次，全年共 {planVolume.quarterlyReviewCount.value} 次：年度交付進度、內容庫與發布狀況、窩牛／Takara 題材比例、內部帶訓與交接成熟度，並視需要調整下一季方向。</p>
+        </section>
+
+        <section className="docSection">
+          <h2>第九部分｜年度執行階段</h2>
           <div className="docTableWrap">
             <table className="docTable">
               <thead>
@@ -111,61 +157,53 @@ export default function ServicePage() {
         </section>
 
         <section className="docSection">
-          <h2>六、合作分工</h2>
-          <h3>引弘企業社</h3>
+          <h2>第十部分｜合作分工</h2>
+          <h3>引弘企業社負責</h3>
           <ul>
             <li>策略、選題、腳本、主要拍攝與剪輯。</li>
             <li>品質控管與製作內容的發布協作。</li>
             <li>進度回報、季度檢核與漸進帶訓。</li>
           </ul>
-          <h3>窩牛</h3>
+          <h3>窩牛負責</h3>
           <ul>
             <li>提供正確的工程、產品、原廠、價格、保固與案例資訊。</li>
             <li>安排出鏡者、場地與必要素材。</li>
-            <li>取得屋主、工班、員工、設計師、住戶等拍攝與公開同意。</li>
+            <li>取得屋主、工班、員工、設計師等相關人物與案場之公開同意。</li>
             <li>進行內容的最終專業與發布確認。</li>
-            <li>自行負責諮詢、丈量、報價、成交、工程、保固與售後。</li>
+            <li>自行負責實際諮詢、報價、成交、施工、保固與售後。</li>
           </ul>
         </section>
 
         <section className="docSection">
-          <h2>七、修改原則</h2>
-          <p>{planContractTerms.revisionPolicy.value}。</p>
-        </section>
-
-        <section className="docSection">
-          <h2>八、不包含與可另案延伸</h2>
-          <p>本服務不包含：{planScope.excludedSeparateEngagement.join("、")}。</p>
-          <p>第三方素材授權：{planContractTerms.thirdPartyLicensing.value}。如有需要，可依目標另案規劃與報價。</p>
-        </section>
-
-        <section className="docSection">
-          <h2>九、額外服務</h2>
+          <h2>第十一部分｜方案內與不包含</h2>
+          <div className="docFieldGrid">
+            <div>
+              <dt>方案內</dt>
+              <dd>{planScope.included.join("、")}</dd>
+            </div>
+            <div>
+              <dt>不包含（另案報價）</dt>
+              <dd>{planScope.excludedSeparateEngagement.join("、")}</dd>
+            </div>
+          </div>
+          <h3>額外服務</h3>
           <p>{planContractTerms.extraServicePricing.value}。</p>
         </section>
 
         <section className="docSection">
-          <h2>十、權利與資產</h2>
+          <h2>第十二部分｜最後留下的資產</h2>
           <ul>
-            <li>本案交付影片成品與原始拍攝素材歸{planRights.finishedWorkAndRawFootageOwner.value}所有。</li>
-            <li>{planRights.methodologyAndTemplateLicense.value}。</li>
-            <li>{planContractTerms.ipDisplayRights.value}。</li>
-            <li>窩牛專屬選題庫、素材規則、發布排程與教學紀錄，可供內部持續使用。</li>
+            <li>已完成影片成品與原始拍攝素材（歸{planRights.finishedWorkAndRawFootageOwner.value}所有）。</li>
+            <li>選題庫、素材命名規則、腳本模板。</li>
+            <li>發布流程與教學紀錄。</li>
+            <li>平台帳號與管理權限。</li>
+            <li>年度成果報告。</li>
           </ul>
+          <p>{planRights.methodologyAndTemplateLicense.value}；{planContractTerms.ipDisplayRights.value}。</p>
         </section>
 
         <section className="docSection">
-          <h2>十一、期滿與後續</h2>
-          <p>{planContractTerms.postContractConsulting.value}。</p>
-        </section>
-
-        <section className="docSection">
-          <h2>十二、成效邊界</h2>
-          <p>{planOutcomeDisclaimer.value}</p>
-        </section>
-
-        <section className="docSection">
-          <h2>服務費用</h2>
+          <h2>第十三部分｜服務費用</h2>
           <div className="docTableWrap">
             <table className="docTable">
               <thead>
@@ -184,11 +222,22 @@ export default function ServicePage() {
               </tbody>
             </table>
           </div>
-          <p>{planContractTerms.paymentTerms.value}。</p>
+          <p>{planContractTerms.paymentTerms.value}。第三方軟體、雲端、特殊場地與道具、廣告投放及外縣市交通住宿等費用另計，事前告知並經確認後由窩牛負擔。</p>
+        </section>
+
+        <section className="docSection">
+          <h2>第十四部分｜我們的承諾與成效邊界</h2>
+          <ul>
+            <li>依約完成年度交付，交付透明可查核。</li>
+            <li>每週進度透明，重大事項不延遲告知。</li>
+            <li>約定資產全部歸屬窩牛，不保留副本另作他用。</li>
+            <li>工程、產品等專業內容由窩牛確認後始對外發布。</li>
+            <li>{planOutcomeDisclaimer.value}</li>
+          </ul>
         </section>
 
         <p className="docFooterNote">
-          本說明書用於說明合作內容與價值，詳細權利義務、改期、終止與保密以雙方簽署之正式契約為準。
+          本說明書用於說明合作內容與交付價值，詳細權利義務以雙方簽署之正式契約為準。本頁內容與正式 Google 文件一致，如有出入以雙方簽署之正式契約為準。
         </p>
       </article>
     </main>

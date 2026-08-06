@@ -9,6 +9,10 @@
   --line: rgba(22, 18, 15, .18);
   --serif: "Songti TC", "STSong", "Noto Serif TC", serif;
   --sans: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  --status-done: #2f6b4f;
+  --status-done-soft: #e3ede4;
+  --status-wait: #9a6515;
+  --status-wait-soft: #f7e9cf;
 }
 
 * { box-sizing: border-box; }
@@ -540,4 +544,85 @@ footer { font-size: 17px; }
   .docArticle { padding: 60px 20px 90px; }
   .docSignBlock { grid-template-columns: 1fr; gap: 28px; }
   .docFieldGrid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- 進度儀表板（Supabase 共用後台，架構比照 GD／達氏占星）---- */
+.progressDash { min-height: 100vh; overflow-x: hidden; background: var(--paper); color: var(--ink); }
+.progressDash__header { position: relative; overflow: hidden; padding: 50px 0 44px; background: var(--night); color: #fff; }
+.progressDash__header:after { content: ""; position: absolute; inset: -50%; background: radial-gradient(circle at 70% 35%, rgba(169, 87, 50, .3), transparent 24%); pointer-events: none; }
+.progressDash__wrap { width: min(1120px, calc(100% - 32px)); margin: auto; }
+.progressDash__headerGrid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: end; }
+.progressDash__eyebrow { font: 700 11px/1.4 ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; color: #e8c8a9; text-transform: uppercase; }
+.progressDash__title { margin: 12px 0 10px; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4.8vw, 52px); line-height: 1.15; }
+.progressDash__subtitle { margin: 0; color: #d8cdbf; font-size: 14px; }
+.progressDash__meta { text-align: right; color: #d8cdbf; font-size: 13px; }
+.progressDash__meta strong { display: block; margin-top: 2px; font-family: var(--serif); font-weight: 400; color: #fff; font-size: 19px; }
+.progressDash__status { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 7px 12px; border: 1px solid rgba(255, 255, 255, .2); font-size: 12px; }
+.progressDash__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--copper); box-shadow: 0 0 10px var(--copper); }
+.progressDash__main { padding: 34px 0 80px; }
+.progressDash__label { margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--brown); }
+.progressDash__metrics { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 30px; }
+.progressDash__metric { padding: 16px; background: #fff; border: 1px solid var(--line); box-shadow: 0 8px 28px rgba(22, 18, 15, .05); }
+.progressDash__metric strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; }
+.progressDash__metric span { font-size: 12px; color: var(--muted); }
+.progressDash__bar { height: 4px; margin-top: 12px; overflow: hidden; background: var(--cream); }
+.progressDash__bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--copper), #c98a5e); }
+.progressDash__weekGrid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 12px; margin-bottom: 36px; }
+.progressDash__weekCard { min-height: 140px; padding: 20px; background: #fff; border: 1px solid var(--line); }
+.progressDash__weekCard h2 { margin: 0 0 12px; font-family: var(--serif); font-weight: 400; font-size: 16px; }
+.progressDash__weekCard ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+.progressDash__weekCard.done { border-top: 3px solid var(--status-done); }
+.progressDash__weekCard.wait { border-top: 3px solid var(--status-wait); }
+.progressDash__weekCard.next { border-top: 3px solid var(--copper); }
+.progressDash__prepBadge { display: inline-block; margin-bottom: 18px; padding: 8px 14px; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--brown); background: var(--cream); border: 1px solid var(--line); }
+.progressDash__months { display: grid; gap: 10px; }
+.progressDash__month { background: #fff; border: 1px solid var(--line); }
+.progressDash__month[open] { border-color: var(--copper); }
+.progressDash__month summary { display: grid; grid-template-columns: 66px minmax(160px, .8fr) 1.2fr auto 20px; gap: 14px; align-items: center; padding: 17px 18px; list-style: none; cursor: pointer; }
+.progressDash__month summary::-webkit-details-marker { display: none; }
+.progressDash__monthNum { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1; color: var(--brown); }
+.progressDash__monthNum small { display: block; margin-top: 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .12em; color: var(--muted); }
+.progressDash__monthTitle { font-size: 14px; font-weight: 600; }
+.progressDash__monthFocus { font-size: 13px; color: var(--muted); }
+.progressDash__monthProgress { font: 600 12px ui-monospace, monospace; color: var(--brown); white-space: nowrap; }
+.progressDash__chev { color: var(--copper); transition: transform .2s; }
+.progressDash__month[open] .progressDash__chev { transform: rotate(90deg); }
+.progressDash__monthBody { padding: 4px 18px 18px; border-top: 1px solid var(--line); }
+.progressDash__task { display: grid; grid-template-columns: 22px minmax(150px, 1fr) auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.progressDash__task:last-child { border-bottom: 0; }
+.progressDash__check { width: 18px; height: 18px; display: grid; place-items: center; font-size: 12px; color: #fff; border: 1.5px solid #b7ada0; border-radius: 3px; }
+.progressDash__task.complete .progressDash__check { background: var(--status-done); border-color: var(--status-done); }
+.progressDash__taskName { font-size: 14px; }
+.progressDash__task.complete .progressDash__taskName { color: #8a8378; text-decoration: line-through; }
+.progressDash__taskMeta { display: block; margin-top: 2px; font-size: 11px; color: #9a9184; text-decoration: none; }
+.progressDash__taskLinks { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.progressDash__taskLinks a { padding: 5px 8px; font-size: 11px; color: var(--brown); background: var(--cream); border-radius: 3px; text-decoration: none; }
+.progressDash__taskState { padding: 4px 8px; font-size: 11px; color: var(--muted); background: var(--cream); border-radius: 20px; }
+.progressDash__taskState.review { color: var(--status-wait); background: var(--status-wait-soft); }
+.progressDash__taskState.active { color: var(--copper); background: rgba(169, 87, 50, .12); }
+.progressDash__taskState.complete { color: var(--status-done); background: var(--status-done-soft); }
+.progressDash__legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 16px 0 0; font-size: 12px; color: var(--muted); }
+.progressDash__legend span:before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: #bbb; }
+.progressDash__legend .l-active:before { background: var(--copper); }
+.progressDash__legend .l-review:before { background: var(--status-wait); }
+.progressDash__legend .l-done:before { background: var(--status-done); }
+.progressDash__footerNote { margin-top: 32px; padding: 20px; font-size: 13px; line-height: 1.85; color: var(--brown); background: var(--cream); border-left: 3px solid var(--copper); }
+.progressDash__loading { padding: 60px 0; text-align: center; color: var(--muted); }
+.progressDash__back { display: inline-block; margin-top: 22px; font-weight: 700; color: var(--ink); text-decoration: none; }
+
+@media (max-width: 850px) {
+  .progressDash__metrics { grid-template-columns: repeat(3, 1fr); }
+  .progressDash__weekGrid { grid-template-columns: 1fr; }
+  .progressDash__month summary { grid-template-columns: 48px 1fr auto 18px; }
+  .progressDash__monthFocus { grid-column: 2 / 5; }
+  .progressDash__headerGrid { grid-template-columns: 1fr; }
+  .progressDash__meta { text-align: left; }
+}
+@media (max-width: 560px) {
+  .progressDash__metrics { grid-template-columns: 1fr 1fr; }
+  .progressDash__month summary { padding: 14px; }
+  .progressDash__monthBody { padding: 6px 14px 16px; }
+  .progressDash__task { grid-template-columns: 20px 1fr; }
+  .progressDash__taskLinks, .progressDash__taskState { grid-column: 2; justify-content: flex-start; }
+  .progressDash__metric strong { font-size: 19px; }
 }
