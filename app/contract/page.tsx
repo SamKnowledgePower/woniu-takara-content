@@ -68,10 +68,11 @@ export default function ContractPage() {
         <section className="docSection">
           <h2>第五條　96 支短影音規格與交付認定</h2>
           <p>
-            全年完成 {planVolume.annualVideoCount.value} 支短影音之企劃、選題、腳本、主要拍攝、主要剪輯與品質控管，為年度總交付數量，不保證每次到場或每月固定產出支數，依內容難度、出鏡人員與批次拍攝安排調整。
+            全年完成 {planVolume.annualVideoCount.value} 支短影音之企劃、選題、腳本、主要拍攝、主要剪輯與品質控管。原則上維持窩牛本業與 Takara 代理雙主線穩定發布；實際週次與題材比例依拍攝條件、素材成熟度及季度策略彈性安排，以 {planVolume.annualVideoCount.value} 支為限，不保證每次到場或每月固定產出支數。
           </p>
           <p>單支影音規格：{planContractTerms.videoDurationSeconds.value}。</p>
           <p>交付認定：{planContractTerms.acceptanceWindow.value}。</p>
+          <p>發布責任：{planContractTerms.publishingResponsibility.value}。</p>
           <p>成效聲明：{planOutcomeDisclaimer.value}</p>
         </section>
 
@@ -80,6 +81,7 @@ export default function ContractPage() {
           <p>
             全年提供 {planVolume.annualOnsiteVisitCount.value} 次到場，每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題與專業資訊確認、現場交辦及內部能力帶訓，依雙方實際排程安排，不代表每月固定次數。
           </p>
+          <p>{planContractTerms.onsiteReschedulingAndTravel.value}。</p>
         </section>
 
         <section className="docSection">
@@ -95,7 +97,7 @@ export default function ContractPage() {
           <h2>第八條　準備期與正式服務期間</h2>
           <p>
             自民國＿＿年＿＿月＿＿日起至民國＿＿年＿＿月＿＿日止，共 {planDuration.contractMonths.value} 個月，為正式服務期間。
-            {planDuration.prepPeriodIsComplimentary.value ? "正式期間開始前之準備期為贈送項目，不計入前述合作月數。" : null}
+            {planDuration.prepPeriodIsComplimentary.value ? `正式期間開始前另有 ${planDuration.prepPeriodMonths.value} 個月準備期，為贈送項目，不計入前述合作月數。` : null}
           </p>
           <div className="docTableWrap">
             <table className="docTable">
@@ -165,6 +167,7 @@ export default function ContractPage() {
           <p>
             內容於發布前應送交甲方確認，{planContractTerms.acceptanceWindow.value}。工程、產品、價格、保固、原廠與案例等專業資訊之正確性，由甲方負責審閱確認；乙方依甲方提供或確認之資訊製作內容，不另就專業資訊內容之正確性負責。
           </p>
+          <p>{planContractTerms.publishingResponsibility.value}。</p>
         </section>
 
         <section className="docSection">
@@ -174,6 +177,7 @@ export default function ContractPage() {
             <li>{planRights.methodologyAndTemplateLicense.value}。</li>
             <li>平台帳號與管理權限歸窩牛所有；乙方僅依約取得執行發布協作所需之操作權限。</li>
             <li>甲方專屬選題庫、素材規則、發布排程及教學紀錄，可供甲方內部持續使用。</li>
+            <li>{planContractTerms.rawAssetStorage.value}。</li>
           </ul>
         </section>
 

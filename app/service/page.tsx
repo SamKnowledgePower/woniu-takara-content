@@ -37,7 +37,7 @@ export default function ServicePage() {
         <section className="docSection">
           <h2>第一部分｜一年合作總覽</h2>
           <div className="docFieldGrid">
-            <div><dt>合作期間</dt><dd>{planDuration.contractMonths.value} 個月（另有不計入之贈送準備期）</dd></div>
+            <div><dt>合作期間</dt><dd>{planDuration.contractMonths.value} 個月（另有不計入之 1 個月贈送準備期）</dd></div>
             <div><dt>短影音</dt><dd>{planVolume.annualVideoCount.value} 支／年</dd></div>
             <div><dt>到場服務</dt><dd>{planVolume.annualOnsiteVisitCount.value} 次／年</dd></div>
             <div><dt>季度檢核</dt><dd>每年 {planVolume.quarterlyReviewCount.value} 次</dd></div>
@@ -100,8 +100,10 @@ export default function ServicePage() {
             <li>送審與發布協作。</li>
           </ul>
           <p>
-            {planVolume.annualVideoCount.value} 支為全年總交付，不保證每次到場固定支數；依內容難度、出鏡人員與場景批次製作。單支規格：{planContractTerms.videoDurationSeconds.value}。交付與確認方式：{planContractTerms.acceptanceWindow.value}。
+            全年共 {planVolume.annualVideoCount.value} 支短影音，原則上維持雙主線穩定發布；實際週次與題材比例依拍攝條件、素材成熟度及季度策略彈性安排，以 {planVolume.annualVideoCount.value} 支為限，不保證每次到場固定支數。單支規格：{planContractTerms.videoDurationSeconds.value}。交付與確認方式：{planContractTerms.acceptanceWindow.value}。
           </p>
+          <h3>發布如何執行</h3>
+          <p>{planContractTerms.publishingResponsibility.value}。</p>
         </section>
 
         <section className="docSection">
@@ -109,6 +111,7 @@ export default function ServicePage() {
           <p>
             每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題確認、專業訪談、現場交辦及帶訓，依實際排程安排，不等於每月固定次數。
           </p>
+          <p>{planContractTerms.onsiteReschedulingAndTravel.value}。</p>
         </section>
 
         <section className="docSection">
@@ -198,6 +201,7 @@ export default function ServicePage() {
             <li>發布流程與教學紀錄。</li>
             <li>平台帳號與管理權限。</li>
             <li>年度成果報告。</li>
+            <li>{planContractTerms.rawAssetStorage.value}。</li>
           </ul>
           <p>{planRights.methodologyAndTemplateLicense.value}；{planContractTerms.ipDisplayRights.value}。</p>
         </section>
@@ -226,7 +230,14 @@ export default function ServicePage() {
         </section>
 
         <section className="docSection">
-          <h2>第十四部分｜我們的承諾與成效邊界</h2>
+          <h2>第十四部分｜期滿與提前終止</h2>
+          <p>{planContractTerms.postContractConsulting.value}。</p>
+          <p>{planContractTerms.voluntaryTermination.value}。</p>
+          <p>{planContractTerms.terminationSettlement.value}。</p>
+        </section>
+
+        <section className="docSection">
+          <h2>第十五部分｜我們的承諾與成效邊界</h2>
           <ul>
             <li>依約完成年度交付，交付透明可查核。</li>
             <li>每週進度透明，重大事項不延遲告知。</li>

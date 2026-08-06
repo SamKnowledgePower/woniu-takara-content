@@ -223,7 +223,7 @@ export default function ProgressDashboard() {
       </header>
       <main className="progressDash__main">
         <div className="progressDash__wrap">
-          <p className="progressDash__label">年度數量總覽</p>
+          <p className="progressDash__label">年度數量總覽｜每 3 個月進行一次季度檢核，全年共 4 次</p>
           <section className="progressDash__metrics">
             {metricDefs.map((m) => {
               const pct = Math.min(100, (m.n / m.total) * 100);
@@ -270,7 +270,7 @@ export default function ProgressDashboard() {
           </section>
 
           <p className="progressDash__label">逐月進度</p>
-          <p className="progressDash__prepBadge">準備期｜贈送，不計入 12 個月</p>
+          <p className="progressDash__prepBadge">一個月準備期｜贈送，不計入 12 個月</p>
           <section className="progressDash__months">
             {renderPhase("prep", planProgressPrep, true)}
             {monthPhases.map(({ prefix, phase }) => renderPhase(prefix, phase, false))}

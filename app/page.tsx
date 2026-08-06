@@ -248,7 +248,7 @@ export default function Home() {
         <div className="sectionHead">
           <p className="eyebrow">合作內容</p>
           <h2>雙主線內容，<br />同一套成長系統。</h2>
-          <p>原則上每週一支窩牛本業內容、一支 Takara 內容。批次拍攝、累積內容庫，再依確認節奏分批發布。</p>
+          <p>全年共 96 支短影音，原則上維持雙主線穩定發布。實際週次與題材比例依拍攝條件、素材成熟度及季度策略彈性安排，以 96 支為限。</p>
         </div>
         <div className="serviceGrid">
           <article className="serviceCard dark">
@@ -278,7 +278,7 @@ export default function Home() {
           <h2>每週看得見進度，<br />每季調整一次方向。</h2>
         </div>
         <div className="timeline">
-          <div><span>00</span><h3>準備期</h3><p>素材蒐集、資料盤點、理解品牌與內容定位。此階段為贈送，不計入 12 個月。</p></div>
+          <div><span>00</span><h3>一個月準備期</h3><p>素材蒐集、資料盤點、理解品牌與內容定位。此階段為贈送，不計入 12 個月。</p></div>
           <div><span>01–03</span><h3>建立節奏</h3><p>確認雙主線題材、批次拍攝方式、送審與發布流程，建立第一批內容庫。</p></div>
           <div><span>04–06</span><h3>穩定產出</h3><p>持續拍攝與製作，依週進度追蹤交付；第 6 個月開始整理內容資產，並用真實任務帶入內部操作能力。</p></div>
           <div><span>07–12</span><h3>資產化與系統交接</h3><p>維持內容產製，同步完成選題庫、素材規則、發布流程、教學紀錄與內部帶訓，讓系統逐步由窩牛接手。</p></div>

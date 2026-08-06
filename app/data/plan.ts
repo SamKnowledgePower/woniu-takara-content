@@ -28,6 +28,7 @@ export interface PlanIdentity {
 
 export interface PlanDuration {
   contractMonths: PlanField<number>;
+  prepPeriodMonths: PlanField<number>;
   prepPeriodIncludedInContractMonths: PlanField<boolean>;
   prepPeriodIsComplimentary: PlanField<boolean>;
 }
@@ -95,6 +96,9 @@ export interface PlanContractTerms {
   thirdPartyPlatformLiability: PlanField<string>;
   amendmentProcedure: PlanField<string>;
   disputeResolution: PlanField<string>;
+  publishingResponsibility: PlanField<string>;
+  onsiteReschedulingAndTravel: PlanField<string>;
+  rawAssetStorage: PlanField<string>;
 }
 
 export const planIdentity: PlanIdentity = {
@@ -104,6 +108,7 @@ export const planIdentity: PlanIdentity = {
 
 export const planDuration: PlanDuration = {
   contractMonths: confirmed(12),
+  prepPeriodMonths: confirmed(1),
   prepPeriodIncludedInContractMonths: confirmed(false),
   prepPeriodIsComplimentary: confirmed(true),
 };
@@ -126,7 +131,7 @@ export const planPricing: PlanPricing = {
 export const planPhases: PlanPhase[] = [
   {
     key: "prep",
-    months: "準備期（不計入 12 個月）",
+    months: "一個月準備期（不計入 12 個月）",
     focus: "素材蒐集、資料盤點、理解品牌與內容定位",
   },
   {
@@ -206,7 +211,7 @@ export const planContractTerms: PlanContractTerms = {
     "窩牛提供或指定的日本原廠、案場、人物與客戶素材，由窩牛確認使用與公開授權；引弘自行選用的配樂、字型與素材庫，由引弘確認使用範圍；需另購的授權或第三方費用事前告知並由窩牛負擔",
   ),
   terminationTerms: confirmed(
-    "原則一個月前以書面或通訊通知；當月已付費不退，已完成或已執行部分仍計費；終止後 10 日內移交窩牛帳號、成品與約定資產並刪除乙方持有的原始登入資料；不可抗力連續二個月得協議終止與結算",
+    "原則一個月前以書面或通訊通知；通知如跨入下一付款月份，次月月費仍應支付，雙方並於次月月底前完成提前結案；當月及次月已付費不退，已完成或已執行部分仍計費；終止後 10 日內移交窩牛帳號、成品與約定資產並刪除乙方持有的原始登入資料；不可抗力連續二個月得協議終止與結算",
   ),
   postContractConsulting: confirmed(
     "12 個月期滿即結束，沒有自動顧問期、月費或最低期間；如需顧問或維護，另行議約",
@@ -230,13 +235,13 @@ export const planContractTerms: PlanContractTerms = {
     "如因甲方未能於合理期間內提供拍攝所需資料、場地、出鏡人員配合或內容確認，致乙方無法依原訂時程履行，該部分時程得順延至甲方完成配合後起算，不視為乙方遲延；因前述原因致乙方額外產生之合理費用，經甲方確認後由甲方負擔；乙方因第九條付款逾期暫停服務者，暫停期間之交付時程比照順延處理",
   ),
   voluntaryTermination: confirmed(
-    "任一方得原則於一個月前以書面或雙方可辨識之電子訊息通知他方後終止本契約；通知期間內雙方仍應依約履行原有義務",
+    "任一方得原則於一個月前以書面或雙方可辨識之電子訊息通知他方後終止本契約；通知如跨入下一付款月份，次月月費仍應支付，雙方並於次月月底前完成提前結案；通知期間內雙方仍應依約履行原有義務",
   ),
   immediateTermination: confirmed(
     "有下列情形之一者，他方得不經前條通知期間，以書面通知立即終止本契約：(1) 一方遲延給付服務費用逾 30 日，經書面催告 7 日仍未給付；(2) 一方違反本契約重大義務，經他方書面通知後 7 日內未改善或無法改善；(3) 一方喪失營業能力、解散、停業、破產或受重整、清算宣告；(4) 一方之行為涉及侵害他方或第三人權利、違反法令，致他方有受重大損害之虞；(5) 不可抗力事由持續達本契約不可抗力條款所定期間",
   ),
   terminationSettlement: confirmed(
-    "本契約終止時，當月已預付之服務費用不予退還；已完成或已執行之交付項目仍計入應付費用，尚未支付部分甲方應於終止後 7 日內結清；因終止所生之必要合理費用，由可歸責之一方負擔",
+    "本契約終止時，當月及依任意終止條款應支付之次月服務費用不予退還；已完成或已執行之交付項目仍計入應付費用，尚未支付部分甲方應於終止後 7 日內結清；因終止所生之必要合理費用，由可歸責之一方負擔",
   ),
   terminationHandover: confirmed(
     "本契約終止後 10 日內，乙方應將窩牛指定帳號之管理權限、已完成成品、原始拍攝素材，及依本契約應移交之選題庫、素材規則、發布流程與教學紀錄等資產，依窩牛指定方式移交，並刪除乙方持有之原始登入資料，不得保留副本供其他用途使用",
@@ -255,6 +260,15 @@ export const planContractTerms: PlanContractTerms = {
   ),
   disputeResolution: confirmed(
     "本契約以中華民國法律為準據法。因本契約所生之爭議，雙方應本誠信原則先行協商；協商不成時，雙方同意以本契約履行地之地方法院為第一審管轄法院",
+  ),
+  publishingResponsibility: confirmed(
+    "發布協作由引弘企業社主導執行，以降低甲方內部人員異動造成的操作中斷；甲方仍保有內容之最終專業與發布確認權。發布平台、帳號權限及排程由雙方於合作啟動時確認",
+  ),
+  onsiteReschedulingAndTravel: confirmed(
+    "臨時取消、改期、遲到或超時不計入 24 次到場額度，未完成時間依雙方可配合時段順延；花蓮市及花蓮縣吉安鄉、壽豐鄉、新城鄉不另計交通費，其餘縣市之火車票由甲方依票價實報實銷",
+  ),
+  rawAssetStorage: confirmed(
+    "影片成品、原始拍攝素材及約定工作檔存放於雙方確認之網路硬碟，交付後保存 5 年；期間甲方可自行下載備份，期滿後乙方得停止保存",
   ),
 };
 
