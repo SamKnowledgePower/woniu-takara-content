@@ -124,8 +124,8 @@ export const planVolume: PlanVolume = {
 
 export const planPricing: PlanPricing = {
   currency: confirmed("TWD"),
-  monthlyFee: confirmed(32000),
-  annualFee: confirmed(384000),
+  monthlyFee: confirmed(33500),
+  annualFee: confirmed(402000),
 };
 
 export const planPhases: PlanPhase[] = [
@@ -205,7 +205,7 @@ export const planContractTerms: PlanContractTerms = {
     "完成製作並送交確認即計入交付；窩牛保有最終發布確認權；不以未回覆視為同意",
   ),
   paymentTerms: confirmed(
-    "每月 10 日前預付當月 NT$32,000；逾期得暫停，款項到帳後恢復，受影響交付時程順延",
+    "每月 10 日前預付當月 NT$33,500；逾期得暫停，款項到帳後恢復，受影響交付時程順延",
   ),
   thirdPartyLicensing: confirmed(
     "窩牛提供或指定的日本原廠、案場、人物與客戶素材，由窩牛確認使用與公開授權；引弘自行選用的配樂、字型與素材庫，由引弘確認使用範圍；需另購的授權或第三方費用事前告知並由窩牛負擔",

@@ -337,8 +337,8 @@ export default function Home() {
         </div>
         <div className="priceCard">
           <p>12 個月合作</p>
-          <div><span>新台幣</span><strong>32,000</strong><em>/ 月</em></div>
-          <p className="annual">年度合計新台幣 384,000 元</p>
+          <div><span>新台幣</span><strong>33,500</strong><em>/ 月</em></div>
+          <p className="annual">年度合計新台幣 402,000 元</p>
           <a href="mailto:blessingstable@gmail.com">開始討論合作</a>
           <small>詳細權利義務以雙方簽署之正式契約為準。</small>
         </div>
