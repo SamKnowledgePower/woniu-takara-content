@@ -7,6 +7,7 @@ import {
   planOutcomeDisclaimer,
   planPhases,
   planPricing,
+  planPublishingDeliverables,
   planRights,
   planScope,
   planServiceTracks,
@@ -97,13 +98,33 @@ export default function ServicePage() {
             <li>企劃、選題與腳本撰寫。</li>
             <li>主要拍攝與主要剪輯。</li>
             <li>字幕與基本後製、品質控管。</li>
-            <li>送審與發布協作。</li>
+            <li>送審與多平台發布協作。</li>
           </ul>
           <p>
             全年共 {planVolume.annualVideoCount.value} 支短影音，原則上維持雙主線穩定發布；實際週次與題材比例依拍攝條件、素材成熟度及季度策略彈性安排，以 {planVolume.annualVideoCount.value} 支為限，不保證每次到場固定支數。單支規格：{planContractTerms.videoDurationSeconds.value}。交付與確認方式：{planContractTerms.acceptanceWindow.value}。
           </p>
           <h3>發布如何執行</h3>
           <p>{planContractTerms.publishingResponsibility.value}。</p>
+          <div className="docTableWrap">
+            <table className="docTable">
+              <thead>
+                <tr>
+                  <th scope="col">管道</th>
+                  <th scope="col">內容型態</th>
+                  <th scope="col">交付服務</th>
+                </tr>
+              </thead>
+              <tbody>
+                {planPublishingDeliverables.map((item) => (
+                  <tr key={item.channel}>
+                    <td>{item.channel}</td>
+                    <td>{item.contentType}</td>
+                    <td>{item.service}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="docSection">
@@ -164,7 +185,7 @@ export default function ServicePage() {
           <h3>引弘企業社負責</h3>
           <ul>
             <li>策略、選題、腳本、主要拍攝與剪輯。</li>
-            <li>品質控管與製作內容的發布協作。</li>
+            <li>品質控管與影片、網站文章、指定社團文字內容及 Threads 議題的發布協作。</li>
             <li>進度回報、季度檢核與漸進帶訓。</li>
           </ul>
           <h3>窩牛負責</h3>

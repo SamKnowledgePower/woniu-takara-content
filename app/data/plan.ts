@@ -71,6 +71,12 @@ export interface PlanScope {
   excludedSeparateEngagement: string[];
 }
 
+export interface PlanPublishingDeliverable {
+  channel: string;
+  contentType: "影片" | "文字內容";
+  service: string;
+}
+
 // D-007 要求至少同步的欄位。2026-08-05 Sam 指示：未被 Takara 新規格取代的通用條款
 // 沿用達氏占星正式契約；Takara 已有的修改、驗收與額外到場規則維持優先。
 export interface PlanContractTerms {
@@ -178,7 +184,17 @@ export const planServiceTracks: PlanServiceTrack[] = [
 ];
 
 export const planScope: PlanScope = {
-  included: ["年度內容策略", "96 支短影音", "24 次到場", "主要製作", "發布協作", "進度檢核與帶訓"],
+  included: [
+    "年度內容策略",
+    "96 支短影音",
+    "24 次到場",
+    "主要製作",
+    "Facebook／Instagram／YouTube／TikTok 影片代上架",
+    "網站文章代上架",
+    "3 個指定社團文字內容代上架",
+    "Threads 行銷議題操作",
+    "進度檢核與帶訓",
+  ],
   excludedSeparateEngagement: [
     "廣告",
     "網站",
@@ -190,6 +206,13 @@ export const planScope: PlanScope = {
     "高規格專案影片",
   ],
 };
+
+export const planPublishingDeliverables: PlanPublishingDeliverable[] = [
+  { channel: "Facebook／Instagram／YouTube／TikTok", contentType: "影片", service: "完成影片代上架" },
+  { channel: "網站", contentType: "文字內容", service: "完成文章代上架" },
+  { channel: "甲方指定之 3 個社團", contentType: "文字內容", service: "完成內容代上架" },
+  { channel: "Threads", contentType: "文字內容", service: "行銷議題操作" },
+];
 
 export const planOutcomeDisclaimer: PlanField<string> = confirmed(
   "以完成製作並送交確認作為交付認定；窩牛保有最終發布確認權；觸及、詢價與成交受市場、平台與後續服務影響，不作特定數字保證。",
@@ -262,7 +285,7 @@ export const planContractTerms: PlanContractTerms = {
     "本契約以中華民國法律為準據法。因本契約所生之爭議，雙方應本誠信原則先行協商；協商不成時，雙方同意以本契約履行地之地方法院為第一審管轄法院",
   ),
   publishingResponsibility: confirmed(
-    "發布協作由引弘企業社主導執行，以降低甲方內部人員異動造成的操作中斷；甲方仍保有內容之最終專業與發布確認權。發布平台、帳號權限及排程由雙方於合作啟動時確認",
+    "發布協作由引弘企業社主導執行，包含 Facebook、Instagram、YouTube 與 TikTok 之完成影片代上架、網站文章代上架、甲方指定之 3 個社團文字內容代上架，以及 Threads 行銷議題操作。甲方仍保有內容之最終專業與發布確認權，並應提供合法有效之帳號及操作權限；各平台帳號、3 個社團名單、內容確認方式與發布排程由雙方於合作啟動時確認",
   ),
   onsiteReschedulingAndTravel: confirmed(
     "臨時取消、改期、遲到或超時不計入 24 次到場額度，未完成時間依雙方可配合時段順延；花蓮市及花蓮縣吉安鄉、壽豐鄉、新城鄉不另計交通費，其餘縣市之火車票由甲方依票價實報實銷",

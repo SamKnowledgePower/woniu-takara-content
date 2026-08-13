@@ -7,6 +7,7 @@ import {
   planOutcomeDisclaimer,
   planPhases,
   planPricing,
+  planPublishingDeliverables,
   planRights,
   planScope,
   planServiceTracks,
@@ -41,7 +42,7 @@ export default function ContractPage() {
           </p>
           <ul>
             <li>甲方負責工程、產品、原廠、價格、保固與案例等專業資訊之正確性，並保有內容之最終發布確認權。</li>
-            <li>乙方負責市場轉譯、內容策略、選題、腳本、主要拍攝、主要剪輯、品質控管與發布協作。</li>
+            <li>乙方負責市場轉譯、內容策略、選題、腳本、主要拍攝、主要剪輯、品質控管與約定管道之發布協作。</li>
             <li>雙方以誠信原則合作，任一方對合作內容有疑義時，應先行溝通確認，不逕自變更已確認事項。</li>
           </ul>
         </section>
@@ -66,13 +67,18 @@ export default function ContractPage() {
         </section>
 
         <section className="docSection">
-          <h2>第五條　96 支短影音規格與交付認定</h2>
+          <h2>第五條　96 支短影音規格、交付認定與發布協作</h2>
           <p>
             全年完成 {planVolume.annualVideoCount.value} 支短影音之企劃、選題、腳本、主要拍攝、主要剪輯與品質控管。原則上維持窩牛本業與 Takara 代理雙主線穩定發布；實際週次與題材比例依拍攝條件、素材成熟度及季度策略彈性安排，以 {planVolume.annualVideoCount.value} 支為限，不保證每次到場或每月固定產出支數。
           </p>
           <p>單支影音規格：{planContractTerms.videoDurationSeconds.value}。</p>
           <p>交付認定：{planContractTerms.acceptanceWindow.value}。</p>
           <p>發布責任：{planContractTerms.publishingResponsibility.value}。</p>
+          <ul>
+            {planPublishingDeliverables.map((item) => (
+              <li key={item.channel}>{item.channel}：{item.contentType}，{item.service}。</li>
+            ))}
+          </ul>
           <p>成效聲明：{planOutcomeDisclaimer.value}</p>
         </section>
 
