@@ -29,6 +29,17 @@
       ]
     },
     {
+      "type": "system_map",
+      "enabled": false,
+      "role": "primary_overview",
+      "source": "app/data/plan.ts",
+      "svg_path": "public/woniu-takara-system-map.svg",
+      "embed_file": "app/page.tsx",
+      "route": "",
+      "png_export": null,
+      "skill": "build-proposal-system-map"
+    },
+    {
       "type": "canva",
       "enabled": true,
       "design_id": "DAHSB0uHYO0",
