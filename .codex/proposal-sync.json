@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "project_id": "woniu-takara",
+  "project_name": "窩牛 × Takara 年度內容合作提案",
+  "mode": "fast",
+  "targets": [
+    {
+      "type": "website",
+      "enabled": true,
+      "repo_root": "/Users/apple/Documents/Codex/2026-07-29/new-chat/work/websites/woniu-takara-content",
+      "content_source": "app/data/plan.ts",
+      "files": [
+        "app/data/plan.ts",
+        "app/page.tsx",
+        "app/service/page.tsx",
+        "app/contract/page.tsx"
+      ],
+      "branch": "main",
+      "build_command": "npm run build",
+      "deploy_workflow": "Deploy website to GitHub Pages",
+      "live_url": "https://samknowledgepower.github.io/woniu-takara-content/",
+      "routes": ["", "service.html", "contract.html"],
+      "verification_markers": [
+        "33,500",
+        "TikTok",
+        "網站文章代上架",
+        "3 個指定社團",
+        "Threads 行銷議題操作"
+      ]
+    },
+    {
+      "type": "canva",
+      "enabled": true,
+      "design_id": "DAHSB0uHYO0",
+      "url": "https://www.canva.com/design/DAHSB0uHYO0/82Tep38Y8GsteSYegmiLyg/edit",
+      "edit_policy": "existing_elements_only"
+    },
+    {
+      "type": "google_doc",
+      "enabled": true,
+      "role": "contract",
+      "document_id": "1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y",
+      "url": "https://docs.google.com/document/d/1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y/edit"
+    },
+    {
+      "type": "google_doc",
+      "enabled": true,
+      "role": "service_guide",
+      "document_id": "1ptCxDhZfLZy4PA4GWBfX0mZQYMJ_SH4PO7RryjfO9ms",
+      "url": "https://docs.google.com/document/d/1ptCxDhZfLZy4PA4GWBfX0mZQYMJ_SH4PO7RryjfO9ms/edit"
+    },
+    {
+      "type": "local_export",
+      "enabled": true,
+      "include_by_default": false,
+      "path": "/Users/apple/Documents/Codex/2026-07-29/new-chat/work/woniu-contract-revised.docx"
+    },
+    {
+      "type": "local_export",
+      "enabled": true,
+      "include_by_default": false,
+      "path": "/Users/apple/Documents/Codex/2026-07-29/new-chat/work/woniu-service-revised.docx"
+    }
+  ]
+}
