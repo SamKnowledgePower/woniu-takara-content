@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ResourceCards from "./components/ResourceCards";
+import { planPhases, planPricing, planPublishingDeliverables, planVolume } from "./data/plan";
 
 export default function Home() {
   return (
@@ -242,6 +243,26 @@ export default function Home() {
         <div><strong>96</strong><span>支年度短影音</span></div>
         <div><strong>24</strong><span>次到場服務</span></div>
         <div><strong>4</strong><span>次季度檢核</span></div>
+      </section>
+
+      <section id="system-map" className="systemMap section">
+        <div className="systemMapIntro">
+          <div>
+            <p className="eyebrow">年度合作系統圖</p>
+            <h2>一張圖，看懂內容如何<br />產製、發布，再交回窩牛。</h2>
+          </div>
+          <p>這不是另一份獨立簡報，而是與方案資料同步的網站原生系統圖。從雙主線內容、四類發布協作到最後的資產交接，都放在同一條可追蹤的路徑上。</p>
+        </div>
+        <a className="systemMapFrame" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer" aria-label="開啟窩牛 × Takara 年度內容、發布與交接系統圖大圖">
+          <img src="woniu-takara-system-map.svg" alt="窩牛與 Takara 雙主線，經策略選題、批次產製、確認發布、多管道分發及回饋校準，最後形成可由窩牛接手的內容資產。" width="1920" height="1080" loading="lazy" />
+        </a>
+        <div className="systemMapSummary" aria-label="系統圖文字摘要">
+          <article><span>產製</span><strong>{planVolume.annualVideoCount.value} 支短影音 × {planVolume.annualOnsiteVisitCount.value} 次到場</strong><p>窩牛本業與 Takara 代理雙主線，依年度策略彈性配置。</p></article>
+          <article><span>發布</span><strong>{planPublishingDeliverables.length} 類發布協作</strong><p>影片多平台、網站文章、指定社團與 Threads 議題操作。</p></article>
+          <article><span>節奏</span><strong>{planPhases.length} 個階段 × {planVolume.quarterlyReviewCount.value} 次季檢核</strong><p>從免費準備期、建立節奏到資產化與內部交接。</p></article>
+          <article><span>方案</span><strong>每月 NT${planPricing.monthlyFee.value.toLocaleString("zh-TW")}</strong><p>十二個月完成內容產製、發布協作與能力建置。</p></article>
+        </div>
+        <a className="systemMapExpand" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer">開啟完整大圖 ↗</a>
       </section>
 
       <section id="service" className="section">

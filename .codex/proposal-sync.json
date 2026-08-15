@@ -12,6 +12,7 @@
       "files": [
         "app/data/plan.ts",
         "app/page.tsx",
+        "app/globals.css",
         "app/service/page.tsx",
         "app/contract/page.tsx"
       ],
@@ -30,7 +31,7 @@
     },
     {
       "type": "system_map",
-      "enabled": false,
+      "enabled": true,
       "role": "primary_overview",
       "source": "app/data/plan.ts",
       "svg_path": "public/woniu-takara-system-map.svg",

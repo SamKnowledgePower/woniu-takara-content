@@ -238,6 +238,21 @@ h1 {
 .stats strong { display: block; }
 .stats span { color: var(--muted); font-size: 12px; }
 
+.systemMap { color: #fff; background: var(--brown); }
+.systemMapIntro { display: grid; grid-template-columns: 1.2fr .7fr; gap: 8vw; align-items: end; margin-bottom: 55px; }
+.systemMapIntro h2 { margin: 0; font-family: var(--serif); font-size: clamp(42px, 5vw, 74px); font-weight: 400; line-height: 1.24; letter-spacing: -.04em; }
+.systemMapIntro > p { margin: 0; color: rgba(255,255,255,.66); font-size: 20px; line-height: 1.9; }
+.systemMapFrame { display: block; overflow: hidden; border: 1px solid rgba(255,255,255,.24); background: var(--paper); box-shadow: 0 28px 70px rgba(0,0,0,.22); }
+.systemMapFrame img { display: block; width: 100%; height: auto; }
+.systemMapFrame:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+.systemMapSummary { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 24px; border: 1px solid rgba(255,255,255,.24); }
+.systemMapSummary article { min-height: 168px; padding: 25px; border-right: 1px solid rgba(255,255,255,.2); }
+.systemMapSummary article:last-child { border-right: 0; }
+.systemMapSummary span { display: block; color: #efb18e; font-size: 14px; font-weight: 700; letter-spacing: .08em; }
+.systemMapSummary strong { display: block; margin: 20px 0 10px; font-family: var(--serif); font-size: 24px; font-weight: 400; }
+.systemMapSummary p { margin: 0; color: rgba(255,255,255,.58); font-size: 16px; line-height: 1.75; }
+.systemMapExpand { display: inline-block; margin-top: 24px; padding-bottom: 7px; border-bottom: 1px solid rgba(255,255,255,.65); font-size: 16px; }
+
 .serviceGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .serviceCard { min-height: 490px; padding: 35px; display: flex; flex-direction: column; }
 .serviceCard.dark { color: #fff; background: var(--night); }
@@ -380,6 +395,10 @@ footer { font-size: 17px; }
   .methodSequence { grid-template-columns: repeat(3, 1fr); }
   .serviceGrid, .timeline { grid-template-columns: 1fr 1fr; }
   .deliver, .scope, .pricing { grid-template-columns: 1fr; }
+  .systemMapIntro { grid-template-columns: 1fr; }
+  .systemMapSummary { grid-template-columns: 1fr 1fr; }
+  .systemMapSummary article:nth-child(2) { border-right: 0; }
+  .systemMapSummary article:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.2); }
 }
 
 @media (max-width: 620px) {
@@ -419,6 +438,12 @@ footer { font-size: 17px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats div { padding: 35px 22px; }
   .stats div:nth-child(2) { border-right: 0; }
+  .systemMapFrame { overflow-x: auto; }
+  .systemMapFrame img { width: 1040px; max-width: none; }
+  .systemMapSummary { grid-template-columns: 1fr; }
+  .systemMapSummary article { min-height: 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .systemMapSummary article:nth-child(3) { border-bottom: 1px solid rgba(255,255,255,.2); }
+  .systemMapSummary article:last-child { border-bottom: 0; }
   .serviceGrid, .timeline { grid-template-columns: 1fr; }
   .timeline div { min-height: 250px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
   .deliverList article { grid-template-columns: 42px 1fr; }
