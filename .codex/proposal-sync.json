@@ -37,7 +37,7 @@
     },
     {
       "type": "system_map",
-      "enabled": true,
+      "enabled": false,
       "role": "primary_overview",
       "source": "app/data/plan.ts",
       "svg_path": "public/woniu-takara-system-map.svg",

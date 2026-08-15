@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ResourceCards from "./components/ResourceCards";
-import { planPricing, planPublishingDeliverables, planVolume } from "./data/plan";
 
 export default function Home() {
   return (
@@ -245,26 +244,6 @@ export default function Home() {
         <div><strong>4</strong><span>次季度檢核</span></div>
       </section>
 
-      <section id="system-map" className="systemMap section">
-        <div className="systemMapIntro">
-          <div>
-            <p className="eyebrow">年度合作系統圖</p>
-            <h2>一張圖，看懂內容如何<br />產製、發布，再持續擴散。</h2>
-          </div>
-          <p>從雙主線內容、96 組延伸短文連動發布，到下半年的 6 篇 SEO／AEO 深度文章，都放在同一條可追蹤的內容成長路徑上。</p>
-        </div>
-        <a className="systemMapFrame" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer" aria-label="開啟窩牛 × Takara 年度內容、發布與議題行銷系統圖大圖">
-          <img src="woniu-takara-system-map.svg" alt="窩牛與 Takara 雙主線，經策略選題、批次產製、確認發布、跨平台延伸短文及搜尋議題行銷，持續累積市場能見度。" width="1920" height="1080" loading="lazy" />
-        </a>
-        <div className="systemMapSummary" aria-label="系統圖文字摘要">
-          <article><span>產製</span><strong>{planVolume.annualVideoCount.value} 支短影音 × {planVolume.annualOnsiteVisitCount.value} 次到場</strong><p>窩牛本業與 Takara 代理雙主線，依年度策略彈性配置。</p></article>
-          <article><span>發布</span><strong>{planPublishingDeliverables.length} 類發布協作</strong><p>影片多平台、網站文章、指定社團與 Threads 議題操作。</p></article>
-          <article><span>搜尋</span><strong>{planVolume.annualSeoAeoArticleCount.value} 篇 SEO／AEO 文章</strong><p>下半年逐月規劃、撰寫並上架，累積搜尋與問答能見度。</p></article>
-          <article><span>方案</span><strong>年度 NT${planPricing.annualFee.value.toLocaleString("zh-TW")}</strong><p>前 11 個月每月 33,500 元，最後一個月優惠 2,000 元。</p></article>
-        </div>
-        <a className="systemMapExpand" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer">開啟完整大圖 ↗</a>
-      </section>
-
       <section id="service" className="section">
         <div className="sectionHead">
           <p className="eyebrow">合作內容</p>
@@ -347,7 +326,7 @@ export default function Home() {
       <section id="documents" className="resources section">
         <div className="sectionHead">
           <p className="eyebrow">合作依據與執行工具</p>
-          <h2>提案確認方向後，<br />實際合作以這四份文件銜接。</h2>
+          <h2>提案確認方向後，<br />實際合作以這三項工具銜接。</h2>
           <p>從完整交付內容、雙方權利邊界，到內容規劃與每週執行紀錄，都有一致的查閱依據。</p>
         </div>
         <ResourceCards />

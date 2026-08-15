@@ -307,7 +307,7 @@ export const planContractTerms: PlanContractTerms = {
 // 文件目前僅擁有者（Sam 的帳號）可見；公開網站上線前需由 Sam 自行把分享權限
 // 改成「知道連結的使用者」，Claude 沒有可用工具可以代為變更分享設定。
 export interface PlanResourceCard {
-  key: "service" | "contract" | "contentMap" | "progress";
+  key: "service" | "contract" | "progress";
   title: string;
   summary: string;
   status: "ready" | "planned";
@@ -338,15 +338,6 @@ export const planResourceCards: PlanResourceCard[] = [
     href: "https://docs.google.com/document/d/1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y/edit",
     previewUrl: "https://docs.google.com/document/d/1AV9unXnuS_vITKWO75DxTz33YHFqx2Aux8fASq6PK8Y/preview",
     openInNewTab: true,
-  },
-  {
-    key: "contentMap",
-    title: "窩牛 × Takara 內容行銷大地圖",
-    summary: "雙主線題庫、選題邏輯與內容資產全貌一次看懂，規劃中，尚未建立。",
-    status: "planned",
-    href: null,
-    previewUrl: null,
-    openInNewTab: false,
   },
   {
     key: "progress",

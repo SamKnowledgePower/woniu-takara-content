@@ -6,8 +6,7 @@ import { planResourceCards, type PlanResourceCard } from "../data/plan";
 const stepLabels: Record<PlanResourceCard["key"], string> = {
   service: "01・完整交付內容",
   contract: "02・合作邊界與權利",
-  contentMap: "03・策略與內容規劃",
-  progress: "04・每週執行檢核",
+  progress: "03・每週執行檢核",
 };
 
 function ResourceCardItem({ card }: { card: PlanResourceCard }) {
