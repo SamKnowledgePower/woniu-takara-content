@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="map-title map-desc">
-  <title id="map-title">窩牛 × Takara 一年內容、發布與交接系統圖</title>
-  <desc id="map-desc">窩牛本業與 Takara 代理兩條內容主線，經過策略選題、批次產製、確認發布、多管道分發及回饋校準，完成一年九十六支短影音、二十四次到場、四次季度檢核，並留下可由窩牛接手的內容資產。</desc>
+  <title id="map-title">窩牛 × Takara 一年內容、發布與議題行銷系統圖</title>
+  <desc id="map-desc">窩牛本業與 Takara 代理兩條內容主線，經過策略選題、批次產製、確認發布、九十六組延伸短文跨平台連動及下半年六篇 SEO／AEO 深度文章，持續累積市場與搜尋能見度。</desc>
   <defs>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#16120f" flood-opacity=".09"/>
@@ -19,8 +19,8 @@
 
   <g class="sans">
     <text x="70" y="70" class="eyebrow" fill="#a95732">WONIU × TAKARA · ANNUAL CONTENT SYSTEM</text>
-    <text id="visual-title" x="70" y="132" class="title serif" fill="#16120f">一年內容、發布與交接系統</text>
-    <text x="70" y="172" class="subtitle">雙品牌內容主線，透過穩定產製、多管道發布與資產化，逐步建立窩牛可接手的內容能力。</text>
+    <text id="visual-title" x="70" y="132" class="title serif" fill="#16120f">一年內容、發布與議題行銷系統</text>
+    <text x="70" y="172" class="subtitle">雙品牌內容主線，透過穩定產製、跨平台連動與搜尋文章，持續累積市場能見度。</text>
     <g transform="translate(1582 74)">
       <rect width="268" height="80" rx="16" fill="#16120f"/>
       <text x="22" y="31" class="eyebrow" fill="#d79069">12 MONTHS</text>
@@ -59,7 +59,7 @@
         <text x="28" y="36" class="stepNo" fill="#a95732">ONSITE &amp; REVIEW</text>
         <text x="28" y="80" class="metric serif" fill="#16120f">24 次到場</text>
         <text x="28" y="115" class="cardBody">每次約 1 小時，最長不超過 2 小時。</text>
-        <text x="28" y="142" class="cardBody">同步完成訪談、拍攝、確認與帶訓。</text>
+        <text x="28" y="142" class="cardBody">同步完成訪談、拍攝與現場內容確認。</text>
         <rect x="28" y="159" width="127" height="23" rx="12" fill="#f0e8d6"/>
         <text x="43" y="176" class="chip" fill="#5a2d1d">真實場景採集</text>
       </g>
@@ -98,23 +98,23 @@
       <g transform="translate(1132 522)">
         <rect width="320" height="208" rx="20" fill="#5a2d1d"/>
         <text x="24" y="34" class="stepNo" fill="#efb18e">STEP 04</text>
-        <text x="24" y="73" class="stepTitle serif" fill="#fff">四路發布協作</text>
+        <text x="24" y="73" class="stepTitle serif" fill="#fff">96 組跨平台連動</text>
         <text x="24" y="105" class="chip" fill="#f7f3ea">① FB／IG／YT／TikTok 影片</text>
-        <text x="24" y="130" class="chip" fill="#f7f3ea">② 網站文章　③ 3 個指定社團</text>
-        <text x="24" y="155" class="chip" fill="#f7f3ea">④ Threads 行銷議題操作</text>
-        <text x="24" y="184" font-size="13" fill="#efb18e">確認後代上架／操作</text>
+        <text x="24" y="130" class="chip" fill="#f7f3ea">② 延伸短文：網站＋3 個社團</text>
+        <text x="24" y="155" class="chip" fill="#f7f3ea">③ Threads 議題連動</text>
+        <text x="24" y="184" font-size="13" fill="#efb18e">同一內容組不按平台重複計件</text>
       </g>
       <g transform="translate(1486 522)">
         <rect width="364" height="208" rx="20" fill="#16120f"/>
         <text x="24" y="34" class="stepNo" fill="#d79069">STEP 05</text>
-        <text x="24" y="73" class="stepTitle serif" fill="#fff">回饋校準與資產化</text>
-        <text x="24" y="108" class="whiteBody">每週回報進度、每季檢核方向，</text>
-        <text x="24" y="133" class="whiteBody">把有效做法沉澱為可重複流程。</text>
-        <text x="24" y="176" class="chip" fill="#e8b18f">發布 → 回饋 → 下一輪選題</text>
+        <text x="24" y="73" class="stepTitle serif" fill="#fff">搜尋議題持續累積</text>
+        <text x="24" y="108" class="whiteBody">每週回報、每季校準；下半年</text>
+        <text x="24" y="133" class="whiteBody">逐月完成 6 篇 SEO／AEO 文章。</text>
+        <text x="24" y="176" class="chip" fill="#e8b18f">發布 → 回饋 → 搜尋內容</text>
       </g>
     </g>
 
-    <text x="70" y="785" class="band">03 · 一年後留下的交付與能力</text>
+    <text x="70" y="785" class="band">03 · 全年內容交付與市場累積</text>
     <g filter="url(#shadow)">
       <g transform="translate(70 808)">
         <rect width="540" height="202" rx="22" fill="#fff" stroke="#d9cdbc"/>
@@ -123,10 +123,10 @@
           <text x="0" y="34" class="metric serif" fill="#a95732">96</text><text x="0" y="59" class="metricLabel">支短影音</text>
           <text x="120" y="34" class="metric serif" fill="#a95732">24</text><text x="120" y="59" class="metricLabel">次到場</text>
           <text x="240" y="34" class="metric serif" fill="#a95732">4</text><text x="240" y="59" class="metricLabel">次季度檢核</text>
-          <text x="360" y="34" class="metric serif" fill="#a95732">33,500</text><text x="360" y="59" class="metricLabel">元／月</text>
+          <text x="360" y="34" class="metric serif" fill="#a95732">33,500</text><text x="360" y="59" class="metricLabel">前 11 月／月</text>
         </g>
         <line x1="26" y1="146" x2="514" y2="146" stroke="#e2d8ca"/>
-        <text x="26" y="178" class="footerBody">每週進度回報 · 年度合計 NT$402,000</text>
+        <text x="26" y="178" class="footerBody">末月 NT$31,500 · 年度合計 NT$400,000</text>
       </g>
       <g transform="translate(630 808)">
         <rect width="590" height="202" rx="22" fill="#f0e8d6" stroke="#d9cdbc"/>
@@ -135,21 +135,21 @@
           <rect width="122" height="72" rx="13" fill="#fff"/><text x="14" y="25" class="chip" fill="#a95732">準備期</text><text x="14" y="49" font-size="13" fill="#746e65">定位與盤點</text>
           <rect x="136" width="122" height="72" rx="13" fill="#fff"/><text x="150" y="25" class="chip" fill="#a95732">第 1–3 月</text><text x="150" y="49" font-size="13" fill="#746e65">建立節奏</text>
           <rect x="272" width="122" height="72" rx="13" fill="#fff"/><text x="286" y="25" class="chip" fill="#a95732">第 4–6 月</text><text x="286" y="49" font-size="13" fill="#746e65">穩定產出</text>
-          <rect x="408" width="130" height="72" rx="13" fill="#5a2d1d"/><text x="422" y="25" class="chip" fill="#efb18e">第 7–12 月</text><text x="422" y="49" font-size="13" fill="#fff">資產與交接</text>
+          <rect x="408" width="130" height="72" rx="13" fill="#5a2d1d"/><text x="422" y="25" class="chip" fill="#efb18e">第 7–12 月</text><text x="422" y="49" font-size="13" fill="#fff">搜尋議題累積</text>
         </g>
         <text x="26" y="178" class="footerBody">準備期免費贈送，不計入十二個月契約期間。</text>
       </g>
       <g transform="translate(1240 808)">
         <rect width="610" height="202" rx="22" fill="#16120f"/>
-        <text x="26" y="37" class="footerTitle serif" fill="#fff">窩牛可接手的內容資產</text>
+        <text x="26" y="37" class="footerTitle serif" fill="#fff">持續累積的市場內容</text>
         <g transform="translate(26 64)">
-          <rect width="158" height="38" rx="19" fill="#5a2d1d"/><text x="79" y="25" text-anchor="middle" class="chip" fill="#fff">選題庫</text>
-          <rect x="172" width="158" height="38" rx="19" fill="#5a2d1d"/><text x="251" y="25" text-anchor="middle" class="chip" fill="#fff">素材規則</text>
-          <rect x="344" width="188" height="38" rx="19" fill="#5a2d1d"/><text x="438" y="25" text-anchor="middle" class="chip" fill="#fff">發布流程</text>
-          <rect y="52" width="244" height="38" rx="19" fill="#f0e8d6"/><text x="122" y="77" text-anchor="middle" class="chip" fill="#5a2d1d">教學紀錄與模板</text>
-          <rect x="258" y="52" width="274" height="38" rx="19" fill="#f0e8d6"/><text x="395" y="77" text-anchor="middle" class="chip" fill="#5a2d1d">權限盤點與內部帶訓</text>
+          <rect width="158" height="38" rx="19" fill="#5a2d1d"/><text x="79" y="25" text-anchor="middle" class="chip" fill="#fff">96 支影音</text>
+          <rect x="172" width="158" height="38" rx="19" fill="#5a2d1d"/><text x="251" y="25" text-anchor="middle" class="chip" fill="#fff">96 組延伸短文</text>
+          <rect x="344" width="188" height="38" rx="19" fill="#5a2d1d"/><text x="438" y="25" text-anchor="middle" class="chip" fill="#fff">6 篇 SEO／AEO</text>
+          <rect y="52" width="244" height="38" rx="19" fill="#f0e8d6"/><text x="122" y="77" text-anchor="middle" class="chip" fill="#5a2d1d">網站與 3 個指定社團</text>
+          <rect x="258" y="52" width="274" height="38" rx="19" fill="#f0e8d6"/><text x="395" y="77" text-anchor="middle" class="chip" fill="#5a2d1d">Threads 議題連動</text>
         </g>
-        <text x="26" y="178" font-size="15" fill="#d8cdbf">目標：讓內容從外部代操，逐步成為內部日常能力。</text>
+        <text x="26" y="178" font-size="15" fill="#d8cdbf">目標：讓每次拍攝延伸出更多接觸點與長期搜尋入口。</text>
       </g>
     </g>
   </g>

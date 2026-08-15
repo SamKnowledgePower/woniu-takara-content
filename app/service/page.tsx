@@ -16,12 +16,12 @@ import {
 
 export const metadata: Metadata = {
   title: "窩牛 × Takara｜服務說明書",
-  description: "引弘企業社 × 窩牛 × Takara 內容行銷導入暨內部能力建置一年期服務說明書。",
+  description: "引弘企業社 × 窩牛 × Takara 年度內容產製暨議題行銷一年期服務說明書。",
 };
 
 const woniuTrack = planServiceTracks.find((t) => t.key === "woniu")!;
 const takaraTrack = planServiceTracks.find((t) => t.key === "takara")!;
-const internalTrack = planServiceTracks.find((t) => t.key === "internalCapability")!;
+const distributionTrack = planServiceTracks.find((t) => t.key === "contentDistribution")!;
 
 export default function ServicePage() {
   return (
@@ -45,7 +45,7 @@ export default function ServicePage() {
             <div><dt>進度回報</dt><dd>{planVolume.weeklyReporting.value ? "每週" : "依約定頻率"}</dd></div>
             <div><dt>內容主線</dt><dd>窩牛本業／Takara 代理雙主線</dd></div>
           </div>
-          <p>這一年不只是代拍影片，同時建立選題庫、素材整理規則、發布排程與內部操作能力，讓合作結束後窩牛仍能保有內容資產、帳號權限與持續運作的基礎。</p>
+          <p>這一年以持續產製與市場擴散為核心：完成 96 支短影音、96 組跨平台延伸短文，並於下半年逐月完成 6 篇 SEO／AEO 深度文章。</p>
         </section>
 
         <section className="docSection">
@@ -130,32 +130,32 @@ export default function ServicePage() {
         <section className="docSection">
           <h2>第六部分｜{planVolume.annualOnsiteVisitCount.value} 次到場服務</h2>
           <p>
-            每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題確認、專業訪談、現場交辦及帶訓，依實際排程安排，不等於每月固定次數。
+            每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題確認、專業訪談及現場內容確認，依實際排程安排，不等於每月固定次數。
           </p>
           <p>{planContractTerms.onsiteReschedulingAndTravel.value}。</p>
         </section>
 
         <section className="docSection">
-          <h2>第七部分｜內部能力建置</h2>
-          <p>{internalTrack.summary}</p>
+          <h2>第七部分｜影音延伸與搜尋議題行銷</h2>
+          <p>{distributionTrack.summary}</p>
           <h3>我們會做什麼</h3>
           <ul>
-            {internalTrack.items.map((item) => (
+            {distributionTrack.items.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
           <h3>你獲得的價值</h3>
           <ul>
-            <li>合作結束後不會失去內容操作能力。</li>
-            <li>新人可依文件與紀錄接手，不需要重新從零學習。</li>
-            <li>素材與方法留在企業內部，成為可持續使用的資產。</li>
+            <li>讓每支影片不只停留在影音平台，而能進入網站、社團與 Threads。</li>
+            <li>用 6 篇 SEO／AEO 深度文章累積長期搜尋與問答入口。</li>
+            <li>全年內容由同一策略脈絡持續推進，不依賴額外聘用內部人員。</li>
           </ul>
         </section>
 
         <section className="docSection">
           <h2>第八部分｜每週回報與季度檢核</h2>
           <p>每週提供簡短進度：本週完成、累計交付、待確認、阻塞事項、下週安排、需要窩牛決定的事項。</p>
-          <p>每 3 個月共同檢核一次，全年共 {planVolume.quarterlyReviewCount.value} 次：年度交付進度、內容庫與發布狀況、窩牛／Takara 題材比例、內部帶訓與交接成熟度，並視需要調整下一季方向。</p>
+          <p>每 3 個月共同檢核一次，全年共 {planVolume.quarterlyReviewCount.value} 次：年度交付進度、影音與延伸短文發布狀況、窩牛／Takara 題材比例、SEO／AEO 文章進度，並視需要調整下一季方向。</p>
         </section>
 
         <section className="docSection">
@@ -186,7 +186,7 @@ export default function ServicePage() {
           <ul>
             <li>策略、選題、腳本、主要拍攝與剪輯。</li>
             <li>品質控管與影片、網站文章、指定社團文字內容及 Threads 議題的發布協作。</li>
-            <li>進度回報、季度檢核與漸進帶訓。</li>
+            <li>96 組影音延伸短文連動發布、6 篇 SEO／AEO 深度文章、進度回報與季度檢核。</li>
           </ul>
           <h3>窩牛負責</h3>
           <ul>
@@ -215,11 +215,11 @@ export default function ServicePage() {
         </section>
 
         <section className="docSection">
-          <h2>第十二部分｜最後留下的資產</h2>
+          <h2>第十二部分｜年度內容成果</h2>
           <ul>
             <li>已完成影片成品與原始拍攝素材（歸{planRights.finishedWorkAndRawFootageOwner.value}所有）。</li>
-            <li>選題庫、素材命名規則、腳本模板。</li>
-            <li>發布流程與教學紀錄。</li>
+            <li>96 組影音延伸短文與跨平台發布紀錄。</li>
+            <li>6 篇 SEO／AEO 深度文章。</li>
             <li>平台帳號與管理權限。</li>
             <li>年度成果報告。</li>
             <li>{planContractTerms.rawAssetStorage.value}。</li>
@@ -234,14 +234,14 @@ export default function ServicePage() {
               <thead>
                 <tr>
                   <th scope="col">合作期間</th>
-                  <th scope="col">每月服務費</th>
+                  <th scope="col">服務費安排</th>
                   <th scope="col">年度合計</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>{planDuration.contractMonths.value} 個月</td>
-                  <td>NT${planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")}</td>
+                  <td>前 11 個月每月 NT${planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")}；第 12 個月 NT${planPricing.finalMonthFee.value.toLocaleString("zh-Hant-TW")}</td>
                   <td>NT${planPricing.annualFee.value.toLocaleString("zh-Hant-TW")}</td>
                 </tr>
               </tbody>

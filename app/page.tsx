@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ResourceCards from "./components/ResourceCards";
-import { planPhases, planPricing, planPublishingDeliverables, planVolume } from "./data/plan";
+import { planPricing, planPublishingDeliverables, planVolume } from "./data/plan";
 
 export default function Home() {
   return (
@@ -54,9 +54,9 @@ export default function Home() {
             <p>不單單介紹規格與案例，更進一步回答消費者在裝修、選材、使用與決策過程中真正關心的問題，並破除常見迷思。</p>
           </article>
           <article>
-            <span>03｜內容資產建構</span>
-            <h3>讓每次產製回到品牌資產</h3>
-            <p>影片之外，同步留下選題庫、素材規則、發布節奏、教學紀錄與可由內部接手的操作方法。</p>
+            <span>03｜議題擴散</span>
+            <h3>讓一支影片延伸成多個接觸點</h3>
+            <p>每支影音搭配延伸短文，連動發布至網站、指定社團與 Threads；下半年再用 SEO／AEO 深度文章累積搜尋能見度。</p>
           </article>
         </div>
       </section>
@@ -191,7 +191,7 @@ export default function Home() {
           <article><span>03｜系列化</span><h3>用系列累積，而非追單點爆量</h3><p>建立內容支柱與可連載題型，讓一次拍攝能形成內容庫，品牌也能持續被辨識。</p></article>
           <article><span>04｜執行</span><h3>同一套判斷貫穿製作</h3><p>策略、腳本、拍攝、剪輯與發布由同一脈絡推進，避免每個環節各自解讀品牌。</p></article>
           <article><span>05｜校準</span><h3>用發布結果校準下一輪</h3><p>每週檢查進度、每季檢視題材與發布狀況；數據是修正依據，不是空泛的成效承諾。</p></article>
-          <article><span>06｜交接</span><h3>把方法留在企業內部</h3><p>同步整理選題庫、素材規則、排程與教學紀錄，讓合作成果能被接手與延續。</p></article>
+          <article><span>06｜擴散</span><h3>讓內容持續進入不同情境</h3><p>影音、網站、社團、Threads 與搜尋文章彼此連動，持續累積品牌被看見與被理解的機會。</p></article>
         </div>
         <div className="methodTracks">
           <article>
@@ -220,7 +220,7 @@ export default function Home() {
           </article>
         </div>
         <div className="methodSequence" aria-label="內容工作流程">
-          {["採集真實專業", "轉譯客戶語言", "批次製作內容", "確認後發布", "數據與回饋校準", "整理交接資產"].map((item, index) => (
+          {["採集真實專業", "轉譯客戶語言", "批次製作內容", "確認後發布", "跨平台議題擴散", "搜尋內容累積"].map((item, index) => (
             <div key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>
           ))}
         </div>
@@ -229,7 +229,7 @@ export default function Home() {
       <section className="proposalBridge">
         <p className="eyebrow">從既有能力到本次方案</p>
         <h2>因此，接下來不是一份<br />從零拼湊的行銷清單。</h2>
-        <p>重點要放在發展策略、轉譯、製作與資產化方法，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整、也能逐步交接的合作方案。</p>
+        <p>重點放在策略、轉譯、拍攝製作與議題擴散，放進窩牛與 Takara 的真實業務情境，形成一套一年期、可追蹤、可調整並持續累積市場能見度的合作方案。</p>
         <a href="#service">進入年度合作方案 <span>↓</span></a>
       </section>
 
@@ -249,18 +249,18 @@ export default function Home() {
         <div className="systemMapIntro">
           <div>
             <p className="eyebrow">年度合作系統圖</p>
-            <h2>一張圖，看懂內容如何<br />產製、發布，再交回窩牛。</h2>
+            <h2>一張圖，看懂內容如何<br />產製、發布，再持續擴散。</h2>
           </div>
-          <p>這不是另一份獨立簡報，而是與方案資料同步的網站原生系統圖。從雙主線內容、四類發布協作到最後的資產交接，都放在同一條可追蹤的路徑上。</p>
+          <p>從雙主線內容、96 組延伸短文連動發布，到下半年的 6 篇 SEO／AEO 深度文章，都放在同一條可追蹤的內容成長路徑上。</p>
         </div>
-        <a className="systemMapFrame" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer" aria-label="開啟窩牛 × Takara 年度內容、發布與交接系統圖大圖">
-          <img src="woniu-takara-system-map.svg" alt="窩牛與 Takara 雙主線，經策略選題、批次產製、確認發布、多管道分發及回饋校準，最後形成可由窩牛接手的內容資產。" width="1920" height="1080" loading="lazy" />
+        <a className="systemMapFrame" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer" aria-label="開啟窩牛 × Takara 年度內容、發布與議題行銷系統圖大圖">
+          <img src="woniu-takara-system-map.svg" alt="窩牛與 Takara 雙主線，經策略選題、批次產製、確認發布、跨平台延伸短文及搜尋議題行銷，持續累積市場能見度。" width="1920" height="1080" loading="lazy" />
         </a>
         <div className="systemMapSummary" aria-label="系統圖文字摘要">
           <article><span>產製</span><strong>{planVolume.annualVideoCount.value} 支短影音 × {planVolume.annualOnsiteVisitCount.value} 次到場</strong><p>窩牛本業與 Takara 代理雙主線，依年度策略彈性配置。</p></article>
           <article><span>發布</span><strong>{planPublishingDeliverables.length} 類發布協作</strong><p>影片多平台、網站文章、指定社團與 Threads 議題操作。</p></article>
-          <article><span>節奏</span><strong>{planPhases.length} 個階段 × {planVolume.quarterlyReviewCount.value} 次季檢核</strong><p>從免費準備期、建立節奏到資產化與內部交接。</p></article>
-          <article><span>方案</span><strong>每月 NT${planPricing.monthlyFee.value.toLocaleString("zh-TW")}</strong><p>十二個月完成內容產製、發布協作與能力建置。</p></article>
+          <article><span>搜尋</span><strong>{planVolume.annualSeoAeoArticleCount.value} 篇 SEO／AEO 文章</strong><p>下半年逐月規劃、撰寫並上架，累積搜尋與問答能見度。</p></article>
+          <article><span>方案</span><strong>年度 NT${planPricing.annualFee.value.toLocaleString("zh-TW")}</strong><p>前 11 個月每月 33,500 元，最後一個月優惠 2,000 元。</p></article>
         </div>
         <a className="systemMapExpand" href="woniu-takara-system-map.svg" target="_blank" rel="noreferrer">開啟完整大圖 ↗</a>
       </section>
@@ -286,9 +286,9 @@ export default function Home() {
           </article>
           <article className="serviceCard outline">
             <span>03</span>
-            <h3>內部能力</h3>
-            <p>從素材命名、模板填寫與發布檢核開始，逐步帶入固定場景拍攝與簡易套版剪輯。</p>
-            <ul><li>真實微任務</li><li>既有教材</li><li>權限盤點</li><li>漸進交接</li></ul>
+            <h3>議題擴散</h3>
+            <p>把 96 支影音延伸成短文，連動網站、3 個指定社團與 Threads；下半年逐月上架 SEO／AEO 深度文章。</p>
+            <ul><li>96 組延伸短文</li><li>跨平台連動</li><li>社團議題</li><li>6 篇 SEO／AEO</li></ul>
           </article>
         </div>
       </section>
@@ -301,8 +301,8 @@ export default function Home() {
         <div className="timeline">
           <div><span>00</span><h3>一個月準備期</h3><p>素材蒐集、資料盤點、理解品牌與內容定位。此階段為贈送，不計入 12 個月。</p></div>
           <div><span>01–03</span><h3>建立節奏</h3><p>確認雙主線題材、批次拍攝方式、送審與發布流程，建立第一批內容庫。</p></div>
-          <div><span>04–06</span><h3>穩定產出</h3><p>持續拍攝與製作，依週進度追蹤交付；第 6 個月開始整理內容資產，並用真實任務帶入內部操作能力。</p></div>
-          <div><span>07–12</span><h3>資產化與系統交接</h3><p>維持內容產製，同步完成選題庫、素材規則、發布流程、教學紀錄與內部帶訓，讓系統逐步由窩牛接手。</p></div>
+          <div><span>04–06</span><h3>穩定產出與擴散</h3><p>持續拍攝與製作，依週進度追蹤交付；同步優化影音延伸短文與跨平台連動方式。</p></div>
+          <div><span>07–12</span><h3>搜尋議題累積</h3><p>維持影片及延伸短文發布，下半年逐月完成 6 篇 SEO／AEO 深度文章，累積網站搜尋與議題能見度。</p></div>
         </div>
       </section>
 
@@ -316,11 +316,11 @@ export default function Home() {
             ["年度內容策略", "窩牛與 Takara 的消費市場內容主軸、選題與腳本。"],
             ["96 支短影音", "主要拍攝、剪輯、品質控管與發布協作。"],
             ["影片多平台代上架", "Facebook、Instagram、YouTube 與 TikTok。"],
-            ["文字內容發布協作", "網站文章、3 個指定社團代上架及 Threads 行銷議題操作。"],
+            ["96 組延伸短文", "每支影音搭配一則短文，連動網站、3 個指定社團與 Threads；同一內容組不重複計件。"],
+            ["6 篇 SEO／AEO 文章", "下半年逐月研究搜尋意圖、撰寫並上架深度文章。"],
             ["24 次到場", "每次約 1 小時，最長不超過 2 小時。"],
-            ["內容資產系統", "專屬選題庫、素材規則、標準作業流程與發布排程。"],
+            ["發布紀錄管理", "維持必要內容檔案、帳號權限與跨平台發布紀錄。"],
             ["透明進度", "每週回報、季度檢核與阻塞事項追蹤。"],
-            ["漸進式帶訓", "讓內部人員從可完成的小任務開始接手。"],
           ].map(([title, copy], index) => (
             <article key={title}>
               <span>{String(index + 1).padStart(2, "0")}</span>
@@ -338,7 +338,7 @@ export default function Home() {
           <p>以完成製作並送交確認作為交付認定。窩牛保有最終發布確認權；觸及、詢價與成交受市場、平台與後續服務影響，不作特定數字保證。</p>
         </div>
         <div className="scopeList">
-          <div><strong>包含</strong><p>年度策略、96 支短影音、24 次到場、主要製作、Facebook／Instagram／YouTube／TikTok 影片代上架、網站文章代上架、3 個指定社團文字內容代上架、Threads 行銷議題操作、進度檢核與帶訓。</p></div>
+          <div><strong>包含</strong><p>年度策略、96 支短影音、24 次到場、主要製作、影片多平台代上架、96 組影音延伸短文連動網站／3 個指定社團／Threads、下半年 6 篇 SEO／AEO 深度文章、進度回報與季度檢核。</p></div>
           <div><strong>另案</strong><p>廣告、網站、長影片、課程、企業對企業業務、新品牌線、重大活動與高規格專案影片。</p></div>
           <div><strong>權利</strong><p>成品與原始拍攝素材歸窩牛；通用方法論與模板授權內部使用，不得轉售。</p></div>
         </div>
@@ -359,9 +359,9 @@ export default function Home() {
           <h2>一年，把內容從臨時任務，變成日常能力。</h2>
         </div>
         <div className="priceCard">
-          <p>12 個月合作</p>
+          <p>12 個月合作｜最後一個月優惠 2,000 元</p>
           <div><span>新台幣</span><strong>33,500</strong><em>/ 月</em></div>
-          <p className="annual">年度合計新台幣 402,000 元</p>
+          <p className="annual">前 11 個月每月 33,500 元；第 12 個月 31,500 元｜年度合計新台幣 400,000 元</p>
           <a href="mailto:blessingstable@gmail.com">開始討論合作</a>
           <small>詳細權利義務以雙方簽署之正式契約為準。</small>
         </div>
@@ -369,7 +369,7 @@ export default function Home() {
 
       <footer>
         <div className="brand"><span className="mark">窩</span><span>窩牛 × Takara</span></div>
-        <p>內容行銷導入暨內部能力建置</p>
+        <p>年度內容產製暨議題行銷</p>
         <span>© 2026 引弘企業社</span>
         <nav className="footerDocs" aria-label="方案文件">
           <a href="#documents">合作依據與執行工具</a>

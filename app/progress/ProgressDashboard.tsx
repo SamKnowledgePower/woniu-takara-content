@@ -118,29 +118,23 @@ export default function ProgressDashboard() {
   const quarterlyDone = planProgressMetricTaskNames.quarterlyReviews.filter((name) =>
     taskList.some((t) => t.name === name && t.status === "complete"),
   ).length;
-  const contentAssetDone = taskList.some(
-    (t) => t.name === planProgressMetricTaskNames.contentAssetHandover && t.status === "complete",
-  )
-    ? 1
-    : 0;
-  const internalCapabilityDone = taskList.some(
-    (t) => t.name === planProgressMetricTaskNames.internalCapabilityHandover && t.status === "complete",
-  )
-    ? 1
-    : 0;
-  const annualAssetDone = taskList.some(
-    (t) => t.name === planProgressMetricTaskNames.annualAssetHandover && t.status === "complete",
-  )
-    ? 1
-    : 0;
+  const seoAeoDone = planProgressMetricTaskNames.seoAeoArticles.filter((name) =>
+    taskList.some((t) => t.name === name && t.status === "complete"),
+  ).length;
+  const distributionDone = taskList.some(
+    (t) => t.name === planProgressMetricTaskNames.distributionCompletion && t.status === "complete",
+  ) ? 1 : 0;
+  const annualSummaryDone = taskList.some(
+    (t) => t.name === planProgressMetricTaskNames.annualContentSummary && t.status === "complete",
+  ) ? 1 : 0;
 
   const metricDefs = [
     { label: "短影音", n: videoCount, total: planVolume.annualVideoCount.value },
     { label: "到場服務", n: visitCount, total: planVolume.annualOnsiteVisitCount.value },
     { label: "季度檢核", n: quarterlyDone, total: planVolume.quarterlyReviewCount.value },
-    { label: "內容資產系統", n: contentAssetDone, total: 1 },
-    { label: "內部能力交接", n: internalCapabilityDone, total: 1 },
-    { label: "年度成果與資產交接", n: annualAssetDone, total: 1 },
+    { label: "SEO／AEO 文章", n: seoAeoDone, total: planVolume.annualSeoAeoArticleCount.value },
+    { label: "延伸短文連動完成", n: distributionDone, total: 1 },
+    { label: "年度內容整理", n: annualSummaryDone, total: 1 },
   ];
 
   const currentMonthLabel =
@@ -208,7 +202,7 @@ export default function ProgressDashboard() {
           <div>
             <div className="progressDash__eyebrow">SAM KNOWLEDGE POWER × 窩牛 × Takara</div>
             <h1 className="progressDash__title">執行進度儀表板</h1>
-            <p className="progressDash__subtitle">窩牛 × Takara 一年期內容行銷導入暨內部能力建置</p>
+            <p className="progressDash__subtitle">窩牛 × Takara 一年期年度內容產製暨議題行銷</p>
             <div className="progressDash__status">
               <span className="progressDash__dot" />
               <span>{data.status}</span>

@@ -35,6 +35,8 @@ export interface PlanDuration {
 
 export interface PlanVolume {
   annualVideoCount: PlanField<number>;
+  annualVideoDerivativePostCount: PlanField<number>;
+  annualSeoAeoArticleCount: PlanField<number>;
   annualOnsiteVisitCount: PlanField<number>;
   onsiteVisitTypicalDuration: PlanField<string>;
   onsiteVisitMaxDuration: PlanField<string>;
@@ -45,6 +47,8 @@ export interface PlanVolume {
 export interface PlanPricing {
   currency: PlanField<string>;
   monthlyFee: PlanField<number>;
+  finalMonthFee: PlanField<number>;
+  finalMonthDiscount: PlanField<number>;
   annualFee: PlanField<number>;
 }
 
@@ -60,7 +64,7 @@ export interface PlanRights {
 }
 
 export interface PlanServiceTrack {
-  key: "woniu" | "takara" | "internalCapability";
+  key: "woniu" | "takara" | "contentDistribution";
   title: string;
   summary: string;
   items: string[];
@@ -73,7 +77,7 @@ export interface PlanScope {
 
 export interface PlanPublishingDeliverable {
   channel: string;
-  contentType: "影片" | "文字內容";
+  contentType: "影片" | "文字內容" | "SEO／AEO 深度文章";
   service: string;
 }
 
@@ -109,7 +113,7 @@ export interface PlanContractTerms {
 
 export const planIdentity: PlanIdentity = {
   clientName: confirmed("窩牛 × Takara"),
-  planName: confirmed("內容行銷導入暨內部能力建置"),
+  planName: confirmed("年度內容產製暨議題行銷"),
 };
 
 export const planDuration: PlanDuration = {
@@ -121,6 +125,8 @@ export const planDuration: PlanDuration = {
 
 export const planVolume: PlanVolume = {
   annualVideoCount: confirmed(96),
+  annualVideoDerivativePostCount: confirmed(96),
+  annualSeoAeoArticleCount: confirmed(6),
   annualOnsiteVisitCount: confirmed(24),
   onsiteVisitTypicalDuration: confirmed("約 1 小時"),
   onsiteVisitMaxDuration: confirmed("最長不超過 2 小時"),
@@ -131,7 +137,9 @@ export const planVolume: PlanVolume = {
 export const planPricing: PlanPricing = {
   currency: confirmed("TWD"),
   monthlyFee: confirmed(33500),
-  annualFee: confirmed(402000),
+  finalMonthFee: confirmed(31500),
+  finalMonthDiscount: confirmed(2000),
+  annualFee: confirmed(400000),
 };
 
 export const planPhases: PlanPhase[] = [
@@ -148,12 +156,12 @@ export const planPhases: PlanPhase[] = [
   {
     key: "phase4to6",
     months: "第 4–6 月",
-    focus: "持續拍攝與製作，依週進度追蹤交付；第 6 個月開始整理內容資產，並用真實任務帶入內部操作能力",
+    focus: "持續拍攝與製作，依週進度追蹤交付；同步優化影音延伸短文與跨平台連動發布方式",
   },
   {
     key: "phase7to12",
     months: "第 7–12 月",
-    focus: "維持內容產製，同步完成選題庫、素材規則、發布流程、教學紀錄與內部帶訓，讓系統逐步由窩牛接手",
+    focus: "維持內容產製及 96 組延伸短文連動發布；下半年逐月完成 6 篇 SEO／AEO 深度文章，累積網站搜尋與議題能見度",
   },
 ];
 
@@ -176,10 +184,10 @@ export const planServiceTracks: PlanServiceTrack[] = [
     items: ["產品教育", "展間體驗", "情境應用", "品牌差異"],
   },
   {
-    key: "internalCapability",
-    title: "內部能力",
-    summary: "從素材命名、模板填寫與發布檢核開始，逐步帶入固定場景拍攝與簡易套版剪輯。",
-    items: ["真實微任務", "既有教材", "權限盤點", "漸進交接"],
+    key: "contentDistribution",
+    title: "議題擴散",
+    summary: "把每支影音延伸成短文，連動發布至網站、指定社團與 Threads；下半年再以 6 篇 SEO／AEO 深度文章累積搜尋能見度。",
+    items: ["96 組延伸短文", "網站連動", "3 個指定社團", "Threads 議題", "6 篇 SEO／AEO"],
   },
 ];
 
@@ -190,10 +198,10 @@ export const planScope: PlanScope = {
     "24 次到場",
     "主要製作",
     "Facebook／Instagram／YouTube／TikTok 影片代上架",
-    "網站文章代上架",
-    "3 個指定社團文字內容代上架",
-    "Threads 行銷議題操作",
-    "進度檢核與帶訓",
+    "96 組影音延伸短文連動發布至網站、3 個指定社團與 Threads",
+    "下半年 6 篇 SEO／AEO 深度文章",
+    "進度回報與季度檢核",
+    "必要內容檔案與發布紀錄管理",
   ],
   excludedSeparateEngagement: [
     "廣告",
@@ -208,10 +216,9 @@ export const planScope: PlanScope = {
 };
 
 export const planPublishingDeliverables: PlanPublishingDeliverable[] = [
-  { channel: "Facebook／Instagram／YouTube／TikTok", contentType: "影片", service: "完成影片代上架" },
-  { channel: "網站", contentType: "文字內容", service: "完成文章代上架" },
-  { channel: "甲方指定之 3 個社團", contentType: "文字內容", service: "完成內容代上架" },
-  { channel: "Threads", contentType: "文字內容", service: "行銷議題操作" },
+  { channel: "Facebook／Instagram／YouTube／TikTok", contentType: "影片", service: "96 支完成影片代上架" },
+  { channel: "網站／甲方指定之 3 個社團／Threads", contentType: "文字內容", service: "96 組影音延伸短文跨平台連動發布；同一內容組不重複計件" },
+  { channel: "網站", contentType: "SEO／AEO 深度文章", service: "下半年逐月完成並上架，共 6 篇" },
 ];
 
 export const planOutcomeDisclaimer: PlanField<string> = confirmed(
@@ -228,7 +235,7 @@ export const planContractTerms: PlanContractTerms = {
     "完成製作並送交確認即計入交付；窩牛保有最終發布確認權；不以未回覆視為同意",
   ),
   paymentTerms: confirmed(
-    "每月 10 日前預付當月 NT$33,500；逾期得暫停，款項到帳後恢復，受影響交付時程順延",
+    "前 11 個月於每月 10 日前預付當月 NT$33,500；第 12 個月優惠 NT$2,000，當月應付 NT$31,500；年度合計 NT$400,000。逾期得暫停，款項到帳後恢復，受影響交付時程順延",
   ),
   thirdPartyLicensing: confirmed(
     "窩牛提供或指定的日本原廠、案場、人物與客戶素材，由窩牛確認使用與公開授權；引弘自行選用的配樂、字型與素材庫，由引弘確認使用範圍；需另購的授權或第三方費用事前告知並由窩牛負擔",
@@ -240,7 +247,7 @@ export const planContractTerms: PlanContractTerms = {
     "12 個月期滿即結束，沒有自動顧問期、月費或最低期間；如需顧問或維護，另行議約",
   ),
   extraServicePricing: confirmed(
-    "超過 96 支的額外影片原則每支 NT$6,000；超過 24 次的額外到場原則每次 NT$2,000；人員更替含一次合理銜接，完整重訓、密集補訓或重建未整理資料依實際範圍另行報價",
+    "超過 96 支的額外影片原則每支 NT$6,000；超過 24 次的額外到場原則每次 NT$2,000；超過 6 篇的 SEO／AEO 深度文章及其他新增內容需求，依實際範圍另行報價",
   ),
   ipDisplayRights: confirmed(
     "引弘得將已公開成品作合理作品集展示；不得揭露窩牛營業秘密、未公開案場、客戶個資或未取得公開同意的內容",
@@ -249,10 +256,10 @@ export const planContractTerms: PlanContractTerms = {
     "本契約如有未盡事宜，依中華民國相關法令及雙方後續書面協議辦理",
   ),
   clientObligations: confirmed(
-    "甲方應：(1) 於雙方約定期間內提供拍攝、企劃所需之工程進度、產品資訊、報價、保固及案例等正確資料；(2) 協調拍攝場地、出鏡人員與必要陪同，並於合理期間內完成內容確認與回覆；(3) 取得屋主、工班、員工、設計師及其他出鏡或入鏡人員之拍攝與公開同意，並留存同意紀錄；(4) 妥善保管雙方約定之帳號與權限，並於帶訓期間指派專責人員配合學習",
+    "甲方應：(1) 於雙方約定期間內提供拍攝、企劃所需之工程進度、產品資訊、報價、保固及案例等正確資料；(2) 協調拍攝場地、出鏡人員與必要陪同，並於合理期間內完成內容確認與回覆；(3) 取得屋主、工班、員工、設計師及其他出鏡或入鏡人員之拍攝與公開同意，並留存同意紀錄；(4) 妥善保管雙方約定之帳號與權限，並提供網站、社團及社群平台發布所需之合法有效權限",
   ),
   vendorObligations: confirmed(
-    "乙方應：(1) 依本契約規劃年度內容策略、選題與腳本，並執行主要拍攝、主要剪輯與品質控管；(2) 於發布前將完成內容送交甲方確認，不得於未經確認前逕自對外發布；(3) 對於履行過程中知悉之甲方營業秘密、未公開案場及客戶個資負保密義務；(4) 依約定進度提供每週進度回報及季度檢核，並配合內部能力建置與教學紀錄留存",
+    "乙方應：(1) 依本契約規劃年度內容策略、選題與腳本，並執行主要拍攝、主要剪輯與品質控管；(2) 於發布前將完成內容送交甲方確認，不得於未經確認前逕自對外發布；(3) 對於履行過程中知悉之甲方營業秘密、未公開案場及客戶個資負保密義務；(4) 完成 96 組影音延伸短文之跨平台連動發布、下半年 6 篇 SEO／AEO 深度文章，並依約提供每週進度回報及季度檢核",
   ),
   scheduleExtension: confirmed(
     "如因甲方未能於合理期間內提供拍攝所需資料、場地、出鏡人員配合或內容確認，致乙方無法依原訂時程履行，該部分時程得順延至甲方完成配合後起算，不視為乙方遲延；因前述原因致乙方額外產生之合理費用，經甲方確認後由甲方負擔；乙方因第九條付款逾期暫停服務者，暫停期間之交付時程比照順延處理",
@@ -267,7 +274,7 @@ export const planContractTerms: PlanContractTerms = {
     "本契約終止時，當月及依任意終止條款應支付之次月服務費用不予退還；已完成或已執行之交付項目仍計入應付費用，尚未支付部分甲方應於終止後 7 日內結清；因終止所生之必要合理費用，由可歸責之一方負擔",
   ),
   terminationHandover: confirmed(
-    "本契約終止後 10 日內，乙方應將窩牛指定帳號之管理權限、已完成成品、原始拍攝素材，及依本契約應移交之選題庫、素材規則、發布流程與教學紀錄等資產，依窩牛指定方式移交，並刪除乙方持有之原始登入資料，不得保留副本供其他用途使用",
+    "本契約終止後 10 日內，乙方應將窩牛指定帳號之管理權限、已完成成品、原始拍攝素材、已完成文章及必要發布紀錄，依窩牛指定方式移交，並刪除乙方持有之原始登入資料，不得保留副本供其他用途使用",
   ),
   forceMajeure: confirmed(
     "因天災、政府命令、傳染病防治措施、網路或電力等基礎設施中斷，或其他非可歸責於雙方之不可抗力事由，致本契約全部或一部無法履行者，受影響之義務暫停履行，相關時程順延至事由消滅後合理期間；不可抗力事由持續達連續 2 個月以上者，任一方得以書面通知他方終止本契約，並依終止後費用結算條款辦理",
@@ -285,7 +292,7 @@ export const planContractTerms: PlanContractTerms = {
     "本契約以中華民國法律為準據法。因本契約所生之爭議，雙方應本誠信原則先行協商；協商不成時，雙方同意以本契約履行地之地方法院為第一審管轄法院",
   ),
   publishingResponsibility: confirmed(
-    "發布協作由引弘企業社主導執行，包含 Facebook、Instagram、YouTube 與 TikTok 之完成影片代上架、網站文章代上架、甲方指定之 3 個社團文字內容代上架，以及 Threads 行銷議題操作。甲方仍保有內容之最終專業與發布確認權，並應提供合法有效之帳號及操作權限；各平台帳號、3 個社團名單、內容確認方式與發布排程由雙方於合作啟動時確認",
+    "發布協作由引弘企業社主導執行，包含 Facebook、Instagram、YouTube 與 TikTok 之 96 支完成影片代上架，以及每支影音對應之 96 組延伸短文連動發布至網站、甲方指定之 3 個社團與 Threads；同一組延伸內容為跨平台連動，不按平台重複計件。另於下半年逐月完成並上架 6 篇 SEO／AEO 深度文章。甲方仍保有內容之最終專業與發布確認權，並應提供合法有效之帳號及操作權限",
   ),
   onsiteReschedulingAndTravel: confirmed(
     "臨時取消、改期、遲到或超時不計入 24 次到場額度，未完成時間依雙方可配合時段順延；花蓮市及花蓮縣吉安鄉、壽豐鄉、新城鄉不另計交通費，其餘縣市之火車票由甲方依票價實報實銷",
@@ -479,14 +486,14 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m6",
     numberLabel: "06",
-    title: "半年檢核與內部帶訓啟動",
-    focus: "半年成果檢核，內部帶訓正式啟動",
+    title: "半年檢核與議題擴散校準",
+    focus: "半年成果檢核，確認下半年搜尋文章主軸",
     tasks: [
       checklist("半年內容成果檢核"),
       checklist("第二次季度檢核"),
-      checklist("內容資產整理"),
-      checklist("內部素材命名與整理帶訓"),
-      checklist("選題／腳本模板初步帶訓"),
+      checklist("96 組延伸短文發布方式校準"),
+      checklist("SEO／AEO 六篇文章主軸確認"),
+      checklist("下半年網站文章排程確認"),
       qtyVisitTask,
       qtyVideoTask,
       weeklyReportTask,
@@ -495,13 +502,12 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m7",
     numberLabel: "07",
-    title: "內部操作微任務",
-    focus: "內部人員實作與基礎拍攝帶訓",
+    title: "搜尋文章啟動",
+    focus: "維持影音產製，完成第一篇 SEO／AEO 文章",
     tasks: [
-      checklist("內部人員素材整理實作"),
-      checklist("選題模板填寫"),
-      checklist("發布前檢核流程實作"),
-      checklist("固定場景基礎拍攝帶訓"),
+      checklist("第 1 篇 SEO／AEO 深度文章完成上架"),
+      checklist("影音延伸短文連動發布"),
+      checklist("社團與 Threads 議題回饋整理"),
       qtyVisitTask,
       qtyVideoTask,
       weeklyReportTask,
@@ -510,13 +516,12 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m8",
     numberLabel: "08",
-    title: "簡易製作與流程接手",
-    focus: "簡易剪輯帶訓與流程接手測試",
+    title: "搜尋與社群雙軌累積",
+    focus: "完成第二篇 SEO／AEO 文章並維持連動發布",
     tasks: [
-      checklist("簡易套版剪輯帶訓"),
-      checklist("素材交接流程測試"),
-      checklist("發布排程維護實作"),
-      checklist("內部操作問題整理"),
+      checklist("第 2 篇 SEO／AEO 深度文章完成上架"),
+      checklist("影音延伸短文連動發布"),
+      checklist("網站、社團與 Threads 議題校準"),
       qtyVisitTask,
       qtyVideoTask,
       weeklyReportTask,
@@ -529,7 +534,8 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
     focus: "第三季檢核與第四季方向確認",
     tasks: [
       checklist("第三次季度檢核"),
-      checklist("內部帶訓成熟度檢查"),
+      checklist("第 3 篇 SEO／AEO 深度文章完成上架"),
+      checklist("影音延伸短文連動發布"),
       checklist("題材與內容比例調整"),
       checklist("第四季內容方向確認"),
       qtyVisitTask,
@@ -540,14 +546,12 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m10",
     numberLabel: "10",
-    title: "內容系統文件化",
-    focus: "選題、素材與流程文件化",
+    title: "搜尋議題持續放大",
+    focus: "完成第四篇 SEO／AEO 文章並延續內容擴散",
     tasks: [
-      checklist("選題庫整理"),
-      checklist("素材命名規則整理"),
-      checklist("腳本模板整理"),
-      checklist("發布流程整理"),
-      checklist("教學紀錄整理"),
+      checklist("第 4 篇 SEO／AEO 深度文章完成上架"),
+      checklist("影音延伸短文連動發布"),
+      checklist("高反應搜尋與社群議題整理"),
       qtyVisitTask,
       qtyVideoTask,
       weeklyReportTask,
@@ -556,14 +560,12 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m11",
     numberLabel: "11",
-    title: "交接測試與缺口補強",
-    focus: "交接流程測試與素材文件缺口補強",
+    title: "年度議題缺口補強",
+    focus: "完成第五篇 SEO／AEO 文章並補強議題缺口",
     tasks: [
-      checklist("內部操作流程測試"),
-      checklist("帳號及權限檢核"),
-      checklist("素材庫與文件缺口補強"),
-      checklist("未完成項目盤點"),
-      checklist("年度資產清單初稿"),
+      checklist("第 5 篇 SEO／AEO 深度文章完成上架"),
+      checklist("影音延伸短文連動發布"),
+      checklist("未完成內容與發布項目盤點"),
       qtyVisitTask,
       qtyVideoTask,
       weeklyReportTask,
@@ -572,17 +574,17 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
   {
     key: "m12",
     numberLabel: "12",
-    title: "年度總結與正式交接",
-    focus: "全年檢核、成果報告與正式交接",
+    title: "年度總結與內容續航",
+    focus: "完成第六篇 SEO／AEO 文章及全年內容檢核",
     tasks: [
       checklist("第四次季度檢核"),
       checklist("全年 96 支短影音交付檢核"),
       checklist("全年 24 次到場服務檢核"),
+      checklist("第 6 篇 SEO／AEO 深度文章完成上架"),
+      checklist("全年 96 組延伸短文連動發布檢核"),
+      checklist("成品、文章與必要發布紀錄整理"),
       checklist("年度成果報告"),
-      checklist("選題庫、素材規則與發布流程交接"),
-      checklist("教學紀錄與內部能力交接"),
-      checklist("成品與原始素材交接"),
-      checklist("第二年合作或自主營運建議"),
+      checklist("第二年內容合作建議"),
       weeklyReportTask,
     ],
   },
@@ -590,9 +592,16 @@ export const planProgressMonths: ProgressPhaseTemplate[] = [
 
 export const planProgressMetricTaskNames = {
   quarterlyReviews: ["第一次季度檢核", "第二次季度檢核", "第三次季度檢核", "第四次季度檢核"],
-  contentAssetHandover: "選題庫、素材規則與發布流程交接",
-  internalCapabilityHandover: "教學紀錄與內部能力交接",
-  annualAssetHandover: "成品與原始素材交接",
+  seoAeoArticles: [
+    "第 1 篇 SEO／AEO 深度文章完成上架",
+    "第 2 篇 SEO／AEO 深度文章完成上架",
+    "第 3 篇 SEO／AEO 深度文章完成上架",
+    "第 4 篇 SEO／AEO 深度文章完成上架",
+    "第 5 篇 SEO／AEO 深度文章完成上架",
+    "第 6 篇 SEO／AEO 深度文章完成上架",
+  ],
+  distributionCompletion: "全年 96 組延伸短文連動發布檢核",
+  annualContentSummary: "成品、文章與必要發布紀錄整理",
 };
 
 export const planProgressDefaults = {

@@ -15,13 +15,13 @@ import {
 } from "../data/plan";
 
 export const metadata: Metadata = {
-  title: "窩牛 × Takara｜內容行銷導入暨內部能力建置服務契約",
-  description: "引弘企業社 × 窩牛 × Takara 內容行銷導入暨內部能力建置服務契約。",
+  title: "窩牛 × Takara｜年度內容產製暨議題行銷服務契約",
+  description: "引弘企業社 × 窩牛 × Takara 年度內容產製暨議題行銷服務契約。",
 };
 
 const woniuTrack = planServiceTracks.find((t) => t.key === "woniu")!;
 const takaraTrack = planServiceTracks.find((t) => t.key === "takara")!;
-const internalTrack = planServiceTracks.find((t) => t.key === "internalCapability")!;
+const distributionTrack = planServiceTracks.find((t) => t.key === "contentDistribution")!;
 
 export default function ContractPage() {
   return (
@@ -29,7 +29,7 @@ export default function ContractPage() {
       <DocNav current="/contract" />
       <article className="docArticle">
         <p className="docEyebrow">引弘企業社 × 窩牛 × Takara</p>
-        <h1 className="docTitle">內容行銷導入暨內部能力建置服務契約</h1>
+        <h1 className="docTitle">年度內容產製暨議題行銷服務契約</h1>
         <p className="docSubtitle">
           立契約書人：委託方（甲方）：{planIdentity.clientName.value}；受託方（乙方）：引弘企業社。雙方就{planIdentity.planName.value}
           之年度合作，本誠信原則同意訂立本契約，條款如下。本頁為網站預覽版本，內容與正式簽署 Google 文件一致；正式簽署以雙方用印或電子簽署之版本為準。
@@ -38,7 +38,7 @@ export default function ContractPage() {
         <section className="docSection">
           <h2>第一條　合作目的與基本原則</h2>
           <p>
-            本案以 {planDuration.contractMonths.value} 個月為一期，由乙方協助甲方旗下窩牛本業與 Takara 代理業務建立可持續運作的年度內容行銷系統，並逐步將操作能力移轉予甲方內部團隊。
+            本案以 {planDuration.contractMonths.value} 個月為一期，由乙方協助甲方旗下窩牛本業與 Takara 代理業務持續產製內容，並透過影音、網站、社團、Threads 與 SEO／AEO 深度文章擴大議題能見度。
           </p>
           <ul>
             <li>甲方負責工程、產品、原廠、價格、保固與案例等專業資訊之正確性，並保有內容之最終發布確認權。</li>
@@ -85,18 +85,15 @@ export default function ContractPage() {
         <section className="docSection">
           <h2>第六條　24 次到場服務規格</h2>
           <p>
-            全年提供 {planVolume.annualOnsiteVisitCount.value} 次到場，每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題與專業資訊確認、現場交辦及內部能力帶訓，依雙方實際排程安排，不代表每月固定次數。
+            全年提供 {planVolume.annualOnsiteVisitCount.value} 次到場，每次{planVolume.onsiteVisitTypicalDuration.value}、{planVolume.onsiteVisitMaxDuration.value}，可用於拍攝、選題、專業資訊與現場內容確認，依雙方實際排程安排，不代表每月固定次數。
           </p>
           <p>{planContractTerms.onsiteReschedulingAndTravel.value}。</p>
         </section>
 
         <section className="docSection">
-          <h2>第七條　內部能力建置及帶訓範圍</h2>
-          <p>{internalTrack.summary}</p>
-          <p>
-            帶訓內容包含{internalTrack.items.join("、")}
-            等項目，嵌入到場服務執行，不另開獨立工作坊；帶訓期間仍以完成拍攝與主交付為優先，使甲方內部人員得於合作期間漸進接手操作。
-          </p>
+          <h2>第七條　影音延伸短文與 SEO／AEO 文章</h2>
+          <p>{distributionTrack.summary}</p>
+          <p>96 組影音延伸短文係配合 96 支影音形成之跨平台連動內容，同一內容組發布至多個管道時不重複計件；6 篇 SEO／AEO 深度文章則於下半年逐月規劃、撰寫並上架。</p>
         </section>
 
         <section className="docSection">
@@ -130,8 +127,8 @@ export default function ContractPage() {
           <h2>第九條　服務費用及付款方式</h2>
           <div className="docFieldGrid">
             <div>
-              <dt>每月服務費</dt>
-              <dd>{planPricing.currency.value === "TWD" ? "新臺幣" : planPricing.currency.value} {planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")} 元</dd>
+              <dt>服務費安排</dt>
+              <dd>前 11 個月每月新臺幣 {planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")} 元；第 12 個月新臺幣 {planPricing.finalMonthFee.value.toLocaleString("zh-Hant-TW")} 元</dd>
             </div>
             <div>
               <dt>年度合計</dt>
@@ -182,7 +179,7 @@ export default function ContractPage() {
             <li>本案交付影片成品與原始拍攝素材歸{planRights.finishedWorkAndRawFootageOwner.value}所有。</li>
             <li>{planRights.methodologyAndTemplateLicense.value}。</li>
             <li>平台帳號與管理權限歸窩牛所有；乙方僅依約取得執行發布協作所需之操作權限。</li>
-            <li>甲方專屬選題庫、素材規則、發布排程及教學紀錄，可供甲方內部持續使用。</li>
+            <li>已完成文章、必要內容檔案與發布紀錄歸甲方保存使用。</li>
             <li>{planContractTerms.rawAssetStorage.value}。</li>
           </ul>
         </section>

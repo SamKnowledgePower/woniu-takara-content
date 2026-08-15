@@ -13,8 +13,11 @@
         "app/data/plan.ts",
         "app/page.tsx",
         "app/globals.css",
+        "app/layout.tsx",
         "app/service/page.tsx",
-        "app/contract/page.tsx"
+        "app/contract/page.tsx",
+        "app/progress/page.tsx",
+        "app/progress/ProgressDashboard.tsx"
       ],
       "branch": "main",
       "build_command": "npm run build",
@@ -23,10 +26,13 @@
       "routes": ["", "service.html", "contract.html"],
       "verification_markers": [
         "33,500",
+        "31,500",
+        "400,000",
         "TikTok",
-        "網站文章代上架",
+        "96 組影音延伸短文",
+        "6 篇 SEO／AEO",
         "3 個指定社團",
-        "Threads 行銷議題操作"
+        "Threads"
       ]
     },
     {
