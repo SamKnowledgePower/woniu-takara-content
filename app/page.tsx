@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ResourceCards from "./components/ResourceCards";
+import { planDuration } from "./data/plan";
 
 export default function Home() {
   return (
@@ -290,7 +291,7 @@ export default function Home() {
           <h2>每週看得見進度，<br />每季調整一次方向。</h2>
         </div>
         <div className="timeline">
-          <div><span>00</span><h3>一個月準備期</h3><p>素材蒐集、資料盤點、理解品牌與內容定位。此階段為贈送，不計入 12 個月。</p></div>
+          <div><span>00</span><h3>第 0 月｜預備期</h3><p>進行 2 次主題發想與訪談討論，確認雙主線內容方向；不另收費，也不計入 12 個月正式合作期。</p></div>
           <div><span>01–03</span><h3>建立節奏</h3><p>確認雙主線題材、批次拍攝方式、送審與發布流程，建立第一批內容庫。</p></div>
           <div><span>04–06</span><h3>穩定產出與擴散</h3><p>持續拍攝與製作，依週進度追蹤交付；同步優化影音延伸短文與跨平台連動方式。</p></div>
           <div><span>07–12</span><h3>搜尋議題累積</h3><p>維持影片及延伸短文發布，下半年逐月完成 6 篇 SEO／AEO 深度文章，累積網站搜尋與議題能見度。</p></div>
@@ -348,6 +349,7 @@ export default function Home() {
         <div>
           <p className="eyebrow">年度合作方案</p>
           <h2>一年，把內容從臨時任務，變成日常能力。</h2>
+          <p>{planDuration.formalPeriod.value}｜第 0 月預備期另行提供，不另收費。</p>
         </div>
         <div className="priceCard">
           <p>12 個月合作｜最後一個月優惠 2,000 元</p>

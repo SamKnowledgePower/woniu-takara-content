@@ -28,9 +28,11 @@ export interface PlanIdentity {
 
 export interface PlanDuration {
   contractMonths: PlanField<number>;
+  formalPeriod: PlanField<string>;
   prepPeriodMonths: PlanField<number>;
   prepPeriodIncludedInContractMonths: PlanField<boolean>;
   prepPeriodIsComplimentary: PlanField<boolean>;
+  prepDiscussionCount: PlanField<number>;
 }
 
 export interface PlanVolume {
@@ -118,9 +120,11 @@ export const planIdentity: PlanIdentity = {
 
 export const planDuration: PlanDuration = {
   contractMonths: confirmed(12),
+  formalPeriod: confirmed("2026 年 10 月至 2027 年 9 月"),
   prepPeriodMonths: confirmed(1),
   prepPeriodIncludedInContractMonths: confirmed(false),
   prepPeriodIsComplimentary: confirmed(true),
+  prepDiscussionCount: confirmed(2),
 };
 
 export const planVolume: PlanVolume = {
@@ -145,8 +149,8 @@ export const planPricing: PlanPricing = {
 export const planPhases: PlanPhase[] = [
   {
     key: "prep",
-    months: "一個月準備期（不計入 12 個月）",
-    focus: "素材蒐集、資料盤點、理解品牌與內容定位",
+    months: "第 0 月｜預備期（不計入 12 個月）",
+    focus: "進行 2 次主題發想與訪談討論，確認雙主線內容方向；不另收費",
   },
   {
     key: "phase1to3",
@@ -383,13 +387,14 @@ const weeklyReportTask = checklist("當月週進度回報");
 
 export const planProgressPrep: ProgressPhaseTemplate = {
   key: "prep",
-  numberLabel: "準備期",
-  title: "準備期｜贈送，不計入 12 個月",
-  focus: "素材蒐集、資料盤點、雙主線初步訪談",
+  numberLabel: "00",
+  title: "第 0 月｜預備期，不另收費",
+  focus: "進行 2 次主題發想與訪談討論，確認雙主線內容方向",
   tasks: [
     checklist("素材蒐集"),
     checklist("品牌與服務資料盤點"),
-    checklist("窩牛與 Takara 雙主線初步訪談"),
+    checklist("第 1 次主題發想與訪談討論"),
+    checklist("第 2 次主題發想與訪談討論"),
     checklist("現有帳號與權限盤點"),
     checklist("年度內容方向與執行流程確認"),
   ],

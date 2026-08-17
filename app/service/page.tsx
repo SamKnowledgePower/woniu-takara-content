@@ -31,14 +31,15 @@ export default function ServicePage() {
         <p className="docEyebrow">引弘企業社 × 窩牛 × Takara</p>
         <h1 className="docTitle">{planIdentity.planName.value}｜一年期服務說明書</h1>
         <p className="docSubtitle">
-          服務提供：引弘企業社｜合作期間：{planDuration.contractMonths.value} 個月｜服務費：每月新臺幣 {planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")} 元。
+          服務提供：引弘企業社｜正式合作期間：{planDuration.formalPeriod.value}，共 {planDuration.contractMonths.value} 個月｜服務費：每月新臺幣 {planPricing.monthlyFee.value.toLocaleString("zh-Hant-TW")} 元。
           本說明書用客戶角度說明這一年會得到什麼、我們如何執行、為什麼這樣安排；詳細權利義務、修改、終止與保密以雙方簽署之正式契約為準。
         </p>
 
         <section className="docSection">
           <h2>第一部分｜一年合作總覽</h2>
           <div className="docFieldGrid">
-            <div><dt>合作期間</dt><dd>{planDuration.contractMonths.value} 個月（另有不計入之 1 個月贈送準備期）</dd></div>
+            <div><dt>正式合作期間</dt><dd>{planDuration.formalPeriod.value}，共 {planDuration.contractMonths.value} 個月</dd></div>
+            <div><dt>第 0 月預備期</dt><dd>{planDuration.prepDiscussionCount.value} 次主題發想與訪談討論，不另收費</dd></div>
             <div><dt>短影音</dt><dd>{planVolume.annualVideoCount.value} 支／年</dd></div>
             <div><dt>到場服務</dt><dd>{planVolume.annualOnsiteVisitCount.value} 次／年</dd></div>
             <div><dt>季度檢核</dt><dd>每年 {planVolume.quarterlyReviewCount.value} 次</dd></div>

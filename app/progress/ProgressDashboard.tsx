@@ -264,7 +264,7 @@ export default function ProgressDashboard() {
           </section>
 
           <p className="progressDash__label">逐月進度</p>
-          <p className="progressDash__prepBadge">一個月準備期｜贈送，不計入 12 個月</p>
+          <p className="progressDash__prepBadge">第 0 月預備期｜2 次主題發想與訪談討論｜不另收費、不計入 12 個月</p>
           <section className="progressDash__months">
             {renderPhase("prep", planProgressPrep, true)}
             {monthPhases.map(({ prefix, phase }) => renderPhase(prefix, phase, false))}

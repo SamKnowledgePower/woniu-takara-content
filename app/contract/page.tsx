@@ -99,8 +99,8 @@ export default function ContractPage() {
         <section className="docSection">
           <h2>第八條　準備期與正式服務期間</h2>
           <p>
-            自民國＿＿年＿＿月＿＿日起至民國＿＿年＿＿月＿＿日止，共 {planDuration.contractMonths.value} 個月，為正式服務期間。
-            {planDuration.prepPeriodIsComplimentary.value ? `正式期間開始前另有 ${planDuration.prepPeriodMonths.value} 個月準備期，為贈送項目，不計入前述合作月數。` : null}
+            正式服務期間為 {planDuration.formalPeriod.value}，共 {planDuration.contractMonths.value} 個月。
+            {planDuration.prepPeriodIsComplimentary.value ? `正式期間開始前之第 0 月為預備期，包含 ${planDuration.prepDiscussionCount.value} 次主題發想與訪談討論，不另收費，亦不計入前述合作月數。` : null}
           </p>
           <div className="docTableWrap">
             <table className="docTable">
