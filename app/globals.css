@@ -238,6 +238,12 @@ h1 {
 .stats strong { display: block; }
 .stats span { color: var(--muted); font-size: 12px; }
 
+.generatedMap { color: #fff; background: var(--brown); }
+.generatedMap .sectionHead > p:last-child { color: rgba(255,255,255,.66); }
+.generatedMapFigure { margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.22); background: var(--cream); box-shadow: 0 28px 70px rgba(0,0,0,.22); }
+.generatedMapFigure img { display: block; width: 100%; height: auto; }
+.generatedMapSummary { max-width: 1100px; margin: 24px 0 0; color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.8; }
+
 .serviceGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .serviceCard { min-height: 490px; padding: 35px; display: flex; flex-direction: column; }
 .serviceCard.dark { color: #fff; background: var(--night); }
@@ -419,6 +425,8 @@ footer { font-size: 17px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats div { padding: 35px 22px; }
   .stats div:nth-child(2) { border-right: 0; }
+  .generatedMapFigure { overflow-x: auto; }
+  .generatedMapFigure img { width: 1040px; max-width: none; }
   .serviceGrid, .timeline { grid-template-columns: 1fr; }
   .timeline div { min-height: 250px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
   .deliverList article { grid-template-columns: 42px 1fr; }

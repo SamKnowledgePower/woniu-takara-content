@@ -37,7 +37,7 @@
     },
     {
       "type": "system_map",
-      "enabled": false,
+      "enabled": true,
       "role": "primary_overview",
       "source": "app/data/plan.ts",
       "svg_path": "public/woniu-takara-system-map.svg",
@@ -48,7 +48,7 @@
     },
     {
       "type": "canva",
-      "enabled": true,
+      "enabled": false,
       "design_id": "DAHSB0uHYO0",
       "url": "https://www.canva.com/design/DAHSB0uHYO0/82Tep38Y8GsteSYegmiLyg/edit",
       "edit_policy": "existing_elements_only"

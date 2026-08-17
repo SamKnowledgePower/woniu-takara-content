@@ -244,6 +244,18 @@ export default function Home() {
         <div><strong>4</strong><span>次季度檢核</span></div>
       </section>
 
+      <section id="system-map" className="generatedMap section">
+        <div className="sectionHead">
+          <p className="eyebrow">年度內容營運流程</p>
+          <h2>從現場專業，走到<br />跨平台與搜尋累積。</h2>
+          <p>這張圖直接由已確認的提案資料生成，之後服務數量、發布管道或時程調整時，可跟網站一起更新，不再依賴 Canva。</p>
+        </div>
+        <figure className="generatedMapFigure">
+          <img src="woniu-takara-system-map.svg" alt="窩牛與 Takara 一年內容產製、發布與搜尋成長流程：雙主線素材經到場採集、策略選題、影音製作、多平台發布、延伸短文與 SEO／AEO 文章，持續累積市場能見度。" width="1920" height="1080" loading="lazy" />
+        </figure>
+        <p className="generatedMapSummary">核心路徑：雙主線素材 → 24 次到場與策略轉譯 → 96 支短影音 → 96 組跨平台延伸短文 → 下半年 6 篇 SEO／AEO 深度文章。</p>
+      </section>
+
       <section id="service" className="section">
         <div className="sectionHead">
           <p className="eyebrow">合作內容</p>
